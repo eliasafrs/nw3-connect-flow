@@ -1,26 +1,33 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User } from "lucide-react";
 import nw3Logo from "@/assets/nw3-logo.png";
 
 const navLinks = [
-  { label: "Internet", href: "#planos" },
-  { label: "Câmera", href: "#seguranca" },
-  { label: "TV & Streaming", href: "#tv" },
-  { label: "Fixo", href: "#fixo" },
-  { label: "Aplicativos", href: "#streaming" },
-  { label: "Ajuda", href: "#autoatendimento" },
+  { label: "Internet", href: "/internet" },
+  { label: "Câmera", href: "/camera" },
+  { label: "TV & Streaming", href: "/tv-streaming" },
+  { label: "Fixo", href: "/fixo" },
+  { label: "Aplicativos", href: "/aplicativos" },
+  { label: "Ajuda", href: "/ajuda" },
+  { label: "Sobre", href: "/sobre" },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 90);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setOpen(false);
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <nav
@@ -31,20 +38,22 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={nw3Logo} alt="NW3 Internet" className="h-10" />
-        </a>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+              to={l.href}
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname === l.href ? "text-primary" : "text-foreground"
+              }`}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <a
             href="#"
@@ -74,14 +83,15 @@ const Navbar = () => {
         <div className="lg:hidden bg-card/95 backdrop-blur-lg border-b border-border animate-fade-in">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
             {navLinks.map((l) => (
-              <a
+              <Link
                 key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="text-sm font-medium text-foreground hover:text-primary py-2"
+                to={l.href}
+                className={`text-sm font-medium hover:text-primary py-2 ${
+                  location.pathname === l.href ? "text-primary" : "text-foreground"
+                }`}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
             <a
               href="#"

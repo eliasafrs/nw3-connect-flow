@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Youtube, Phone, Mail, MapPin, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import nw3Logo from "@/assets/nw3-logo.png";
 
 const Footer = () => {
@@ -8,9 +9,9 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <a href="#">
+            <Link to="/">
               <img src={nw3Logo} alt="NW3 Internet" className="h-10 brightness-0 invert" />
-            </a>
+            </Link>
             <p className="text-primary-foreground/50 text-sm mt-3 mb-4">
               Conectando você ao que importa com fibra óptica de alta velocidade.
             </p>
@@ -31,11 +32,17 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-primary-foreground mb-4">Serviços</h4>
             <ul className="space-y-2">
-              {["Internet", "Câmera", "TV & Streaming", "Telefone Fixo"].map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
-                    {l}
-                  </a>
+              {[
+                { label: "Internet", href: "/internet" },
+                { label: "Câmera", href: "/camera" },
+                { label: "TV & Streaming", href: "/tv-streaming" },
+                { label: "Telefone Fixo", href: "/fixo" },
+                { label: "Aplicativos", href: "/aplicativos" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <Link to={l.href} className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -45,11 +52,24 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-primary-foreground mb-4">Suporte</h4>
             <ul className="space-y-2">
-              {["Área do Cliente", "2ª Via de Boleto", "Teste de Velocidade", "Manual do Cliente", "Ouvidoria", "Documentos Legais"].map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
-                    {l}
-                  </a>
+              {[
+                { label: "Área do Cliente", href: "#" },
+                { label: "2ª Via de Boleto", href: "#" },
+                { label: "Central de Ajuda", href: "/ajuda" },
+                { label: "Sobre a NW3", href: "/sobre" },
+                { label: "Ouvidoria", href: "#" },
+                { label: "Documentos Legais", href: "#" },
+              ].map((l) => (
+                <li key={l.label}>
+                  {l.href.startsWith("/") ? (
+                    <Link to={l.href} className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+                      {l.label}
+                    </Link>
+                  ) : (
+                    <a href={l.href} className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+                      {l.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
