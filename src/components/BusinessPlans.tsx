@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Building2, Server, Shield, Headset, Globe, Wifi, Phone, Camera,
-  Clock, ChevronRight, Check, Zap, Award, Users
+  Clock, ChevronRight, Check, Zap, Award, Users, ArrowUpDown, Link as LinkIcon
 } from "lucide-react";
 import businessHero from "@/assets/banners/business-hero.jpg";
 
@@ -10,6 +10,8 @@ const segments = [
   { id: "basico", label: "Básico", icon: Zap },
   { id: "avancado", label: "Avançado", icon: Award },
   { id: "plus", label: "Plus", icon: Users },
+  { id: "simetrica", label: "Banda Simétrica", icon: ArrowUpDown },
+  { id: "dedicado", label: "Link Dedicado", icon: LinkIcon },
 ] as const;
 
 type Segment = typeof segments[number]["id"];
@@ -82,6 +84,46 @@ const plans: Record<Segment, {
         price: "319",
         cents: ",00",
         features: ["Sem taxa de ativação", "Wi-Fi 6 + 1 IP Fixo", "1 linha telefônica fixa", "Suporte prioritário"],
+      },
+    ],
+  },
+  simetrica: {
+    headline: "Upload igual ao Download",
+    subtitle: "Banda simétrica ideal para empresas que enviam arquivos pesados, fazem videoconferências e usam sistemas em nuvem.",
+    options: [
+      {
+        speed: "300 Mega",
+        sla: "SLA de atendimento: 12 horas",
+        price: "349",
+        cents: ",00",
+        features: ["300 Mbps Download + 300 Mbps Upload", "Wi-Fi 6 + 1 IP Fixo", "1 linha telefônica fixa", "Suporte prioritário"],
+      },
+      {
+        speed: "500 Mega",
+        sla: "SLA de atendimento: 8 horas",
+        price: "499",
+        cents: ",00",
+        features: ["500 Mbps Download + 500 Mbps Upload", "Wi-Fi 6 + 1 IP Fixo", "1 linha telefônica fixa", "Suporte VIP 24h"],
+      },
+    ],
+  },
+  dedicado: {
+    headline: "Internet 100% dedicada ao seu negócio",
+    subtitle: "Link dedicado com banda garantida, IP fixo e SLA agressivo para operações críticas.",
+    options: [
+      {
+        speed: "100 Mega",
+        sla: "SLA de atendimento: 4 horas",
+        price: "699",
+        cents: ",00",
+        features: ["100 Mbps dedicados e simétricos", "IP Fixo (/29 - 5 IPs úteis)", "SLA 99,5% de disponibilidade", "Gerente de conta dedicado"],
+      },
+      {
+        speed: "200 Mega",
+        sla: "SLA de atendimento: 4 horas",
+        price: "999",
+        cents: ",00",
+        features: ["200 Mbps dedicados e simétricos", "IP Fixo (/29 - 5 IPs úteis)", "SLA 99,7% de disponibilidade", "Gerente de conta dedicado"],
       },
     ],
   },
