@@ -41,7 +41,7 @@ const TopBar = ({ segment, onSegmentChange }: TopBarProps) => {
             Suporte 24h | (11) 2586-2995
           </span>
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/551125862995"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
