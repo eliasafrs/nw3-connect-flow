@@ -1,0 +1,146 @@
+import { Camera as CameraIcon, Smartphone, Cloud, ShieldCheck, ChevronRight, Check, Monitor } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import PageBanner from "@/components/PageBanner";
+import CoverageSection from "@/components/CoverageSection";
+
+const cameraPlans = [
+  {
+    name: "Básico",
+    cameras: "2 câmeras",
+    price: "129",
+    cents: ",90",
+    features: ["2 Câmeras Full HD", "Acesso pelo celular", "Gravação local", "Instalação inclusa"],
+    popular: false,
+  },
+  {
+    name: "Intermediário",
+    cameras: "4 câmeras",
+    price: "199",
+    cents: ",90",
+    features: ["4 Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem", "Instalação inclusa", "Visão noturna"],
+    popular: true,
+  },
+  {
+    name: "Avançado",
+    cameras: "6+ câmeras",
+    price: "Sob consulta",
+    cents: "",
+    features: ["6+ Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem", "Instalação inclusa", "Visão noturna", "Detecção de movimento"],
+    popular: false,
+  },
+];
+
+const Camera = () => {
+  return (
+    <>
+      <PageBanner
+        icon={CameraIcon}
+        title="NW3"
+        highlight="Câmera"
+        description="Monitoramento profissional com acesso remoto pelo celular. Segurança 24h para sua casa ou empresa."
+      />
+
+      {/* Features */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                Segurança e praticidade <span className="text-gradient">na palma da mão</span>
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                Câmeras de alta definição com instalação profissional. Acompanhe tudo pelo celular, de qualquer lugar.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  { icon: CameraIcon, text: "Câmeras Full HD com visão noturna" },
+                  { icon: Smartphone, text: "Acesso remoto pelo celular 24h" },
+                  { icon: Cloud, text: "Gravação em nuvem disponível" },
+                  { icon: ShieldCheck, text: "Ideal para residências e empresas" },
+                  { icon: Monitor, text: "Monitoramento em tempo real" },
+                ].map((item) => (
+                  <li key={item.text} className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="text-foreground">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-card rounded-3xl p-8 border border-border shadow-card text-center">
+              <div className="w-24 h-24 rounded-3xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <CameraIcon className="w-12 h-12 text-primary" />
+              </div>
+              <h3 className="font-heading text-2xl font-bold text-foreground mb-2">NW3 Câmera</h3>
+              <p className="text-muted-foreground text-sm max-w-xs mx-auto">
+                Veja o que acontece na sua casa ou empresa em tempo real, de forma prática e segura.
+              </p>
+            </div>
+          </div>
+
+          {/* Plans */}
+          <div className="text-center mb-10">
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-2">
+              Planos de <span className="text-gradient">Câmera</span>
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {cameraPlans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`relative bg-card rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 ${
+                  plan.popular
+                    ? "border-primary shadow-glow scale-[1.03]"
+                    : "border-border shadow-card hover:shadow-card-hover"
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full">
+                    Mais Popular
+                  </div>
+                )}
+                <h3 className="font-heading text-xl font-bold text-foreground text-center mb-1">{plan.name}</h3>
+                <p className="text-primary text-sm font-semibold text-center mb-4">{plan.cameras}</p>
+
+                {plan.price !== "Sob consulta" ? (
+                  <div className="text-center mb-6">
+                    <div className="flex items-baseline justify-center gap-0.5">
+                      <span className="text-sm text-muted-foreground">R$</span>
+                      <span className="font-heading text-4xl font-bold text-foreground">{plan.price}</span>
+                      <span className="text-sm text-muted-foreground">{plan.cents} /mês</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center mb-6">
+                    <span className="font-heading text-2xl font-bold text-foreground">Sob consulta</span>
+                  </div>
+                )}
+
+                <ul className="space-y-2 mb-6">
+                  {plan.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm text-foreground">
+                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+
+                <Button variant={plan.popular ? "cta" : "outline"} className="w-full">
+                  Solicitar Orçamento
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CoverageSection />
+    </>
+  );
+};
+
+export default Camera;
