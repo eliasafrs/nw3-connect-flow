@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, User } from "lucide-react";
+import nw3Logo from "@/assets/nw3-logo.png";
 
 const navLinks = [
   { label: "Internet", href: "#planos" },
@@ -30,9 +31,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="font-heading text-2xl font-bold">
-          <span className="text-primary">NW3</span>
-          <span className="text-foreground font-normal"> Internet</span>
+        <a href="#" className="flex items-center">
+          <img src={nw3Logo} alt="NW3 Internet" className="h-10" />
         </a>
 
         {/* Desktop */}
