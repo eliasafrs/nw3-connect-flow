@@ -143,7 +143,7 @@ const HeroSection = () => {
               📸 Siga-nos no Instagram
             </a>
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/551125862995"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,40%)] text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
