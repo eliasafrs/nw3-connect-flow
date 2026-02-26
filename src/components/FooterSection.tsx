@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Youtube, Phone, Mail, MapPin, Linkedin } from "lucide-react";
+import nw3Logo from "@/assets/nw3-logo.png";
 
 const Footer = () => {
   return (
@@ -7,8 +8,8 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <a href="#" className="font-heading text-2xl font-bold text-primary-foreground">
-              NW3 <span className="font-normal text-primary-foreground/60">Internet</span>
+            <a href="#">
+              <img src={nw3Logo} alt="NW3 Internet" className="h-10 brightness-0 invert" />
             </a>
             <p className="text-primary-foreground/50 text-sm mt-3 mb-4">
               Conectando você ao que importa com fibra óptica de alta velocidade.
