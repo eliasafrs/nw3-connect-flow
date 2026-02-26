@@ -12,8 +12,14 @@ const Index = () => {
 
   return (
     <>
-      <HeroSection />
-      {segment === "voce" ? <ResidentialPlans /> : <BusinessPlans />}
+      {segment === "voce" ? (
+        <>
+          <HeroSection />
+          <ResidentialPlans />
+        </>
+      ) : (
+        <BusinessPlans />
+      )}
       <ServicesGrid />
       <DifferentialsSection />
       <CoverageSection />
