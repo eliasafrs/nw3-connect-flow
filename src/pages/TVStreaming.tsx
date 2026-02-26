@@ -1,4 +1,4 @@
-import { Tv, MonitorSmartphone, Radio } from "lucide-react";
+import { Tv, MonitorSmartphone, Radio, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageBanner from "@/components/PageBanner";
 
@@ -18,21 +18,67 @@ import playkidsBanner from "@/assets/banners/playkids-banner.jpg";
 import exitlagBanner from "@/assets/banners/exitlag-banner.jpg";
 import skyPlusBanner from "@/assets/banners/sky-plus-banner.jpg";
 
-const streamingApps = [
-  { logo: disneyLogo, banner: disneyBanner, title: "Disney+", desc: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic. Inclui Star e esportes com ESPN." },
-  { logo: hboLogo, banner: hboBanner, title: "HBO Max", desc: "As melhores séries como House of the Dragon, The Last of Us, e filmes premiados da Warner Bros." },
-  { logo: globoplayLogo, banner: globoplayBanner, title: "Globoplay", desc: "Novelas, séries originais, jornalismo, reality shows e transmissões ao vivo da TV Globo." },
-  { logo: deezerLogo, banner: deezerBanner, title: "Deezer", desc: "Mais de 90 milhões de músicas, podcasts e playlists personalizadas sem anúncios." },
-  { logo: playkidsLogo, banner: playkidsBanner, title: "PlayKids", desc: "Conteúdo educativo e divertido para crianças. Jogos, vídeos e livros em um ambiente seguro." },
-  { logo: exitlagLogo, banner: exitlagBanner, title: "Exitlag", desc: "Otimize sua conexão para jogos online. Reduza lag e melhore sua experiência gamer." },
-  { logo: skyPlusLogo, banner: skyPlusBanner, title: "Sky+", desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda." },
+const streamingBanners = [
+  {
+    logo: disneyLogo,
+    banner: disneyBanner,
+    title: "Disney+",
+    speed: "700",
+    price: "149",
+    cents: "90",
+    headline: "Diversão sem limites com Disney+",
+    subtitle: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic.",
+    dark: true,
+  },
+  {
+    logo: hboLogo,
+    banner: hboBanner,
+    title: "HBO Max",
+    speed: "600",
+    price: "129",
+    cents: "90",
+    headline: "O combo perfeito para qualquer maratoneiro",
+    subtitle: "As melhores séries como House of the Dragon, The Last of Us, e filmes premiados.",
+    dark: true,
+  },
+  {
+    logo: globoplayLogo,
+    banner: globoplayBanner,
+    title: "Globoplay",
+    speed: "700",
+    price: "149",
+    cents: "90",
+    headline: "Tudo da Globo na palma da sua mão",
+    subtitle: "Novelas, séries originais, jornalismo, reality shows e transmissões ao vivo.",
+    dark: true,
+  },
+  {
+    logo: deezerLogo,
+    banner: deezerBanner,
+    title: "Deezer",
+    speed: "500",
+    price: "99",
+    cents: "90",
+    headline: "Leve suas playlists com você!",
+    subtitle: "Mais de 90 milhões de músicas, podcasts e playlists personalizadas sem anúncios.",
+    dark: false,
+  },
+  {
+    logo: skyPlusLogo,
+    banner: skyPlusBanner,
+    title: "Sky+",
+    speed: "600",
+    price: "129",
+    cents: "90",
+    headline: "Esportes, notícias, filmes e variedades",
+    subtitle: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda.",
+    dark: true,
+  },
 ];
 
-const tvFeatures = [
-  { icon: Tv, label: "90+ Canais HD" },
-  { icon: Radio, label: "Abertos e Fechados" },
-  { icon: MonitorSmartphone, label: "App no Celular" },
-  { icon: Tv, label: "Pacotes Flexíveis" },
+const tvPackages = [
+  { name: "LIGHT", channels: "13 Canais", screens: "1 tela", price: "14", cents: "90" },
+  { name: "FULL", channels: "96 Canais", screens: "3 telas", price: "89", cents: "90" },
 ];
 
 const TVStreaming = () => {
@@ -45,88 +91,104 @@ const TVStreaming = () => {
         description="Mais de 90 canais de TV digital inclusos nos planos de internet e os melhores aplicativos de streaming."
       />
 
-      {/* TV Section */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider mb-3">
-                <Tv className="w-4 h-4" /> TV por Assinatura
-              </span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Mais de 90 canais em <span className="text-gradient">qualidade HD</span>
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8">
-                Todos os planos de internet NW3 já incluem mais de 90 canais de TV digital. Canais abertos e fechados, opções de pacotes e aplicativo para assistir no celular.
-              </p>
-              <Button variant="cta" size="lg">
-                Conhecer Pacotes
-              </Button>
-            </div>
+      {/* Full-width streaming banners - estilo Amigo */}
+      {streamingBanners.map((app, index) => (
+        <section
+          key={app.title}
+          className="relative min-h-[480px] lg:min-h-[520px] overflow-hidden flex items-center"
+        >
+          {/* Background */}
+          <img
+            src={app.banner}
+            alt={`Banner ${app.title}`}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className={`absolute inset-0 ${app.dark ? 'bg-black/50' : 'bg-white/40'}`} />
 
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-card">
-              <div className="grid grid-cols-2 gap-4">
-                {tvFeatures.map((item) => (
-                  <div key={item.label} className="flex items-center gap-3 p-4 rounded-lg bg-secondary/50">
-                    <item.icon className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm font-medium text-foreground">{item.label}</span>
+          <div className="relative container mx-auto px-4 max-w-6xl">
+            <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              {/* Content side */}
+              <div className="lg:w-1/2 text-center lg:text-left">
+                <img
+                  src={app.logo}
+                  alt={app.title}
+                  className="h-16 w-auto object-contain mx-auto lg:mx-0 mb-6 drop-shadow-lg"
+                />
+                <h2 className={`font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 ${app.dark ? 'text-white' : 'text-foreground'}`}>
+                  {app.headline}
+                </h2>
+                <p className={`text-lg mb-6 ${app.dark ? 'text-white/80' : 'text-muted-foreground'}`}>
+                  {app.subtitle}
+                </p>
+                <Button variant="cta" size="lg" className="text-base px-10">
+                  Eu quero!
+                </Button>
+              </div>
+
+              {/* Price side */}
+              <div className="lg:w-1/2 flex justify-center lg:justify-end">
+                <div className={`rounded-3xl p-8 lg:p-10 text-center backdrop-blur-md ${app.dark ? 'bg-white/10 border border-white/20' : 'bg-black/10 border border-black/10'}`}>
+                  <div className="flex items-baseline justify-center gap-1 mb-1">
+                    <span className={`text-7xl lg:text-8xl font-heading font-black leading-none ${app.dark ? 'text-white' : 'text-foreground'}`}>
+                      {app.speed}
+                    </span>
+                    <span className={`text-xl font-bold ${app.dark ? 'text-accent' : 'text-primary'}`}>
+                      mega
+                    </span>
                   </div>
-                ))}
+                  <div className="flex items-start justify-center gap-0.5 mt-4">
+                    <span className={`text-lg font-medium mt-2 ${app.dark ? 'text-white/70' : 'text-muted-foreground'}`}>R$</span>
+                    <span className={`text-6xl lg:text-7xl font-heading font-black leading-none ${app.dark ? 'text-white' : 'text-foreground'}`}>
+                      {app.price}
+                    </span>
+                    <span className={`text-2xl font-bold mt-1 ${app.dark ? 'text-white' : 'text-foreground'}`}>,{app.cents}</span>
+                  </div>
+                  <span className={`text-sm block mt-2 ${app.dark ? 'text-white/50' : 'text-muted-foreground'}`}>/mês</span>
+                  <div className={`flex items-center justify-center gap-2 mt-4 text-sm ${app.dark ? 'text-white/60' : 'text-muted-foreground'}`}>
+                    <Wifi className="w-4 h-4" />
+                    <span>Internet + {app.title}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
-      {/* Streaming apps with banners */}
-      <section className="py-20 lg:py-28 bg-secondary/50">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-2">
-              Aplicativos de <span className="text-gradient">Streaming</span> disponíveis
+      {/* TV Packages Section */}
+      <section className="py-20 lg:py-28 bg-hero relative overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/10 blur-3xl" />
+        <div className="container mx-auto px-4 max-w-6xl relative">
+          <div className="text-center mb-4">
+            <Tv className="w-10 h-10 text-accent mx-auto mb-4" />
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-2">
+              TV e Streaming para maratonar <span className="text-gradient">sem limites!</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
-              *Os aplicativos estão disponíveis de acordo com o plano escolhido.
+            <p className="text-primary-foreground/60 text-lg max-w-2xl mx-auto">
+              São mais de 90 canais para você fazer da sua casa uma central de entretenimento.
             </p>
           </div>
 
-          <div className="space-y-8">
-            {streamingApps.map((app, index) => (
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto mt-12">
+            {tvPackages.map((pkg) => (
               <div
-                key={app.title}
-                className={`bg-card rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover transition-all duration-300 ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                key={pkg.name}
+                className="bg-primary-foreground/5 backdrop-blur-md border border-primary-foreground/10 rounded-3xl p-8 text-center hover:bg-primary-foreground/10 transition-all duration-300"
               >
-                <div className={`flex flex-col lg:flex-row ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                  {/* Banner */}
-                  <div className="lg:w-1/2 h-48 lg:h-auto relative overflow-hidden">
-                    <img
-                      src={app.banner}
-                      alt={`Banner ${app.title}`}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="lg:w-1/2 p-8 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 mb-4">
-                      <img
-                        src={app.logo}
-                        alt={`Logo ${app.title}`}
-                        className="h-12 w-12 object-contain rounded-xl"
-                      />
-                      <h3 className="font-heading text-2xl font-bold text-foreground">{app.title}</h3>
-                    </div>
-                    <p className="text-muted-foreground mb-6">{app.desc}</p>
-                    <div>
-                      <Button variant="outline" size="sm">
-                        Ver planos com {app.title}
-                      </Button>
-                    </div>
-                  </div>
+                <span className="inline-block bg-accent/20 text-accent font-bold text-sm uppercase tracking-wider px-4 py-1 rounded-full mb-4">
+                  {pkg.name}
+                </span>
+                <h3 className="font-heading text-xl font-bold text-primary-foreground mb-1">{pkg.channels}</h3>
+                <p className="text-primary-foreground/50 text-sm mb-6">{pkg.screens}</p>
+                <div className="flex items-start justify-center gap-0.5">
+                  <span className="text-primary-foreground/60 text-lg mt-2">R$</span>
+                  <span className="text-5xl font-heading font-black text-primary-foreground leading-none">{pkg.price}</span>
+                  <span className="text-xl font-bold text-primary-foreground mt-1">,{pkg.cents}*</span>
                 </div>
+                <span className="text-primary-foreground/40 text-sm block mt-1">/mês</span>
+                <Button variant="cta" size="lg" className="mt-6 w-full">
+                  Eu quero!
+                </Button>
               </div>
             ))}
           </div>
