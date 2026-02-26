@@ -1,7 +1,7 @@
 import { Camera as CameraIcon, Smartphone, Cloud, ShieldCheck, ChevronRight, Check, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import PageBanner from "@/components/PageBanner";
 import CoverageSection from "@/components/CoverageSection";
+import cameraBanner from "@/assets/banners/camera-banner.jpg";
 
 const cameraPlans = [
   {
@@ -33,12 +33,22 @@ const cameraPlans = [
 const Camera = () => {
   return (
     <>
-      <PageBanner
-        icon={CameraIcon}
-        title="NW3"
-        highlight="Câmera"
-        description="Monitoramento profissional com acesso remoto pelo celular. Segurança 24h para sua casa ou empresa."
-      />
+      {/* Banner com imagem */}
+      <section className="relative min-h-[380px] lg:min-h-[440px] flex items-center overflow-hidden">
+        <img src={cameraBanner} alt="NW3 Câmera" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative container mx-auto px-4 text-center">
+          <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+            <CameraIcon className="w-8 h-8 text-accent" />
+          </div>
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">
+            NW3 <span className="text-gradient">Câmera</span>
+          </h1>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Monitoramento profissional com acesso remoto pelo celular. Segurança 24h para sua casa ou empresa.
+          </p>
+        </div>
+      </section>
 
       {/* Features */}
       <section className="py-20 lg:py-28 bg-background">
