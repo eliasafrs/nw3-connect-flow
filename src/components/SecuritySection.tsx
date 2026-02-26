@@ -1,11 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { Camera, Smartphone, Cloud, ShieldCheck } from "lucide-react";
+import { Camera, Smartphone, Cloud, ShieldCheck, ChevronRight } from "lucide-react";
 
 const SecuritySection = () => {
   return (
-    <section id="seguranca" className="py-20 lg:py-28 bg-background">
+    <section id="seguranca" className="py-20 lg:py-28 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Left - visual card */}
+          <div className="bg-card rounded-3xl p-8 border border-border shadow-card relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+            <div className="relative text-center py-8">
+              <div className="w-24 h-24 rounded-3xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <Camera className="w-12 h-12 text-primary" />
+              </div>
+              <h3 className="font-heading text-2xl font-bold text-foreground mb-2">NW3 Câmera</h3>
+              <p className="text-muted-foreground text-sm max-w-xs mx-auto">
+                Veja o que acontece na sua casa em tempo real, de forma prática e rápida.
+              </p>
+            </div>
+          </div>
+
+          {/* Right - text */}
           <div>
             <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider mb-3">
               <Camera className="w-4 h-4" /> Segurança
@@ -34,15 +49,9 @@ const SecuritySection = () => {
             </ul>
 
             <Button variant="cta" size="lg">
-              Solicitar Orçamento
+              Quero praticidade
+              <ChevronRight className="w-5 h-5 ml-1" />
             </Button>
-          </div>
-
-          <div className="bg-card rounded-2xl p-8 border border-border shadow-card flex items-center justify-center min-h-[300px]">
-            <div className="text-center">
-              <Camera className="w-20 h-20 text-primary/20 mx-auto mb-4" />
-              <p className="text-muted-foreground text-sm">Imagem ilustrativa</p>
-            </div>
           </div>
         </div>
       </div>

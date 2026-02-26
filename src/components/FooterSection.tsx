@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Phone, Mail, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
               Conectando você ao que importa com fibra óptica de alta velocidade.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
+              {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
@@ -26,11 +26,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links */}
+          {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold text-primary-foreground mb-4">Links Rápidos</h4>
+            <h4 className="font-heading font-semibold text-primary-foreground mb-4">Serviços</h4>
             <ul className="space-y-2">
-              {["Planos Residenciais", "Planos Empresariais", "TV Digital", "Segurança"].map((l) => (
+              {["Internet", "Câmera", "TV & Streaming", "Telefone Fixo"].map((l) => (
                 <li key={l}>
                   <a href="#" className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
                     {l}
@@ -44,7 +44,7 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-primary-foreground mb-4">Suporte</h4>
             <ul className="space-y-2">
-              {["Área do Cliente", "2ª Via de Boleto", "Teste de Velocidade", "Política de Privacidade"].map((l) => (
+              {["Área do Cliente", "2ª Via de Boleto", "Teste de Velocidade", "Manual do Cliente", "Ouvidoria", "Documentos Legais"].map((l) => (
                 <li key={l}>
                   <a href="#" className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
                     {l}
