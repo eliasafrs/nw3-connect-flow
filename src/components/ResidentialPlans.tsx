@@ -1,5 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { Wifi, Check, ChevronRight } from "lucide-react";
+import { Check, ChevronRight } from "lucide-react";
+
+import disneyLogo from "@/assets/logos/disney-plus.png";
+import hboLogo from "@/assets/logos/hbo-max.png";
+import deezerLogo from "@/assets/logos/deezer.png";
+import globoplayLogo from "@/assets/logos/globoplay.png";
+
+const logoMap: Record<string, string> = {
+  "Deezer": deezerLogo,
+  "Deezer + Apple TV": deezerLogo,
+  "Disney+": disneyLogo,
+  "Disney+ & HBO Max": disneyLogo,
+};
+
+const secondLogoMap: Record<string, string | undefined> = {
+  "Disney+ & HBO Max": hboLogo,
+};
 
 const plans = [
   {
@@ -70,9 +86,28 @@ const ResidentialPlans = () => {
                 </div>
               </div>
 
-              {/* Streaming badge */}
-              <div className="bg-primary/10 rounded-lg px-3 py-2 text-center mb-4">
-                <span className="text-xs font-semibold text-primary">{plan.streaming}</span>
+              {/* Streaming logos */}
+              <div className="flex items-center justify-center gap-2 bg-primary/5 rounded-lg px-3 py-3 mb-4">
+                {logoMap[plan.streaming] && (
+                  <img
+                    src={logoMap[plan.streaming]}
+                    alt={plan.streaming}
+                    className="h-8 w-auto object-contain"
+                  />
+                )}
+                {secondLogoMap[plan.streaming] && (
+                  <>
+                    <span className="text-muted-foreground text-xs font-bold">+</span>
+                    <img
+                      src={secondLogoMap[plan.streaming]}
+                      alt=""
+                      className="h-8 w-auto object-contain"
+                    />
+                  </>
+                )}
+                {!logoMap[plan.streaming] && (
+                  <span className="text-xs font-semibold text-primary">{plan.streaming}</span>
+                )}
               </div>
 
               <div className="text-center mb-6">

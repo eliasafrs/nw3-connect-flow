@@ -3,6 +3,24 @@ import { Button } from "@/components/ui/button";
 import PageBanner from "@/components/PageBanner";
 import CoverageSection from "@/components/CoverageSection";
 
+import disneyLogo from "@/assets/logos/disney-plus.png";
+import hboLogo from "@/assets/logos/hbo-max.png";
+import globoplayLogo from "@/assets/logos/globoplay.png";
+import deezerLogo from "@/assets/logos/deezer.png";
+
+const logoMap: Record<string, string> = {
+  "Deezer": deezerLogo,
+  "Deezer + Globoplay": deezerLogo,
+  "Disney+ + Globoplay": disneyLogo,
+  "Disney+ & HBO Max": disneyLogo,
+};
+
+const secondLogoMap: Record<string, string | undefined> = {
+  "Deezer + Globoplay": globoplayLogo,
+  "Disney+ + Globoplay": globoplayLogo,
+  "Disney+ & HBO Max": hboLogo,
+};
+
 const plans = [
   {
     speed: "500",
@@ -92,9 +110,25 @@ const Internet = () => {
                   </span>
                 </div>
 
-                {/* Streaming badge */}
-                <div className="bg-primary/10 rounded-lg px-3 py-2 text-center mb-4">
-                  <span className="text-xs font-semibold text-primary">{plan.streaming}</span>
+                {/* Streaming logos */}
+                <div className="flex items-center justify-center gap-2 bg-primary/5 rounded-lg px-3 py-3 mb-4">
+                  {logoMap[plan.streaming] && (
+                    <img
+                      src={logoMap[plan.streaming]}
+                      alt={plan.streaming}
+                      className="h-8 w-auto object-contain"
+                    />
+                  )}
+                  {secondLogoMap[plan.streaming] && (
+                    <>
+                      <span className="text-muted-foreground text-xs font-bold">+</span>
+                      <img
+                        src={secondLogoMap[plan.streaming]}
+                        alt=""
+                        className="h-8 w-auto object-contain"
+                      />
+                    </>
+                  )}
                 </div>
 
                 <div className="text-center mb-6">

@@ -1,15 +1,31 @@
-import { Tv, Play, Music, Film, MonitorSmartphone, Radio, Gamepad2, Baby, Satellite } from "lucide-react";
+import { Tv, MonitorSmartphone, Radio } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageBanner from "@/components/PageBanner";
 
+import disneyLogo from "@/assets/logos/disney-plus.png";
+import hboLogo from "@/assets/logos/hbo-max.png";
+import globoplayLogo from "@/assets/logos/globoplay.png";
+import deezerLogo from "@/assets/logos/deezer.png";
+import playkidsLogo from "@/assets/logos/playkids.png";
+import exitlagLogo from "@/assets/logos/exitlag.png";
+import skyPlusLogo from "@/assets/logos/sky-plus.png";
+
+import disneyBanner from "@/assets/banners/disney-plus-banner.jpg";
+import hboBanner from "@/assets/banners/hbo-max-banner.jpg";
+import globoplayBanner from "@/assets/banners/globoplay-banner.jpg";
+import deezerBanner from "@/assets/banners/deezer-banner.jpg";
+import playkidsBanner from "@/assets/banners/playkids-banner.jpg";
+import exitlagBanner from "@/assets/banners/exitlag-banner.jpg";
+import skyPlusBanner from "@/assets/banners/sky-plus-banner.jpg";
+
 const streamingApps = [
-  { icon: Film, title: "Disney+", desc: "Filmes, séries, Star e esportes com ESPN" },
-  { icon: Play, title: "HBO Max", desc: "Séries premiadas, filmes e documentários" },
-  { icon: Tv, title: "Globoplay", desc: "Novelas, séries, jornalismo e esportes" },
-  { icon: Music, title: "Deezer", desc: "Suas playlists favoritas sem parar" },
-  { icon: Baby, title: "PlayKids", desc: "Conteúdo educativo e divertido para crianças" },
-  { icon: Gamepad2, title: "Exitlag", desc: "Otimize sua conexão para jogos online" },
-  { icon: Satellite, title: "Sky+", desc: "Canais ao vivo e conteúdo sob demanda" },
+  { logo: disneyLogo, banner: disneyBanner, title: "Disney+", desc: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic. Inclui Star e esportes com ESPN." },
+  { logo: hboLogo, banner: hboBanner, title: "HBO Max", desc: "As melhores séries como House of the Dragon, The Last of Us, e filmes premiados da Warner Bros." },
+  { logo: globoplayLogo, banner: globoplayBanner, title: "Globoplay", desc: "Novelas, séries originais, jornalismo, reality shows e transmissões ao vivo da TV Globo." },
+  { logo: deezerLogo, banner: deezerBanner, title: "Deezer", desc: "Mais de 90 milhões de músicas, podcasts e playlists personalizadas sem anúncios." },
+  { logo: playkidsLogo, banner: playkidsBanner, title: "PlayKids", desc: "Conteúdo educativo e divertido para crianças. Jogos, vídeos e livros em um ambiente seguro." },
+  { logo: exitlagLogo, banner: exitlagBanner, title: "Exitlag", desc: "Otimize sua conexão para jogos online. Reduza lag e melhore sua experiência gamer." },
+  { logo: skyPlusLogo, banner: skyPlusBanner, title: "Sky+", desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda." },
 ];
 
 const tvFeatures = [
@@ -62,7 +78,7 @@ const TVStreaming = () => {
         </div>
       </section>
 
-      {/* Streaming apps */}
+      {/* Streaming apps with banners */}
       <section className="py-20 lg:py-28 bg-secondary/50">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
@@ -74,17 +90,43 @@ const TVStreaming = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {streamingApps.map((app) => (
+          <div className="space-y-8">
+            {streamingApps.map((app, index) => (
               <div
                 key={app.title}
-                className="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 text-center"
+                className={`bg-card rounded-2xl overflow-hidden border border-border shadow-card hover:shadow-card-hover transition-all duration-300 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
               >
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                  <app.icon className="w-8 h-8 text-primary" />
+                <div className={`flex flex-col lg:flex-row ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+                  {/* Banner */}
+                  <div className="lg:w-1/2 h-48 lg:h-auto relative overflow-hidden">
+                    <img
+                      src={app.banner}
+                      alt={`Banner ${app.title}`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+                    <div className="flex items-center gap-4 mb-4">
+                      <img
+                        src={app.logo}
+                        alt={`Logo ${app.title}`}
+                        className="h-12 w-12 object-contain rounded-xl"
+                      />
+                      <h3 className="font-heading text-2xl font-bold text-foreground">{app.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground mb-6">{app.desc}</p>
+                    <div>
+                      <Button variant="outline" size="sm">
+                        Ver planos com {app.title}
+                      </Button>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-foreground mb-2">{app.title}</h3>
-                <p className="text-sm text-muted-foreground">{app.desc}</p>
               </div>
             ))}
           </div>
