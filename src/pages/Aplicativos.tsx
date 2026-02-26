@@ -1,50 +1,23 @@
-import { Play, Music, Film, Gamepad2, Baby, Satellite, Tv, AppWindow } from "lucide-react";
+import { AppWindow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageBanner from "@/components/PageBanner";
 
+import disneyLogo from "@/assets/logos/disney-plus.png";
+import hboLogo from "@/assets/logos/hbo-max.png";
+import globoplayLogo from "@/assets/logos/globoplay.png";
+import deezerLogo from "@/assets/logos/deezer.png";
+import playkidsLogo from "@/assets/logos/playkids.png";
+import exitlagLogo from "@/assets/logos/exitlag.png";
+import skyPlusLogo from "@/assets/logos/sky-plus.png";
+
 const apps = [
-  {
-    icon: Film,
-    title: "Disney+",
-    desc: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic. Inclui Star e esportes com ESPN.",
-    plans: "Planos a partir de 700 Mega",
-  },
-  {
-    icon: Play,
-    title: "HBO Max",
-    desc: "As melhores séries como House of the Dragon, The Last of Us, e filmes premiados da Warner Bros.",
-    plans: "Plano 1 Giga",
-  },
-  {
-    icon: Tv,
-    title: "Globoplay",
-    desc: "Novelas, séries originais, jornalismo, reality shows e transmissões ao vivo da TV Globo.",
-    plans: "Planos a partir de 600 Mega",
-  },
-  {
-    icon: Music,
-    title: "Deezer",
-    desc: "Mais de 90 milhões de músicas, podcasts e playlists personalizadas sem anúncios.",
-    plans: "Todos os planos",
-  },
-  {
-    icon: Baby,
-    title: "PlayKids",
-    desc: "Conteúdo educativo e divertido para crianças. Jogos, vídeos e livros em um ambiente seguro.",
-    plans: "Planos a partir de 500 Mega",
-  },
-  {
-    icon: Gamepad2,
-    title: "Exitlag",
-    desc: "Otimize sua conexão para jogos online. Reduza lag e melhore sua experiência gamer.",
-    plans: "Planos a partir de 600 Mega",
-  },
-  {
-    icon: Satellite,
-    title: "Sky+",
-    desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda.",
-    plans: "Planos a partir de 700 Mega",
-  },
+  { logo: disneyLogo, title: "Disney+", desc: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic. Inclui Star e esportes com ESPN.", plans: "Planos a partir de 700 Mega" },
+  { logo: hboLogo, title: "HBO Max", desc: "As melhores séries como House of the Dragon, The Last of Us, e filmes premiados da Warner Bros.", plans: "Plano 1 Giga" },
+  { logo: globoplayLogo, title: "Globoplay", desc: "Novelas, séries originais, jornalismo, reality shows e transmissões ao vivo da TV Globo.", plans: "Planos a partir de 600 Mega" },
+  { logo: deezerLogo, title: "Deezer", desc: "Mais de 90 milhões de músicas, podcasts e playlists personalizadas sem anúncios.", plans: "Todos os planos" },
+  { logo: playkidsLogo, title: "PlayKids", desc: "Conteúdo educativo e divertido para crianças. Jogos, vídeos e livros em um ambiente seguro.", plans: "Planos a partir de 500 Mega" },
+  { logo: exitlagLogo, title: "Exitlag", desc: "Otimize sua conexão para jogos online. Reduza lag e melhore sua experiência gamer.", plans: "Planos a partir de 600 Mega" },
+  { logo: skyPlusLogo, title: "Sky+", desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda.", plans: "Planos a partir de 700 Mega" },
 ];
 
 const Aplicativos = () => {
@@ -74,9 +47,11 @@ const Aplicativos = () => {
                 key={app.title}
                 className="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
-                  <app.icon className="w-8 h-8 text-primary" />
-                </div>
+                <img
+                  src={app.logo}
+                  alt={`Logo ${app.title}`}
+                  className="h-16 w-16 object-contain rounded-2xl mb-5"
+                />
                 <h3 className="font-heading text-xl font-bold text-foreground mb-2">{app.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{app.desc}</p>
                 <span className="inline-block bg-accent/10 text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">

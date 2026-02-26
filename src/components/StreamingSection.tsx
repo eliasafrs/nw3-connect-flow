@@ -1,22 +1,13 @@
-import { Play, Music, Film } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import disneyLogo from "@/assets/logos/disney-plus.png";
+import hboLogo from "@/assets/logos/hbo-max.png";
+import deezerLogo from "@/assets/logos/deezer.png";
+
 const apps = [
-  {
-    icon: Film,
-    title: "Disney+",
-    desc: "Os melhores filmes e séries do Star e esportes com a ESPN",
-  },
-  {
-    icon: Play,
-    title: "HBO Max",
-    desc: "Drama, comédia, realities e muito mais",
-  },
-  {
-    icon: Music,
-    title: "Deezer",
-    desc: "Suas playlists favoritas sem parar",
-  },
+  { logo: disneyLogo, title: "Disney+", desc: "Os melhores filmes e séries do Star e esportes com a ESPN" },
+  { logo: hboLogo, title: "HBO Max", desc: "Drama, comédia, realities e muito mais" },
+  { logo: deezerLogo, title: "Deezer", desc: "Suas playlists favoritas sem parar" },
 ];
 
 const StreamingSection = () => {
@@ -38,9 +29,11 @@ const StreamingSection = () => {
               key={app.title}
               className="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 text-center"
             >
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                <app.icon className="w-8 h-8 text-primary" />
-              </div>
+              <img
+                src={app.logo}
+                alt={`Logo ${app.title}`}
+                className="w-16 h-16 object-contain rounded-2xl mx-auto mb-5"
+              />
               <h3 className="font-heading text-lg font-bold text-foreground mb-2">{app.title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{app.desc}</p>
               <Button variant="outline" size="sm">
