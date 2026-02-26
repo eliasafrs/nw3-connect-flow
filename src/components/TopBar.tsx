@@ -38,7 +38,7 @@ const TopBar = ({ segment, onSegmentChange }: TopBarProps) => {
         <div className="hidden md:flex items-center gap-5">
           <span className="flex items-center gap-1.5 text-primary-foreground/80">
             <Phone className="w-3.5 h-3.5" />
-            Suporte 24h | (00) 0000-0000
+            Suporte 24h | (11) 2586-2995
           </span>
           <a
             href="https://wa.me/5500000000000"

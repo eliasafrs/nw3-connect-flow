@@ -81,7 +81,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-primary-foreground/50">
                 <Phone className="w-4 h-4 text-primary" />
-                (00) 0000-0000
+                (11) 2586-2995
               </li>
               <li className="flex items-center gap-2 text-sm text-primary-foreground/50">
                 <Mail className="w-4 h-4 text-primary" />
@@ -89,7 +89,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/50">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                Endereço da empresa
+                Rua Domingos Fernandes Nobre, 385 - Vila Itaim - São Paulo
               </li>
             </ul>
           </div>
@@ -97,7 +97,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-primary-foreground/40">
-            © 2025 NW3 Internet. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
+            © 2025 NW3 Internet. Todos os direitos reservados. CNPJ: 33.578.123/0001-63
           </p>
           <a href="#" className="text-xs text-primary-foreground/40 hover:text-primary-foreground transition-colors">
             Política de Privacidade
