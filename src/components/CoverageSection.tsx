@@ -4,28 +4,19 @@ import { MapPin, Search, CheckCircle, XCircle, Loader2 } from "lucide-react";
 
 // Lista de bairros/regiões atendidas pela NW3 - atualize conforme necessário
 const coveredNeighborhoods = [
-  "vila itaim",
-  "itaquera",
-  "são mateus",
-  "guaianases",
-  "cidade tiradentes",
-  "ferraz de vasconcelos",
-  "jardim iva",
-  "jardim são pedro",
-  "vila carmosina",
-  "vila verde",
-  "cohab josé bonifácio",
-  "parque boa esperança",
-  "jardim colorado",
-  "cidade líder",
-  "josé bonifácio",
-  "jardim são carlos",
-  "vila curuçá",
-  "poá",
+  "itaim paulista",
+  "jardim helena",
+  "ermelino matarazzo",
+  "vila formosa",
+  "tatuapé",
+  "tatuape",
 ];
 
 const coveredCepRanges = [
-  { start: "08100000", end: "08499999" }, // Zona Leste SP - região principal
+  { start: "08000000", end: "08150000" }, // Itaim Paulista / Jardim Helena
+  { start: "03300000", end: "03399999" }, // Ermelino Matarazzo
+  { start: "03400000", end: "03499999" }, // Vila Formosa
+  { start: "03060000", end: "03099999" }, // Tatuapé
 ];
 
 function normalizeCep(cep: string) {
@@ -217,7 +208,7 @@ const CoverageSection = () => {
             Principais Regiões Atendidas
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Vila Itaim", "Itaquera", "São Mateus", "Guaianases", "Cidade Tiradentes", "Ferraz de Vasconcelos"].map((city) => (
+            {["Itaim Paulista", "Jardim Helena", "Ermelino Matarazzo", "Vila Formosa", "Tatuapé"].map((city) => (
               <span
                 key={city}
                 className="bg-card border border-border rounded-full px-4 py-2 text-sm text-muted-foreground"
