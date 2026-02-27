@@ -15,30 +15,33 @@ const StreamingSection = () => {
     <section id="streaming" className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-2">
-            Acesse os <span className="text-gradient">aplicativos</span> do seu plano
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-foreground mb-2">
+            Streaming <span className="text-gradient">incluso</span> no seu plano
           </h2>
           <p className="text-muted-foreground text-lg">
-            *Os aplicativos estão disponíveis de acordo com o plano escolhido.
+            *Disponível de acordo com o plano escolhido.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-3 gap-5">
           {apps.map((app) => (
             <div
               key={app.title}
-              className="bg-card rounded-2xl p-8 border border-border shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 text-center"
+              className="group bg-card rounded-xl overflow-hidden border border-border shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
             >
-              <img
-                src={app.logo}
-                alt={`Logo ${app.title}`}
-                className="w-16 h-16 object-contain rounded-2xl mx-auto mb-5"
-              />
-              <h3 className="font-heading text-lg font-bold text-foreground mb-2">{app.title}</h3>
-              <p className="text-sm text-muted-foreground mb-4">{app.desc}</p>
-              <Button variant="outline" size="sm">
-                Ver mais
-              </Button>
+              <div className="h-1 bg-primary/15 group-hover:bg-accent transition-colors" />
+              <div className="p-7 text-center">
+                <img
+                  src={app.logo}
+                  alt={`Logo ${app.title}`}
+                  className="w-14 h-14 object-contain rounded-xl mx-auto mb-4"
+                />
+                <h3 className="font-heading text-lg font-bold text-foreground mb-2">{app.title}</h3>
+                <p className="text-sm text-muted-foreground mb-5">{app.desc}</p>
+                <Button variant="outline" size="sm">
+                  Ver mais
+                </Button>
+              </div>
             </div>
           ))}
         </div>
