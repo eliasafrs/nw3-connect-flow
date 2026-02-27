@@ -45,7 +45,7 @@ const Camera = () => {
             NW3 <span className="text-gradient">Câmera</span>
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Monitoramento profissional com acesso remoto pelo celular. Segurança 24h para sua casa ou empresa.
+            Visualize sua casa ou negócio de qualquer lugar, de forma prática e rápida pelo celular.
           </p>
         </div>
       </section>
@@ -55,11 +55,11 @@ const Camera = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Segurança e praticidade <span className="text-gradient">na palma da mão</span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                Visualize sua casa ou negócio <span className="text-gradient">de qualquer lugar</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Câmeras de alta definição com instalação profissional. Acompanhe tudo pelo celular, de qualquer lugar.
+                Câmeras de alta definição com instalação profissional. Acesse de forma prática e rápida pelo celular, onde você estiver.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
@@ -67,7 +67,7 @@ const Camera = () => {
                   { icon: Smartphone, text: "Acesso remoto pelo celular 24h" },
                   { icon: Cloud, text: "Gravação em nuvem disponível" },
                   { icon: ShieldCheck, text: "Ideal para residências e empresas" },
-                  { icon: Monitor, text: "Monitoramento em tempo real" },
+                  { icon: Monitor, text: "Visualização em tempo real" },
                 ].map((item) => (
                   <li key={item.text} className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
