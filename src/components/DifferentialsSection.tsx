@@ -1,35 +1,39 @@
 import { Headset, Signal, Wrench, MapPin, Heart } from "lucide-react";
 
 const items = [
-  { icon: Headset, title: "Suporte Rápido e Humanizado", desc: "Atendimento real, sem robôs" },
-  { icon: Signal, title: "Alta Estabilidade", desc: "Conexão que não cai" },
-  { icon: Wrench, title: "Técnicos Especializados", desc: "Equipe qualificada e ágil" },
+  { icon: Signal, title: "Alta Estabilidade", desc: "Conexão que não cai, mesmo nos horários de pico" },
+  { icon: Headset, title: "Suporte Humanizado", desc: "Atendimento real, sem robôs, 24 horas" },
+  { icon: Wrench, title: "Técnicos Especializados", desc: "Equipe qualificada na sua porta" },
   { icon: MapPin, title: "Atendimento Local", desc: "Estamos perto de você" },
-  { icon: Heart, title: "100% Regional", desc: "Empresa da sua região" },
+  { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, feita para você" },
 ];
 
 const DifferentialsSection = () => {
   return (
-    <section id="diferenciais" className="py-20 lg:py-28 bg-hero">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-          Por que escolher a <span className="text-gradient">NW3 Internet</span>?
-        </h2>
-        <p className="text-primary-foreground/60 text-lg mb-14 max-w-2xl mx-auto">
-          Mais do que um provedor, somos seu parceiro em conectividade.
-        </p>
+    <section id="diferenciais" className="py-20 lg:py-28 bg-primary">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-14">
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-primary-foreground mb-3">
+            Por que escolher a <span className="text-gradient">NW3</span>?
+          </h2>
+          <p className="text-primary-foreground/50 text-lg max-w-xl mx-auto">
+            Mais do que um provedor — somos seu parceiro em conectividade.
+          </p>
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-          {items.map((item) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+          {items.map((item, idx) => (
             <div
               key={item.title}
-              className="bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-xl p-6 hover:bg-primary-foreground/10 transition-all duration-300"
+              className="group relative bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] rounded-xl p-6 hover:bg-primary-foreground/[0.08] transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/30 flex items-center justify-center mx-auto mb-4">
-                <item.icon className="w-6 h-6 text-primary-glow" />
+              <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center mb-4">
+                <item.icon className="w-5 h-5 text-accent" />
               </div>
-              <h3 className="font-heading font-semibold text-primary-foreground text-sm mb-1">{item.title}</h3>
-              <p className="text-xs text-primary-foreground/50">{item.desc}</p>
+              <h3 className="font-heading font-bold text-primary-foreground text-sm mb-1.5">
+                {item.title}
+              </h3>
+              <p className="text-xs text-primary-foreground/40 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

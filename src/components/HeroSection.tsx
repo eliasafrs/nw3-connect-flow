@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import heroSlide3 from "@/assets/hero-slide-3.jpg";
@@ -56,7 +56,7 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative overflow-hidden min-h-[520px] lg:min-h-[600px]">
+    <section className="relative overflow-hidden min-h-[560px] lg:min-h-[620px]">
       {/* Background images */}
       {slides.map((s, i) => (
         <div
@@ -68,134 +68,126 @@ const HeroSection = () => {
           }}
         />
       ))}
-      <div className="absolute inset-0 bg-hero opacity-60" />
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,90%,8%)/0.92] via-[hsl(215,90%,8%)/0.75] to-[hsl(215,90%,8%)/0.3]" />
 
-      <div className="relative container mx-auto px-4 py-16 lg:py-20 flex items-center min-h-[520px] lg:min-h-[600px]">
-        <div className="grid lg:grid-cols-2 gap-8 items-center w-full">
-          {/* Left - promo card */}
-          <div className="flex justify-center lg:justify-start animate-fade-in-up">
-            <div className="bg-primary-foreground/95 backdrop-blur-md border-2 border-accent rounded-3xl p-8 text-center max-w-sm w-full shadow-xl">
-              <h2 className="font-heading text-2xl font-bold text-foreground mb-1">
-                {slide.tagline}
-              </h2>
-              <p className="text-muted-foreground text-sm mb-4">
-                {slide.subtitle}
-              </p>
+      <div className="relative container mx-auto px-4 py-20 lg:py-24 flex items-center min-h-[560px] lg:min-h-[620px]">
+        <div className="max-w-2xl">
+          {/* Tag */}
+          <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+            <Zap className="w-4 h-4 text-accent" />
+            <span className="text-accent text-sm font-semibold tracking-wide uppercase">
+              100% Fibra Óptica
+            </span>
+          </div>
 
-              <div className="bg-accent rounded-2xl p-4 mb-4">
-                {slide.speed ? (
-                  <div className="flex items-baseline justify-center gap-2">
-                    <span className="font-heading text-5xl font-bold text-accent-foreground">
-                      {slide.speed}
-                    </span>
-                    <span className="font-heading text-xl font-bold text-accent-foreground">
-                      {slide.label}
-                    </span>
-                  </div>
-                ) : (
-                  <div>
-                    <div className="font-heading text-xl font-bold text-accent-foreground">
-                      {slide.label}
-                    </div>
-                    {slide.extraInfo && (
-                      <div className="text-accent-foreground/80 text-sm">
-                        {slide.extraInfo}
-                      </div>
-                    )}
-                  </div>
-                )}
+          {/* Main heading */}
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-primary-foreground leading-[1.1] mb-4">
+            {slide.tagline}
+          </h1>
+          <p className="text-primary-foreground/70 text-lg sm:text-xl mb-8 max-w-lg">
+            {slide.subtitle}
+          </p>
+
+          {/* Speed + Price row */}
+          <div className="flex flex-wrap items-end gap-6 mb-8">
+            {slide.speed && (
+              <div className="flex items-baseline gap-1">
+                <span className="font-heading text-6xl lg:text-7xl font-black text-accent leading-none">
+                  {slide.speed}
+                </span>
+                <span className="font-heading text-xl font-bold text-accent/80 uppercase">
+                  {slide.label}
+                </span>
               </div>
-
-              <div className="flex items-baseline justify-center gap-1 mb-1">
-                <span className="text-muted-foreground text-lg">R$</span>
-                <span className="font-heading text-6xl font-bold text-foreground">
+            )}
+            {!slide.speed && slide.extraInfo && (
+              <div>
+                <div className="font-heading text-2xl font-bold text-accent">{slide.label}</div>
+                <div className="text-primary-foreground/60 text-sm">{slide.extraInfo}</div>
+              </div>
+            )}
+            <div className="border-l-2 border-primary-foreground/20 pl-6">
+              <div className="flex items-baseline gap-0.5">
+                <span className="text-primary-foreground/60 text-sm">R$</span>
+                <span className="font-heading text-5xl font-black text-primary-foreground leading-none">
                   {slide.price}
                 </span>
-                <div className="text-left">
-                  <span className="text-muted-foreground text-xl block leading-none">
+                <div className="flex flex-col">
+                  <span className="text-primary-foreground/80 text-lg leading-none">
                     {slide.cents}
                   </span>
-                  <span className="text-muted-foreground text-sm">/mês</span>
+                  <span className="text-primary-foreground/50 text-xs">/mês</span>
                 </div>
               </div>
-              <p className="text-muted-foreground/60 text-xs mb-5">
-                {slide.note}
-              </p>
-              <Button variant="cta" className="w-full text-base">
-                {slide.cta}
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
+              <p className="text-primary-foreground/40 text-xs mt-1">{slide.note}</p>
             </div>
           </div>
 
-          {/* Right - side buttons like Z6 */}
-          <div className="hidden lg:flex flex-col items-end gap-3">
-            <a
-              href="#"
-              className="flex items-center gap-2 bg-primary-foreground/15 hover:bg-primary-foreground/25 border border-accent text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-colors backdrop-blur-sm"
-            >
-              📄 2ª Via do Boleto
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-2 bg-[hsl(330,70%,50%)] hover:bg-[hsl(330,70%,45%)] text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
-            >
-              📸 Siga-nos no Instagram
-            </a>
+          <div className="flex flex-wrap gap-3">
+            <Button variant="cta" size="lg" className="text-base px-8">
+              {slide.cta}
+              <ChevronRight className="w-5 h-5 ml-1" />
+            </Button>
             <a
               href="https://wa.me/551125862995"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,40%)] text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
             >
-              💬 Fale no WhatsApp
+              <Button variant="outline" size="lg" className="text-base border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground px-8">
+                💬 WhatsApp
+              </Button>
             </a>
           </div>
         </div>
+
+        {/* Side quick links - desktop */}
+        <div className="hidden lg:flex flex-col gap-3 absolute right-8 top-1/2 -translate-y-1/2">
+          <a
+            href="#"
+            className="flex items-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all backdrop-blur-sm"
+          >
+            📄 2ª Via do Boleto
+          </a>
+          <a
+            href="#"
+            className="flex items-center gap-2 bg-[hsl(330,70%,50%)]/90 hover:bg-[hsl(330,70%,45%)] text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all"
+          >
+            📸 Instagram
+          </a>
+        </div>
       </div>
 
-      {/* Carousel arrows */}
+      {/* Navigation arrows */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/40 backdrop-blur-sm flex items-center justify-center transition-colors z-10"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-primary-foreground/10"
         aria-label="Anterior"
       >
-        <ChevronLeft className="w-6 h-6 text-primary-foreground" />
+        <ChevronLeft className="w-5 h-5 text-primary-foreground" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/40 backdrop-blur-sm flex items-center justify-center transition-colors z-10"
+        className="absolute right-4 lg:right-56 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-primary-foreground/10"
         aria-label="Próximo"
       >
-        <ChevronRight className="w-6 h-6 text-primary-foreground" />
+        <ChevronRight className="w-5 h-5 text-primary-foreground" />
       </button>
 
-      {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      {/* Progress indicators */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`h-1 rounded-full transition-all duration-500 ${
               i === current
-                ? "bg-accent w-8"
-                : "bg-primary-foreground/40 hover:bg-primary-foreground/60"
+                ? "bg-accent w-10"
+                : "bg-primary-foreground/30 w-6 hover:bg-primary-foreground/50"
             }`}
             aria-label={`Slide ${i + 1}`}
           />
         ))}
-      </div>
-
-      {/* Bottom bar */}
-      <div className="absolute bottom-0 left-0 right-0 bg-accent">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-center gap-4">
-          <span className="font-heading text-lg font-bold text-accent-foreground uppercase">
-            O futuro começa
-          </span>
-          <span className="font-heading text-lg font-bold text-accent-foreground uppercase">
-            com nossa internet
-          </span>
-        </div>
       </div>
     </section>
   );
