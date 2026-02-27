@@ -1,42 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Search, CheckCircle, XCircle, Loader2 } from "lucide-react";
-
-// Lista de bairros/regiões atendidas pela NW3 - atualize conforme necessário
-const coveredNeighborhoods = [
-  "itaim paulista",
-  "jardim helena",
-  "ermelino matarazzo",
-  "vila formosa",
-  "tatuapé",
-  "tatuape",
-];
-
-const coveredCepRanges = [
-  { start: "03001000", end: "03090999" }, // Tatuapé (Centro 07)
-  { start: "03301000", end: "03540999" }, // Tatuapé (Leste 03-05, FR VIII)
-  { start: "03201000", end: "03295999" }, // Vila Formosa (Leste 02)
-  { start: "03337000", end: "03390999" }, // Vila Formosa (Leste 03 C-E)
-  { start: "03801000", end: "03896999" }, // Ermelino Matarazzo (Leste 08)
-  { start: "08010000", end: "08090999" }, // Jardim Helena (Leste 10)
-  { start: "08110000", end: "08192999" }, // Itaim Paulista (Leste 11)
-];
+import { isInCoverageArea, geocodeCep } from "@/lib/coverage-polygons";
 
 function normalizeCep(cep: string) {
   return cep.replace(/\D/g, "");
-}
-
-function isCepInRange(cep: string) {
-  const num = normalizeCep(cep);
-  if (num.length !== 8) return false;
-  return coveredCepRanges.some(
-    (range) => num >= range.start && num <= range.end
-  );
-}
-
-function isNeighborhoodCovered(bairro: string) {
-  const normalized = bairro.toLowerCase().trim();
-  return coveredNeighborhoods.some((n) => normalized.includes(n) || n.includes(normalized));
 }
 
 type Result = {
@@ -51,7 +19,6 @@ const CoverageSection = () => {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Result>(null);
   const [error, setError] = useState("");
-  const [showMap, setShowMap] = useState(false);
 
   const formatCep = (value: string) => {
     const digits = value.replace(/\D/g, "").slice(0, 8);
@@ -76,6 +43,7 @@ const CoverageSection = () => {
     setResult(null);
 
     try {
+      // 1. Get address info from ViaCEP
       const response = await fetch(`https://viacep.com.br/ws/${cleanCep}/json/`);
       const data = await response.json();
 
@@ -88,10 +56,14 @@ const CoverageSection = () => {
       const localidade = data.localidade || "";
       const logradouro = data.logradouro || "";
 
-      const available =
-        isCepInRange(cleanCep) ||
-        isNeighborhoodCovered(bairro) ||
-        isNeighborhoodCovered(localidade);
+      // 2. Geocode the CEP to get coordinates
+      const coords = await geocodeCep(cleanCep);
+
+      let available = false;
+      if (coords) {
+        // 3. Check if coordinates fall inside any coverage polygon
+        available = isInCoverageArea(coords.lat, coords.lng);
+      }
 
       setResult({
         available,
@@ -121,7 +93,6 @@ const CoverageSection = () => {
           </p>
         </div>
 
-        {/* CEP search */}
         <form
           onSubmit={handleSubmit}
           className="bg-card rounded-2xl p-8 border border-border shadow-card mx-auto mb-8"
@@ -206,13 +177,12 @@ const CoverageSection = () => {
           )}
         </form>
 
-        {/* Cities */}
         <div className="text-center">
           <h3 className="font-heading font-semibold text-foreground mb-4">
             Principais Regiões Atendidas
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Itaim Paulista", "Jardim Helena", "Ermelino Matarazzo", "Vila Formosa", "Tatuapé"].map((city) => (
+            {["Itaim Paulista", "Jardim Helena", "Ermelino Matarazzo", "Vila Formosa", "Tatuapé", "Cangaíba", "Vila Califórnia", "Jabaquara"].map((city) => (
               <span
                 key={city}
                 className="bg-card border border-border rounded-full px-4 py-2 text-sm text-muted-foreground"
@@ -222,26 +192,6 @@ const CoverageSection = () => {
               </span>
             ))}
           </div>
-
-          <button
-            onClick={() => setShowMap(!showMap)}
-            className="mt-6 text-primary hover:text-primary/80 text-sm font-medium underline underline-offset-4 transition-colors"
-          >
-            {showMap ? "Ocultar mapa de cobertura" : "Ver mapa de cobertura"}
-          </button>
-
-          {showMap && (
-            <div className="mt-4 rounded-2xl overflow-hidden border border-border shadow-card">
-              <iframe
-                src="https://www.google.com/maps/d/embed?mid=1IE0qc7pGi3Cj3jZ_7wHCuSLcHSzRhCQ&ehbc=2E312F"
-                width="100%"
-                height="480"
-                className="w-full"
-                loading="lazy"
-                title="Mapa de cobertura NW3"
-              />
-            </div>
-          )}
         </div>
       </div>
     </section>
