@@ -675,30 +675,88 @@ export async function geocodeAddress(
   uf: string,
   cep: string
 ): Promise<{ lat: number; lng: number } | null> {
+  const normalizedCity = localidade
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
+  const normalizeText = (value: string) =>
+    value
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+
+  const formattedCep = `${cep.slice(0, 5)}-${cep.slice(5)}`;
   const queries = [
-    // Try full address first
-    logradouro
-      ? `${logradouro}, ${bairro}, ${localidade}, ${uf}, Brazil`
-      : `${bairro}, ${localidade}, ${uf}, Brazil`,
-    // Fallback: neighborhood + city
+    logradouro ? `${logradouro}, ${bairro}, ${localidade}, ${uf}, Brazil` : "",
+    logradouro ? `${logradouro}, ${localidade}, ${uf}, Brazil` : "",
     `${bairro}, ${localidade}, ${uf}, Brazil`,
-    // Fallback: formatted CEP
-    `${cep.slice(0, 5)}-${cep.slice(5)}, São Paulo, Brazil`,
-  ];
+    `${formattedCep}, ${localidade}, ${uf}, Brazil`,
+  ].filter(Boolean);
+
+  let bestMatch: { lat: number; lng: number } | null = null;
 
   for (const q of queries) {
     try {
       const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=1&countrycodes=br`,
+        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=5&addressdetails=1&countrycodes=br`,
         { headers: { "User-Agent": "NW3-Internet-App" } }
       );
-      const data = await response.json();
-      if (data && data.length > 0) {
-        return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+
+      const data: Array<{
+        lat: string;
+        lon: string;
+        display_name?: string;
+        address?: {
+          city?: string;
+          town?: string;
+          municipality?: string;
+          village?: string;
+          city_district?: string;
+          county?: string;
+        };
+      }> = await response.json();
+
+      if (!Array.isArray(data) || data.length === 0) continue;
+
+      for (const item of data) {
+        const lat = parseFloat(item.lat);
+        const lng = parseFloat(item.lon);
+
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+
+        const cityCandidates = [
+          item.address?.city,
+          item.address?.town,
+          item.address?.municipality,
+          item.address?.village,
+          item.address?.city_district,
+          item.address?.county,
+        ]
+          .filter(Boolean)
+          .map((value) => normalizeText(value as string));
+
+        const cityMatchesByAddress = cityCandidates.some((city) => city === normalizedCity);
+        const cityMatchesByDisplay =
+          cityCandidates.length === 0 &&
+          normalizeText(item.display_name || "").includes(`, ${normalizedCity},`);
+
+        if (!cityMatchesByAddress && !cityMatchesByDisplay) continue;
+
+        if (isInCoverageArea(lat, lng)) {
+          return { lat, lng };
+        }
+
+        if (!bestMatch) {
+          bestMatch = { lat, lng };
+        }
       }
     } catch {
       continue;
     }
   }
-  return null;
+
+  return bestMatch;
 }
+
