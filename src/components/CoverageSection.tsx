@@ -13,10 +13,13 @@ const coveredNeighborhoods = [
 ];
 
 const coveredCepRanges = [
-  { start: "08000000", end: "08150000" }, // Itaim Paulista / Jardim Helena
-  { start: "03300000", end: "03399999" }, // Ermelino Matarazzo
-  { start: "03400000", end: "03499999" }, // Vila Formosa
-  { start: "03060000", end: "03099999" }, // Tatuapé
+  { start: "03001000", end: "03090999" }, // Tatuapé (Centro 07)
+  { start: "03301000", end: "03540999" }, // Tatuapé (Leste 03-05, FR VIII)
+  { start: "03201000", end: "03295999" }, // Vila Formosa (Leste 02)
+  { start: "03337000", end: "03390999" }, // Vila Formosa (Leste 03 C-E)
+  { start: "03801000", end: "03896999" }, // Ermelino Matarazzo (Leste 08)
+  { start: "08010000", end: "08090999" }, // Jardim Helena (Leste 10)
+  { start: "08110000", end: "08192999" }, // Itaim Paulista (Leste 11)
 ];
 
 function normalizeCep(cep: string) {
