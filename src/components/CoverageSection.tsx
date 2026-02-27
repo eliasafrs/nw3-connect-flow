@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Search, CheckCircle, XCircle, Loader2 } from "lucide-react";
-import { isInCoverageArea, geocodeCep } from "@/lib/coverage-polygons";
+import { isInCoverageArea, geocodeAddress } from "@/lib/coverage-polygons";
 
 function normalizeCep(cep: string) {
   return cep.replace(/\D/g, "");
@@ -56,8 +56,8 @@ const CoverageSection = () => {
       const localidade = data.localidade || "";
       const logradouro = data.logradouro || "";
 
-      // 2. Geocode the CEP to get coordinates
-      const coords = await geocodeCep(cleanCep);
+      // 2. Geocode using full address from ViaCEP
+      const coords = await geocodeAddress(logradouro, bairro, localidade, data.uf || "", cleanCep);
 
       let available = false;
       if (coords) {

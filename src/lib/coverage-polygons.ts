@@ -668,19 +668,37 @@ export function isInCoverageArea(lat: number, lng: number): boolean {
   return coveragePolygons.some((poly) => isPointInPolygon(point, poly.coords));
 }
 
-export async function geocodeCep(cep: string): Promise<{ lat: number; lng: number } | null> {
-  try {
-    // Try Nominatim first
-    const response = await fetch(
-      `https://nominatim.openstreetmap.org/search?postalcode=${cep}&country=BR&format=json&limit=1`,
-      { headers: { "User-Agent": "NW3-Internet-App" } }
-    );
-    const data = await response.json();
-    if (data && data.length > 0) {
-      return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+export async function geocodeAddress(
+  logradouro: string,
+  bairro: string,
+  localidade: string,
+  uf: string,
+  cep: string
+): Promise<{ lat: number; lng: number } | null> {
+  const queries = [
+    // Try full address first
+    logradouro
+      ? `${logradouro}, ${bairro}, ${localidade}, ${uf}, Brazil`
+      : `${bairro}, ${localidade}, ${uf}, Brazil`,
+    // Fallback: neighborhood + city
+    `${bairro}, ${localidade}, ${uf}, Brazil`,
+    // Fallback: formatted CEP
+    `${cep.slice(0, 5)}-${cep.slice(5)}, São Paulo, Brazil`,
+  ];
+
+  for (const q of queries) {
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=1&countrycodes=br`,
+        { headers: { "User-Agent": "NW3-Internet-App" } }
+      );
+      const data = await response.json();
+      if (data && data.length > 0) {
+        return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+      }
+    } catch {
+      continue;
     }
-    return null;
-  } catch {
-    return null;
   }
+  return null;
 }
