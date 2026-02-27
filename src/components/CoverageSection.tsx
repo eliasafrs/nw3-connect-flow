@@ -51,6 +51,7 @@ const CoverageSection = () => {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Result>(null);
   const [error, setError] = useState("");
+  const [showMap, setShowMap] = useState(false);
 
   const formatCep = (value: string) => {
     const digits = value.replace(/\D/g, "").slice(0, 8);
@@ -221,6 +222,26 @@ const CoverageSection = () => {
               </span>
             ))}
           </div>
+
+          <button
+            onClick={() => setShowMap(!showMap)}
+            className="mt-6 text-primary hover:text-primary/80 text-sm font-medium underline underline-offset-4 transition-colors"
+          >
+            {showMap ? "Ocultar mapa de cobertura" : "Ver mapa de cobertura"}
+          </button>
+
+          {showMap && (
+            <div className="mt-4 rounded-2xl overflow-hidden border border-border shadow-card">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1IE0qc7pGi3Cj3jZ_7wHCuSLcHSzRhCQ&ehbc=2E312F"
+                width="100%"
+                height="480"
+                className="w-full"
+                loading="lazy"
+                title="Mapa de cobertura NW3"
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>
