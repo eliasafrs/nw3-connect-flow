@@ -18,29 +18,29 @@ const secondLogoMap: Record<string, string | undefined> = {
 
 const plans = [
   {
-    speed: "500",
-    price: "99",
+    speed: "400",
+    price: "79",
     cents: ",90",
     streaming: "Deezer",
     popular: false,
   },
   {
     speed: "600",
-    price: "109",
+    price: "99",
     cents: ",90",
-    streaming: "Deezer + Apple TV",
+    streaming: "Deezer",
     popular: true,
   },
   {
     speed: "700",
-    price: "129",
+    price: "109",
     cents: ",90",
     streaming: "Disney+",
     popular: false,
   },
   {
     speed: "1 Giga",
-    price: "179",
+    price: "149",
     cents: ",90",
     streaming: "Disney+ & HBO Max",
     popular: false,
