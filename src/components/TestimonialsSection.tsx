@@ -53,47 +53,42 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-secondary/40">
+    <section className="py-20 lg:py-28 bg-secondary/60">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-8 h-px bg-accent" />
-            <span className="text-accent text-xs font-medium tracking-[0.2em] uppercase">Depoimentos</span>
-            <div className="w-8 h-px bg-accent" />
-          </div>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-3">
-            Quem usa, recomenda
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
+            Quem usa, <span className="text-gradient">recomenda</span>
           </h2>
-          <p className="text-muted-foreground text-base">
+          <p className="text-muted-foreground text-lg">
             Veja o que nossos clientes dizem sobre a NW3.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-card rounded p-6 border border-border shadow-card hover:shadow-card-hover transition-all duration-300 relative"
+              className="bg-card rounded-xl p-6 border border-border shadow-card hover:shadow-card-hover transition-all duration-300 relative"
             >
-              <Quote className="w-7 h-7 text-accent/10 absolute top-5 right-5" />
+              <Quote className="w-8 h-8 text-primary/10 absolute top-4 right-4" />
               <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: t.stars }).map((_, i) => (
-                  <Star key={i} className="w-3 h-3 fill-accent text-accent" />
+                  <Star key={i} className="w-3.5 h-3.5 fill-accent text-accent" />
                 ))}
                 {Array.from({ length: 5 - t.stars }).map((_, i) => (
-                  <Star key={i} className="w-3 h-3 text-muted" />
+                  <Star key={i} className="w-3.5 h-3.5 text-muted" />
                 ))}
               </div>
-              <p className="text-foreground/80 mb-5 text-sm leading-relaxed">"{t.text}"</p>
+              <p className="text-foreground mb-5 text-sm leading-relaxed">"{t.text}"</p>
               <div className="flex items-center justify-between border-t border-border pt-4">
                 <div>
-                  <p className="font-heading font-semibold text-foreground text-sm">{t.name}</p>
-                  <p className="text-[11px] text-muted-foreground flex items-center gap-1">
-                    <MapPin className="w-2.5 h-2.5" />
+                  <p className="font-heading font-bold text-foreground text-sm">{t.name}</p>
+                  <p className="text-xs text-muted-foreground flex items-center gap-1">
+                    <MapPin className="w-3 h-3" />
                     {t.location}
                   </p>
                 </div>
-                <span className="text-[10px] text-muted-foreground font-medium bg-secondary px-2 py-0.5 rounded-sm">
+                <span className="text-[10px] text-muted-foreground font-medium bg-secondary px-2 py-0.5 rounded">
                   {t.source} · {t.date}
                 </span>
               </div>

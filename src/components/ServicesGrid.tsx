@@ -2,41 +2,38 @@ import { Wifi, Camera, Tv, Phone, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
-  { icon: Wifi, label: "Internet", href: "/internet", desc: "Planos de 500 a 1 Giga" },
-  { icon: Camera, label: "Câmera", href: "/camera", desc: "Monitoramento inteligente" },
-  { icon: Tv, label: "TV & Streaming", href: "/tv-streaming", desc: "Seus canais favoritos" },
-  { icon: Phone, label: "Fixo", href: "/fixo", desc: "Ligações ilimitadas" },
+  { icon: Wifi, label: "Internet", href: "/internet", color: "from-primary to-primary-glow" },
+  { icon: Camera, label: "Câmera", href: "/camera", color: "from-primary to-accent" },
+  { icon: Tv, label: "TV & Streaming", href: "/tv-streaming", color: "from-primary-dark to-primary" },
+  { icon: Phone, label: "Fixo", href: "/fixo", color: "from-accent to-primary-glow" },
 ];
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 lg:py-28 bg-primary relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-hero relative overflow-hidden">
+      <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
+
       <div className="relative container mx-auto px-4 text-center">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="w-8 h-px bg-accent" />
-          <span className="text-accent text-xs font-medium tracking-[0.2em] uppercase">Nossos Serviços</span>
-          <div className="w-8 h-px bg-accent" />
-        </div>
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-3">
-          Tudo que você precisa
+          Quem tem <span className="text-gradient">NW3</span>, tem tudo!
         </h2>
-        <p className="text-primary-foreground/40 text-base mb-14 max-w-lg mx-auto">
-          Soluções completas de conectividade em um só lugar.
+        <p className="text-primary-foreground/50 text-lg mb-14 max-w-xl mx-auto">
+          Todos os serviços que você precisa em um só lugar.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {services.map((s) => (
             <Link
               key={s.label}
               to={s.href}
-              className="group bg-primary-foreground/[0.03] border border-primary-foreground/[0.08] rounded p-8 hover:bg-primary-foreground/[0.06] transition-all duration-300"
+              className="group bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 hover:bg-primary-foreground/10 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-14 h-14 rounded bg-accent/10 flex items-center justify-center mx-auto mb-5">
-                <s.icon className="w-6 h-6 text-accent" />
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center mx-auto mb-5 shadow-glow`}>
+                <s.icon className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h3 className="font-heading font-semibold text-primary-foreground text-lg mb-1">{s.label}</h3>
-              <p className="text-primary-foreground/30 text-xs mb-3">{s.desc}</p>
-              <span className="inline-flex items-center gap-1 text-[11px] text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity tracking-wide">
+              <h3 className="font-heading font-bold text-primary-foreground text-lg mb-2">{s.label}</h3>
+              <span className="inline-flex items-center gap-1 text-xs text-primary-glow font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                 Ver mais <ChevronRight className="w-3 h-3" />
               </span>
             </Link>
