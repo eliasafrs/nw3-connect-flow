@@ -10,30 +10,35 @@ const items = [
 
 const DifferentialsSection = () => {
   return (
-    <section id="diferenciais" className="py-20 lg:py-28 bg-primary">
+    <section id="diferenciais" className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-primary-foreground mb-3">
-            Por que escolher a <span className="text-gradient">NW3</span>?
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-px bg-accent" />
+            <span className="text-accent text-xs font-medium tracking-[0.2em] uppercase">Diferenciais</span>
+            <div className="w-8 h-px bg-accent" />
+          </div>
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-3">
+            Por que escolher a NW3?
           </h2>
-          <p className="text-primary-foreground/50 text-lg max-w-xl mx-auto">
+          <p className="text-muted-foreground text-base max-w-xl mx-auto">
             Mais do que um provedor — somos seu parceiro em conectividade.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-          {items.map((item, idx) => (
+          {items.map((item) => (
             <div
               key={item.title}
-              className="group relative bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] rounded-xl p-6 hover:bg-primary-foreground/[0.08] transition-all duration-300"
+              className="group bg-card border border-border rounded p-6 hover:shadow-card-hover transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center mb-4">
-                <item.icon className="w-5 h-5 text-accent" />
+              <div className="w-10 h-10 rounded bg-primary/5 flex items-center justify-center mb-4">
+                <item.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-heading font-bold text-primary-foreground text-sm mb-1.5">
+              <h3 className="font-heading font-semibold text-foreground text-sm mb-1.5">
                 {item.title}
               </h3>
-              <p className="text-xs text-primary-foreground/40 leading-relaxed">{item.desc}</p>
+              <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
