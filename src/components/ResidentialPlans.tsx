@@ -60,7 +60,7 @@ const ResidentialPlans = () => {
             O plano perfeito para <span className="text-gradient">sua casa</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Todos com streaming incluso e instalação gratuita 🤩
+            Aplicativo de canais de TV incluso em todos os planos 📺
           </p>
         </div>
 
@@ -148,7 +148,7 @@ const ResidentialPlans = () => {
             Incluído em todos os planos
           </h3>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {["Instalação gratuita", "Roteador Wi-Fi incluso", "100% Fibra Óptica", "Suporte 24h"].map((item) => (
+            {["Roteador Wi-Fi incluso", "100% Fibra Óptica", "Suporte 24h", "Canais de TV no app"].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-accent" />
                 <span className="font-medium text-primary-foreground text-sm">{item}</span>
