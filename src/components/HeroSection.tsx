@@ -59,13 +59,12 @@ const HeroSection = () => {
     <section className="relative overflow-hidden min-h-[560px] lg:min-h-[620px]">
       {/* Background images */}
       {slides.map((s, i) => (
-        <div
+        <img
           key={i}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-700"
-          style={{
-            backgroundImage: `url(${s.image})`,
-            opacity: i === current ? 1 : 0,
-          }}
+          src={s.image}
+          alt={s.tagline}
+          className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center transition-opacity duration-700"
+          style={{ opacity: i === current ? 1 : 0 }}
         />
       ))}
       {/* Dark gradient overlay */}
