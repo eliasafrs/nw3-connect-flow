@@ -56,21 +56,21 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative overflow-hidden min-h-[560px] lg:min-h-[620px]">
+    <section className="relative overflow-hidden min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
       {/* Background images */}
       {slides.map((s, i) => (
         <img
           key={i}
           src={s.image}
           alt={s.tagline}
-          className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center transition-opacity duration-700"
+          className="absolute inset-0 w-full h-full object-cover object-top sm:object-center transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         />
       ))}
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,90%,8%)/0.92] via-[hsl(215,90%,8%)/0.75] to-[hsl(215,90%,8%)/0.3]" />
 
-      <div className="relative container mx-auto px-4 py-20 lg:py-24 flex items-center min-h-[560px] lg:min-h-[620px]">
+      <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-24 flex items-center min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
         <div className="max-w-2xl">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
