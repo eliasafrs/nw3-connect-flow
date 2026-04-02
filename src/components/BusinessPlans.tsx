@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-  Building2, Server, Shield, Headset, Globe, Wifi, Phone, Camera,
+  Building2, Server, Shield, Headset, Globe, Wifi, Phone, Cctv,
   Clock, ChevronRight, Check, Zap, Award, Users, ArrowUpDown, Link as LinkIcon
 } from "lucide-react";
 import businessHero from "@/assets/banners/business-hero.jpg";
