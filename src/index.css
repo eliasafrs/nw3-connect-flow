@@ -15,12 +15,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 50% 12%;
 
-    --primary: 240 96% 23%;
+    --primary: 225 90% 16%;
     --primary-foreground: 0 0% 100%;
 
-    --primary-light: 224 75% 53%;
-    --primary-dark: 240 96% 15%;
-    --primary-glow: 224 75% 58%;
+    --primary-light: 220 72% 42%;
+    --primary-dark: 225 90% 10%;
+    --primary-glow: 220 72% 48%;
 
     --secondary: 210 20% 94%;
     --secondary-foreground: 215 50% 12%;
