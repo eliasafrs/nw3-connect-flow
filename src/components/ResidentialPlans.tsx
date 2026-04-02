@@ -88,28 +88,28 @@ const ResidentialPlans = () => {
                 </div>
 
                 {/* Streaming logos */}
-                <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
-                  {logoMap[plan.streaming] && (
-                    <img
-                      src={logoMap[plan.streaming]}
-                      alt={plan.streaming}
-                      className="h-7 w-auto object-contain"
-                    />
-                  )}
-                  {secondLogoMap[plan.streaming] && (
-                    <>
-                      <span className="text-muted-foreground text-xs font-bold">+</span>
+                {plan.streaming && (
+                  <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
+                    {logoMap[plan.streaming] && (
                       <img
-                        src={secondLogoMap[plan.streaming]}
-                        alt=""
+                        src={logoMap[plan.streaming]}
+                        alt={plan.streaming}
                         className="h-7 w-auto object-contain"
                       />
-                    </>
-                  )}
-                  {!logoMap[plan.streaming] && (
-                    <span className="text-xs font-semibold text-primary">{plan.streaming}</span>
-                  )}
-                </div>
+                    )}
+                    {secondLogoMap[plan.streaming] && (
+                      <>
+                        <span className="text-muted-foreground text-xs font-bold">+</span>
+                        <img
+                          src={secondLogoMap[plan.streaming]}
+                          alt=""
+                          className="h-7 w-auto object-contain"
+                        />
+                      </>
+                    )}
+                  </div>
+                )}
+                {!plan.streaming && <div className="mb-5" />}
 
                 {/* Price */}
                 <div className="mb-5">
