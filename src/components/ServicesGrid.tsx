@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const services = [
   { icon: Wifi, label: "Internet", href: "/internet", color: "from-primary to-primary-glow" },
-  { icon: Camera, label: "Câmera", href: "/camera", color: "from-primary to-accent" },
+  { icon: Cctv, label: "Câmera", href: "/camera", color: "from-primary to-accent" },
   { icon: Phone, label: "Fixo", href: "/fixo", color: "from-accent to-primary-glow" },
 ];
 

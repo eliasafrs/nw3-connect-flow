@@ -34,7 +34,7 @@ const SecuritySection = () => {
 
             <ul className="space-y-4 mb-8">
               {[
-                { icon: Camera, text: "Instalação profissional de câmeras" },
+                { icon: Cctv, text: "Instalação profissional de câmeras" },
                 { icon: Smartphone, text: "Acesso remoto pelo celular" },
                 { icon: ShieldCheck, text: "Ideal para residências e empresas" },
                 { icon: Cloud, text: "Gravação em nuvem (opcional)" },
