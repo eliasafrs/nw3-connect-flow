@@ -16,7 +16,7 @@ const Footer = () => {
               Conectando você ao que importa com fibra óptica de alta velocidade.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
+              {[Facebook, Instagram].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
