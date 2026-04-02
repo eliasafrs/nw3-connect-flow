@@ -88,7 +88,7 @@ const Footer = () => {
                 contato@nw3internet.com.br
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/50">
-                <MapPin className="w-4 h-4 text-primary-foreground flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-primary-foreground" />
                 Rua Domingos Fernandes Nobre, 385 - Vila Itaim - São Paulo
               </li>
             </ul>
