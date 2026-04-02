@@ -32,11 +32,11 @@ const slides = [
     image: heroSlideBusiness,
     tagline: "Sua empresa conectada",
     subtitle: "Internet dedicada com alta velocidade e estabilidade para o seu negócio.",
-    speed: "1",
-    label: "GIGA",
-    price: "149",
-    cents: ",90",
-    note: "*Consulte condições",
+    speed: "",
+    label: "",
+    price: "",
+    cents: "",
+    note: "",
     cta: "Falar com consultor",
   },
 ];
@@ -88,6 +88,7 @@ const HeroSection = () => {
           </p>
 
           {/* Speed + Price row */}
+          {(slide.speed || slide.price) && (
           <div className="flex flex-wrap items-end gap-6 mb-8">
             {slide.speed && (
               <div className="flex items-baseline gap-1">
@@ -99,6 +100,7 @@ const HeroSection = () => {
                 </span>
               </div>
             )}
+            {slide.price && (
             <div className="border-l-2 border-white/20 pl-6">
               <div className="flex items-baseline gap-0.5">
                 <span className="text-white/60 text-sm">R$</span>
@@ -114,7 +116,9 @@ const HeroSection = () => {
               </div>
               <p className="text-white/40 text-xs mt-1">{slide.note}</p>
             </div>
+            )}
           </div>
+          )}
 
           <div className="flex flex-wrap gap-3">
             <Button variant="cta" size="lg" className="text-base px-8">
