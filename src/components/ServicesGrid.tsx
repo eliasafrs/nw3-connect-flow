@@ -25,8 +25,8 @@ const ServicesGrid = () => {
               to={s.href}
               className="group bg-card border border-border rounded-2xl p-8 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-5">
-                <s.icon className="w-8 h-8 text-[hsl(48,96%,53%)]" />
+              <div className="w-16 h-16 rounded-2xl bg-[hsl(48,96%,53%)] flex items-center justify-center mx-auto mb-5">
+                <s.icon className="w-8 h-8 text-foreground" />
               </div>
               <h3 className="font-heading font-bold text-foreground text-lg mb-2">{s.label}</h3>
               <span className="inline-flex items-center gap-1 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
