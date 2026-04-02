@@ -91,10 +91,10 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-end gap-6 mb-8">
             {slide.speed && (
               <div className="flex items-baseline gap-1">
-                <span className="font-heading text-6xl lg:text-7xl font-black text-accent leading-none">
+                <span className="font-heading text-6xl lg:text-7xl font-black text-white leading-none">
                   {slide.speed}
                 </span>
-                <span className="font-heading text-xl font-bold text-accent/80 uppercase">
+                <span className="font-heading text-xl font-bold text-white/80 uppercase">
                   {slide.label}
                 </span>
               </div>
