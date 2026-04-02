@@ -6,45 +6,45 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 50% 12%;
+    --background: 210 25% 97%;
+    --foreground: 215 50% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 50% 12%;
+    --card-foreground: 215 50% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 50% 12%;
+    --popover-foreground: 215 50% 12%;
 
-    --primary: 215 80% 22%;
+    --primary: 215 85% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --primary-light: 215 75% 32%;
-    --primary-dark: 215 85% 14%;
-    --primary-glow: 45 100% 55%;
+    --primary-light: 210 75% 35%;
+    --primary-dark: 215 90% 12%;
+    --primary-glow: 200 85% 55%;
 
-    --secondary: 220 14% 94%;
-    --secondary-foreground: 220 50% 12%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 215 50% 12%;
 
-    --muted: 220 14% 91%;
-    --muted-foreground: 220 10% 46%;
+    --muted: 210 18% 91%;
+    --muted-foreground: 210 12% 46%;
 
-    --accent: 45 100% 55%;
-    --accent-foreground: 220 80% 12%;
+    --accent: 200 90% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 18% 88%;
-    --input: 220 18% 88%;
-    --ring: 215 80% 22%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 215 85% 22%;
 
     --radius: 0.625rem;
 
-    --hero-gradient: linear-gradient(160deg, hsl(215 85% 18%) 0%, hsl(220 90% 10%) 60%, hsl(225 80% 6%) 100%);
-    --card-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 97%) 100%);
-    --glow-shadow: 0 0 30px -8px hsl(45 100% 55% / 0.35);
-    --card-shadow: 0 2px 16px -2px hsl(220 50% 12% / 0.06);
-    --card-shadow-hover: 0 8px 32px -6px hsl(220 50% 12% / 0.14);
+    --hero-gradient: linear-gradient(160deg, hsl(215 90% 16%) 0%, hsl(220 95% 8%) 60%, hsl(225 85% 5%) 100%);
+    --card-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 25% 97%) 100%);
+    --glow-shadow: 0 0 30px -8px hsl(200 85% 55% / 0.4);
+    --card-shadow: 0 2px 16px -2px hsl(215 50% 12% / 0.06);
+    --card-shadow-hover: 0 8px 32px -6px hsl(215 50% 12% / 0.14);
 
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -55,8 +55,8 @@
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 215 80% 22%;
+    --sidebar-border: 210 18% 91%;
+    --sidebar-ring: 215 85% 22%;
   }
 
   .dark {
