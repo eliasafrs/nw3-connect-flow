@@ -80,15 +80,15 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-primary-foreground mb-4">Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-primary-foreground/50">
-                <Phone className="w-4 h-4 text-primary" />
+                <Phone className="w-4 h-4 text-primary-foreground" />
                 (11) 2586-2995
               </li>
               <li className="flex items-center gap-2 text-sm text-primary-foreground/50">
-                <Mail className="w-4 h-4 text-primary" />
+                <Mail className="w-4 h-4 text-primary-foreground" />
                 contato@nw3internet.com.br
               </li>
               <li className="flex items-start gap-2 text-sm text-primary-foreground/50">
-                <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-primary-foreground flex-shrink-0 mt-0.5" />
                 Rua Domingos Fernandes Nobre, 385 - Vila Itaim - São Paulo
               </li>
             </ul>
