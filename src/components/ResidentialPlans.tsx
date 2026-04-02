@@ -23,7 +23,7 @@ const plans = [
     speed: "600",
     price: "99",
     cents: ",90",
-    streaming: "Deezer",
+    streaming: "",
     popular: false,
   },
   {
