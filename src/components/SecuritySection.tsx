@@ -23,7 +23,7 @@ const SecuritySection = () => {
           {/* Right - text */}
           <div>
             <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider mb-3">
-              <Camera className="w-4 h-4" /> Segurança
+              <Cctv className="w-4 h-4" /> Segurança
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Monitoramento e Segurança <span className="text-gradient">24h</span>
