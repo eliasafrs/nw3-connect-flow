@@ -28,7 +28,7 @@ const DifferentialsSection = () => {
               className="group relative bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] rounded-xl p-6 hover:bg-primary-foreground/[0.08] transition-all duration-300"
             >
               <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center mb-4">
-                <item.icon className="w-5 h-5 text-accent" />
+                <item.icon className="w-5 h-5 text-primary-foreground" />
               </div>
               <h3 className="font-heading font-bold text-primary-foreground text-sm mb-1.5">
                 {item.title}
