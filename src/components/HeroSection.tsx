@@ -88,12 +88,6 @@ const HeroSection = () => {
                 </span>
               </div>
             )}
-            {!slide.speed && slide.extraInfo && (
-              <div>
-                <div className="font-heading text-2xl font-bold text-accent">{slide.label}</div>
-                <div className="text-primary-foreground/60 text-sm">{slide.extraInfo}</div>
-              </div>
-            )}
             <div className="border-l-2 border-primary-foreground/20 pl-6">
               <div className="flex items-baseline gap-0.5">
                 <span className="text-primary-foreground/60 text-sm">R$</span>
