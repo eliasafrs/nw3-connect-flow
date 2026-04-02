@@ -7,7 +7,6 @@ import Layout from "@/components/Layout";
 import Index from "./pages/Index";
 import Internet from "./pages/Internet";
 import Camera from "./pages/Camera";
-import TVStreaming from "./pages/TVStreaming";
 import Fixo from "./pages/Fixo";
 import Aplicativos from "./pages/Aplicativos";
 import Ajuda from "./pages/Ajuda";
