@@ -2,19 +2,22 @@ import { Wifi, Cctv, Phone, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
-  { icon: Wifi, label: "Internet", href: "/internet" },
-  { icon: Cctv, label: "Câmera", href: "/camera" },
-  { icon: Phone, label: "Fixo", href: "/fixo" },
+  { icon: Wifi, label: "Internet", href: "/internet", color: "from-primary to-primary-glow" },
+  { icon: Cctv, label: "Câmera", href: "/camera", color: "from-primary to-accent" },
+  { icon: Phone, label: "Fixo", href: "/fixo", color: "from-accent to-primary-glow" },
 ];
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-hero relative overflow-hidden">
+      <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
+
       <div className="relative container mx-auto px-4 text-center">
-        <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-3">
-          Quem tem <span className="text-primary">NW3</span>, tem tudo!
+        <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-3">
+          Quem tem <span className="text-gradient">NW3</span>, tem tudo!
         </h2>
-        <p className="text-muted-foreground text-lg mb-14 max-w-xl mx-auto">
+        <p className="text-primary-foreground/50 text-lg mb-14 max-w-xl mx-auto">
           Todos os serviços que você precisa em um só lugar.
         </p>
 
@@ -23,13 +26,13 @@ const ServicesGrid = () => {
             <Link
               key={s.label}
               to={s.href}
-              className="group bg-card border border-border rounded-2xl p-8 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
+              className="group bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 hover:bg-primary-foreground/10 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-16 h-16 rounded-2xl bg-[hsl(48,96%,53%)] flex items-center justify-center mx-auto mb-5">
-                <s.icon className="w-8 h-8 text-foreground" />
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center mx-auto mb-5 shadow-glow`}>
+                <s.icon className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h3 className="font-heading font-bold text-foreground text-lg mb-2">{s.label}</h3>
-              <span className="inline-flex items-center gap-1 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <h3 className="font-heading font-bold text-primary-foreground text-lg mb-2">{s.label}</h3>
+              <span className="inline-flex items-center gap-1 text-xs text-primary-glow font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                 Ver mais <ChevronRight className="w-3 h-3" />
               </span>
             </Link>
