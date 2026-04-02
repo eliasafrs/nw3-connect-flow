@@ -156,11 +156,11 @@ const HeroSection = () => {
         className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
         aria-label="Anterior"
       >
-        <ChevronLeft className="w-5 h-5 text-primary-foreground" />
+        <ChevronLeft className="w-5 h-5 text-white" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 lg:right-56 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-primary-foreground/10"
+        className="absolute right-4 lg:right-56 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
         aria-label="Próximo"
       >
         <ChevronRight className="w-5 h-5 text-primary-foreground" />
