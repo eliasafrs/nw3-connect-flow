@@ -143,7 +143,7 @@ const HeroSection = () => {
           </a>
           <a
             href="#"
-            className="flex items-center gap-2 bg-[hsl(330,70%,50%)]/90 hover:bg-[hsl(330,70%,45%)] text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all"
+            className="flex items-center gap-2 bg-accent/90 hover:bg-accent/100 text-accent-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all"
           >
             📸 Instagram
           </a>
