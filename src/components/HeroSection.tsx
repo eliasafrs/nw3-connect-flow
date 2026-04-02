@@ -18,7 +18,7 @@ const slides = [
     cta: "Eu quero!",
   },
   {
-    image: heroSlide3,
+    image: heroSlide2,
     tagline: "Diversão garantida",
     subtitle: "TV Digital + Streaming no melhor combo da região.",
     speed: "600",
@@ -27,6 +27,17 @@ const slides = [
     cents: ",90",
     note: "*Consulte condições",
     cta: "Conhecer Pacotes",
+  },
+  {
+    image: heroSlideBusiness,
+    tagline: "Sua empresa conectada",
+    subtitle: "Internet dedicada com alta velocidade e estabilidade para o seu negócio.",
+    speed: "1",
+    label: "GIGA",
+    price: "149",
+    cents: ",90",
+    note: "*Consulte condições",
+    cta: "Falar com consultor",
   },
 ];
 
