@@ -7,7 +7,6 @@ import Layout from "@/components/Layout";
 import Index from "./pages/Index";
 import Internet from "./pages/Internet";
 import Camera from "./pages/Camera";
-import TVStreaming from "./pages/TVStreaming";
 import Fixo from "./pages/Fixo";
 import Aplicativos from "./pages/Aplicativos";
 import Ajuda from "./pages/Ajuda";
@@ -27,7 +26,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/internet" element={<Internet />} />
             <Route path="/camera" element={<Camera />} />
-            <Route path="/tv-streaming" element={<TVStreaming />} />
             <Route path="/fixo" element={<Fixo />} />
             <Route path="/aplicativos" element={<Aplicativos />} />
             <Route path="/ajuda" element={<Ajuda />} />

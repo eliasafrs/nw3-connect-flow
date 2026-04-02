@@ -6,7 +6,6 @@ import nw3Logo from "@/assets/nw3-logo.png";
 const navLinks = [
   { label: "Internet", href: "/internet" },
   { label: "Câmera", href: "/camera" },
-  { label: "TV & Streaming", href: "/tv-streaming" },
   { label: "Fixo", href: "/fixo" },
   { label: "Aplicativos", href: "/aplicativos" },
   { label: "Ajuda", href: "/ajuda" },
