@@ -89,6 +89,11 @@ const HeroSection = () => {
             {slide.subtitle}
           </p>
 
+          {/* Logo (e.g. Disney+) */}
+          {slide.logo && (
+            <img src={slide.logo} alt="Streaming" className="h-8 sm:h-10 mb-4 object-contain" loading="lazy" />
+          )}
+
           {/* Speed + Price row */}
           {(slide.speed || slide.price) && (
           <div className="flex flex-wrap items-end gap-6 mb-8">
