@@ -11,7 +11,7 @@ const SecuritySection = () => {
             <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
             <div className="relative text-center py-8">
               <div className="w-24 h-24 rounded-3xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                <Camera className="w-12 h-12 text-primary" />
+                <Cctv className="w-12 h-12 text-primary" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-2">NW3 Câmera</h3>
               <p className="text-muted-foreground text-sm max-w-xs mx-auto">
