@@ -23,13 +23,6 @@ const plans = [
     speed: "600",
     price: "99",
     cents: ",90",
-    streaming: "",
-    popular: false,
-  },
-  {
-    speed: "600",
-    price: "109",
-    cents: ",90",
     streaming: "Deezer",
     popular: true,
   },
@@ -59,7 +52,7 @@ const ResidentialPlans = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-14">
+        <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto mb-14">
           {plans.map((plan) => (
             <div
               key={plan.speed}
