@@ -19,7 +19,7 @@ const secondLogoMap: Record<string, string | undefined> = {
 const plans = [
   {
     speed: "400",
-    price: "79",
+    price: "89",
     cents: ",90",
     streaming: "Deezer",
     popular: false,
@@ -28,19 +28,12 @@ const plans = [
     speed: "600",
     price: "99",
     cents: ",90",
-    streaming: "Deezer",
+    streaming: "",
     popular: true,
   },
   {
-    speed: "700",
-    price: "109",
-    cents: ",90",
-    streaming: "Disney+",
-    popular: false,
-  },
-  {
-    speed: "1 Giga",
-    price: "149",
+    speed: "600",
+    price: "129",
     cents: ",90",
     streaming: "Disney+ & HBO Max",
     popular: false,
@@ -64,7 +57,7 @@ const ResidentialPlans = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-14">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-14">
           {plans.map((plan) => (
             <div
               key={plan.speed}
@@ -95,28 +88,28 @@ const ResidentialPlans = () => {
                 </div>
 
                 {/* Streaming logos */}
-                <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
-                  {logoMap[plan.streaming] && (
-                    <img
-                      src={logoMap[plan.streaming]}
-                      alt={plan.streaming}
-                      className="h-7 w-auto object-contain"
-                    />
-                  )}
-                  {secondLogoMap[plan.streaming] && (
-                    <>
-                      <span className="text-muted-foreground text-xs font-bold">+</span>
+                {plan.streaming && (
+                  <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
+                    {logoMap[plan.streaming] && (
                       <img
-                        src={secondLogoMap[plan.streaming]}
-                        alt=""
+                        src={logoMap[plan.streaming]}
+                        alt={plan.streaming}
                         className="h-7 w-auto object-contain"
                       />
-                    </>
-                  )}
-                  {!logoMap[plan.streaming] && (
-                    <span className="text-xs font-semibold text-primary">{plan.streaming}</span>
-                  )}
-                </div>
+                    )}
+                    {secondLogoMap[plan.streaming] && (
+                      <>
+                        <span className="text-muted-foreground text-xs font-bold">+</span>
+                        <img
+                          src={secondLogoMap[plan.streaming]}
+                          alt=""
+                          className="h-7 w-auto object-contain"
+                        />
+                      </>
+                    )}
+                  </div>
+                )}
+                {!plan.streaming && <div className="mb-5" />}
 
                 {/* Price */}
                 <div className="mb-5">
