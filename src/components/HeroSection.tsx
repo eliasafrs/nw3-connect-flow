@@ -67,7 +67,7 @@ const HeroSection = () => {
         />
       ))}
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,90%,8%)/0.92] via-[hsl(215,90%,8%)/0.75] to-[hsl(215,90%,8%)/0.3]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(240,97%,10%)/0.92] via-[hsl(240,97%,10%)/0.75] to-[hsl(240,97%,10%)/0.3]" />
 
       <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-24 flex items-center min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
         <div className="max-w-2xl">
