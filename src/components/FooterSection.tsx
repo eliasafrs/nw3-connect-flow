@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/">
-              <img src={nw3Logo} alt="NW3 Internet" className="h-10 brightness-0 invert" />
+              <img src={nw3Logo} alt="NW3 Internet" className="h-10" />
             </Link>
             <p className="text-primary-foreground/50 text-sm mt-3 mb-4">
               Conectando você ao que importa com fibra óptica de alta velocidade.
