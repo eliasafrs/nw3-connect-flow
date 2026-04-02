@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Camera, Smartphone, Cloud, ShieldCheck, ChevronRight } from "lucide-react";
+import { Cctv, Smartphone, Cloud, ShieldCheck, ChevronRight } from "lucide-react";
 
 const SecuritySection = () => {
   return (
@@ -11,7 +11,7 @@ const SecuritySection = () => {
             <div className="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
             <div className="relative text-center py-8">
               <div className="w-24 h-24 rounded-3xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                <Camera className="w-12 h-12 text-primary" />
+                <Cctv className="w-12 h-12 text-primary" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-2">NW3 Câmera</h3>
               <p className="text-muted-foreground text-sm max-w-xs mx-auto">
@@ -23,7 +23,7 @@ const SecuritySection = () => {
           {/* Right - text */}
           <div>
             <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider mb-3">
-              <Camera className="w-4 h-4" /> Segurança
+              <Cctv className="w-4 h-4" /> Segurança
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Monitoramento e Segurança <span className="text-gradient">24h</span>
@@ -34,7 +34,7 @@ const SecuritySection = () => {
 
             <ul className="space-y-4 mb-8">
               {[
-                { icon: Camera, text: "Instalação profissional de câmeras" },
+                { icon: Cctv, text: "Instalação profissional de câmeras" },
                 { icon: Smartphone, text: "Acesso remoto pelo celular" },
                 { icon: ShieldCheck, text: "Ideal para residências e empresas" },
                 { icon: Cloud, text: "Gravação em nuvem (opcional)" },

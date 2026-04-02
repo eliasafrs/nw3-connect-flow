@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-  Building2, Server, Shield, Headset, Globe, Wifi, Phone, Camera,
+  Building2, Server, Shield, Headset, Globe, Wifi, Phone, Cctv,
   Clock, ChevronRight, Check, Zap, Award, Users, ArrowUpDown, Link as LinkIcon
 } from "lucide-react";
 import businessHero from "@/assets/banners/business-hero.jpg";
@@ -307,7 +307,7 @@ const BusinessPlans = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <span className="inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-wider mb-3">
-                <Camera className="w-4 h-4" /> Proteção Inteligente
+                <Cctv className="w-4 h-4" /> Proteção Inteligente
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
                 Adicione <span className="text-gradient">monitoramento</span> ao seu plano
@@ -333,7 +333,7 @@ const BusinessPlans = () => {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Camera, title: "Full HD", desc: "Câmeras de alta definição" },
+                { icon: Cctv, title: "Full HD", desc: "Câmeras de alta definição" },
                 { icon: Globe, title: "Acesso Remoto", desc: "Monitore de qualquer lugar" },
                 { icon: Shield, title: "Nuvem Segura", desc: "Até 30 dias de gravação" },
                 { icon: Phone, title: "App Exclusivo", desc: "Controle pelo celular" },

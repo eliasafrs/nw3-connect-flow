@@ -1,4 +1,4 @@
-import { Camera as CameraIcon, Smartphone, Cloud, ShieldCheck, ChevronRight, Check, Monitor } from "lucide-react";
+import { Cctv as CameraIcon, Smartphone, Cloud, ShieldCheck, ChevronRight, Check, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CoverageSection from "@/components/CoverageSection";
 import cameraBanner from "@/assets/banners/camera-banner.jpg";
