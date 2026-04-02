@@ -18,18 +18,6 @@ const slides = [
     cta: "Eu quero!",
   },
   {
-    image: heroSlide2,
-    tagline: "Segurança garantida",
-    subtitle: "Monitore sua casa ou empresa em tempo real, de onde estiver.",
-    speed: "",
-    label: "PLANO CÂMERAS",
-    extraInfo: "2 a 4 câmeras Full HD",
-    price: "129",
-    cents: ",90",
-    note: "*Consulte condições",
-    cta: "Solicitar Orçamento",
-  },
-  {
     image: heroSlide3,
     tagline: "Diversão garantida",
     subtitle: "TV Digital + Streaming no melhor combo da região.",
