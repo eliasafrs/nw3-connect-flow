@@ -21,6 +21,13 @@ const secondLogoMap: Record<string, string | undefined> = {
 const plans = [
   {
     speed: "600",
+    price: "99",
+    cents: ",90",
+    streaming: "",
+    popular: false,
+  },
+  {
+    speed: "600",
     price: "109",
     cents: ",90",
     streaming: "Deezer",
