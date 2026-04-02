@@ -59,7 +59,7 @@ const ResidentialPlans = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-5xl mx-auto mb-14">
           {plans.map((plan) => (
             <div
               key={plan.speed}
