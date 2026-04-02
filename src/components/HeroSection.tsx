@@ -72,9 +72,9 @@ const HeroSection = () => {
       <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-24 flex items-center min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
         <div className="max-w-2xl">
           {/* Tag */}
-          <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
-            <Zap className="w-4 h-4 text-accent" />
-            <span className="text-accent text-sm font-semibold tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+            <Zap className="w-4 h-4 text-white" />
+            <span className="text-white text-sm font-semibold tracking-wide uppercase">
               100% Fibra Óptica
             </span>
           </div>
