@@ -40,9 +40,9 @@
 
     --radius: 0.625rem;
 
-    --hero-gradient: linear-gradient(160deg, hsl(240 97% 20%) 0%, hsl(240 97% 12%) 60%, hsl(240 97% 8%) 100%);
+    --hero-gradient: linear-gradient(160deg, hsl(240 96% 20%) 0%, hsl(240 96% 12%) 60%, hsl(240 96% 8%) 100%);
     --card-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(230 25% 97%) 100%);
-    --glow-shadow: 0 0 30px -8px hsl(226 76% 53% / 0.4);
+    --glow-shadow: 0 0 30px -8px hsl(224 75% 53% / 0.4);
     --card-shadow: 0 2px 16px -2px hsl(215 50% 12% / 0.06);
     --card-shadow-hover: 0 8px 32px -6px hsl(215 50% 12% / 0.14);
 
