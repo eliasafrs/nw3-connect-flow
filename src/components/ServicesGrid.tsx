@@ -1,10 +1,9 @@
-import { Wifi, Camera, Tv, Phone, ChevronRight } from "lucide-react";
+import { Wifi, Camera, Phone, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   { icon: Wifi, label: "Internet", href: "/internet", color: "from-primary to-primary-glow" },
   { icon: Camera, label: "Câmera", href: "/camera", color: "from-primary to-accent" },
-  { icon: Tv, label: "TV & Streaming", href: "/tv-streaming", color: "from-primary-dark to-primary" },
   { icon: Phone, label: "Fixo", href: "/fixo", color: "from-accent to-primary-glow" },
 ];
 

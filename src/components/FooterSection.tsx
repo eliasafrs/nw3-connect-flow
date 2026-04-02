@@ -36,7 +36,6 @@ const Footer = () => {
               {[
                 { label: "Internet", href: "/internet" },
                 { label: "Câmera", href: "/camera" },
-                { label: "TV & Streaming", href: "/tv-streaming" },
                 { label: "Telefone Fixo", href: "/fixo" },
                 { label: "Aplicativos", href: "/aplicativos" },
               ].map((l) => (
