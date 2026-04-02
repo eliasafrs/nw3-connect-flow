@@ -333,7 +333,7 @@ const BusinessPlans = () => {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Camera, title: "Full HD", desc: "Câmeras de alta definição" },
+                { icon: Cctv, title: "Full HD", desc: "Câmeras de alta definição" },
                 { icon: Globe, title: "Acesso Remoto", desc: "Monitore de qualquer lugar" },
                 { icon: Shield, title: "Nuvem Segura", desc: "Até 30 dias de gravação" },
                 { icon: Phone, title: "App Exclusivo", desc: "Controle pelo celular" },
