@@ -26,7 +26,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/internet" element={<Internet />} />
             <Route path="/camera" element={<Camera />} />
-            <Route path="/tv-streaming" element={<TVStreaming />} />
             <Route path="/fixo" element={<Fixo />} />
             <Route path="/aplicativos" element={<Aplicativos />} />
             <Route path="/ajuda" element={<Ajuda />} />
