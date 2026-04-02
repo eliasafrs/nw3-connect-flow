@@ -2,8 +2,8 @@ import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import heroSlide2 from "@/assets/hero-slide-2.jpg";
-import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroSlide2 from "@/assets/hero-slide-3.jpg";
+import heroSlideBusiness from "@/assets/hero-slide-business.jpg";
 
 const slides = [
   {
@@ -18,7 +18,7 @@ const slides = [
     cta: "Eu quero!",
   },
   {
-    image: heroSlide3,
+    image: heroSlide2,
     tagline: "Diversão garantida",
     subtitle: "TV Digital + Streaming no melhor combo da região.",
     speed: "600",
@@ -27,6 +27,17 @@ const slides = [
     cents: ",90",
     note: "*Consulte condições",
     cta: "Conhecer Pacotes",
+  },
+  {
+    image: heroSlideBusiness,
+    tagline: "Sua empresa conectada",
+    subtitle: "Internet dedicada com alta velocidade e estabilidade para o seu negócio.",
+    speed: "1",
+    label: "GIGA",
+    price: "149",
+    cents: ",90",
+    note: "*Consulte condições",
+    cta: "Falar com consultor",
   },
 ];
 
