@@ -10,32 +10,34 @@ const logoMap: Record<string, string> = {
   "Deezer + Apple TV": deezerLogo,
   "Disney+": disneyLogo,
   "Disney+ & HBO Max": disneyLogo,
+  "Disney+ ou HBO Max": disneyLogo,
 };
 
 const secondLogoMap: Record<string, string | undefined> = {
   "Disney+ & HBO Max": hboLogo,
+  "Disney+ ou HBO Max": hboLogo,
 };
 
 const plans = [
-  {
-    speed: "400",
-    price: "89",
-    cents: ",90",
-    streaming: "Deezer",
-    popular: false,
-  },
   {
     speed: "600",
     price: "99",
     cents: ",90",
     streaming: "",
+    popular: false,
+  },
+  {
+    speed: "600",
+    price: "109",
+    cents: ",90",
+    streaming: "Deezer",
     popular: true,
   },
   {
     speed: "600",
     price: "129",
     cents: ",90",
-    streaming: "Disney+ & HBO Max",
+    streaming: "Disney+ ou HBO Max",
     popular: false,
   },
 ];
