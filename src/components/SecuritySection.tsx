@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Camera, Smartphone, Cloud, ShieldCheck, ChevronRight } from "lucide-react";
+import { Cctv, Smartphone, Cloud, ShieldCheck, ChevronRight } from "lucide-react";
 
 const SecuritySection = () => {
   return (
