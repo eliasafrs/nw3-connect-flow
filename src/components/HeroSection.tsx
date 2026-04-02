@@ -175,7 +175,7 @@ const HeroSection = () => {
             className={`h-1 rounded-full transition-all duration-500 ${
               i === current
                 ? "bg-accent w-10"
-                : "bg-primary-foreground/30 w-6 hover:bg-primary-foreground/50"
+                : "bg-white/30 w-6 hover:bg-white/50"
             }`}
             aria-label={`Slide ${i + 1}`}
           />
