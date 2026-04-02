@@ -134,21 +134,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Side quick links - desktop */}
-        <div className="hidden lg:flex flex-col gap-3 absolute right-8 top-1/2 -translate-y-1/2">
-          <a
-            href="#"
-            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all backdrop-blur-sm"
-          >
-            📄 2ª Via do Boleto
-          </a>
-          <a
-            href="#"
-            className="flex items-center gap-2 bg-accent/90 hover:bg-accent/100 text-accent-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all"
-          >
-            📸 Instagram
-          </a>
-        </div>
       </div>
 
       {/* Navigation arrows */}
