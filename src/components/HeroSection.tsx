@@ -72,18 +72,18 @@ const HeroSection = () => {
       <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-24 flex items-center min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
         <div className="max-w-2xl">
           {/* Tag */}
-          <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
-            <Zap className="w-4 h-4 text-accent" />
-            <span className="text-accent text-sm font-semibold tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+            <Zap className="w-4 h-4 text-white" />
+            <span className="text-white text-sm font-semibold tracking-wide uppercase">
               100% Fibra Óptica
             </span>
           </div>
 
           {/* Main heading */}
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-primary-foreground leading-[1.1] mb-4">
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-4">
             {slide.tagline}
           </h1>
-          <p className="text-primary-foreground/70 text-lg sm:text-xl mb-8 max-w-lg">
+          <p className="text-white/70 text-lg sm:text-xl mb-8 max-w-lg">
             {slide.subtitle}
           </p>
 
@@ -91,28 +91,28 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-end gap-6 mb-8">
             {slide.speed && (
               <div className="flex items-baseline gap-1">
-                <span className="font-heading text-6xl lg:text-7xl font-black text-accent leading-none">
+                <span className="font-heading text-6xl lg:text-7xl font-black text-white leading-none">
                   {slide.speed}
                 </span>
-                <span className="font-heading text-xl font-bold text-accent/80 uppercase">
+                <span className="font-heading text-xl font-bold text-white/80 uppercase">
                   {slide.label}
                 </span>
               </div>
             )}
-            <div className="border-l-2 border-primary-foreground/20 pl-6">
+            <div className="border-l-2 border-white/20 pl-6">
               <div className="flex items-baseline gap-0.5">
-                <span className="text-primary-foreground/60 text-sm">R$</span>
-                <span className="font-heading text-5xl font-black text-primary-foreground leading-none">
+                <span className="text-white/60 text-sm">R$</span>
+                <span className="font-heading text-5xl font-black text-white leading-none">
                   {slide.price}
                 </span>
                 <div className="flex flex-col">
-                  <span className="text-primary-foreground/80 text-lg leading-none">
+                  <span className="text-white/80 text-lg leading-none">
                     {slide.cents}
                   </span>
-                  <span className="text-primary-foreground/50 text-xs">/mês</span>
+                  <span className="text-white/50 text-xs">/mês</span>
                 </div>
               </div>
-              <p className="text-primary-foreground/40 text-xs mt-1">{slide.note}</p>
+              <p className="text-white/40 text-xs mt-1">{slide.note}</p>
             </div>
           </div>
 
@@ -126,7 +126,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="lg" className="text-base border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground px-8">
+              <Button variant="outline" size="lg" className="text-base border-white/30 text-white hover:bg-white/10 hover:text-white px-8">
                 💬 WhatsApp
               </Button>
             </a>
@@ -137,7 +137,7 @@ const HeroSection = () => {
         <div className="hidden lg:flex flex-col gap-3 absolute right-8 top-1/2 -translate-y-1/2">
           <a
             href="#"
-            className="flex items-center gap-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 border border-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium transition-all backdrop-blur-sm"
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all backdrop-blur-sm"
           >
             📄 2ª Via do Boleto
           </a>
@@ -153,17 +153,17 @@ const HeroSection = () => {
       {/* Navigation arrows */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-primary-foreground/10"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
         aria-label="Anterior"
       >
-        <ChevronLeft className="w-5 h-5 text-primary-foreground" />
+        <ChevronLeft className="w-5 h-5 text-white" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 lg:right-56 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-primary-foreground/10"
+        className="absolute right-4 lg:right-56 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
         aria-label="Próximo"
       >
-        <ChevronRight className="w-5 h-5 text-primary-foreground" />
+        <ChevronRight className="w-5 h-5 text-white" />
       </button>
 
       {/* Progress indicators */}
@@ -175,7 +175,7 @@ const HeroSection = () => {
             className={`h-1 rounded-full transition-all duration-500 ${
               i === current
                 ? "bg-accent w-10"
-                : "bg-primary-foreground/30 w-6 hover:bg-primary-foreground/50"
+                : "bg-white/30 w-6 hover:bg-white/50"
             }`}
             aria-label={`Slide ${i + 1}`}
           />
