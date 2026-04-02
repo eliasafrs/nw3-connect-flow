@@ -4,12 +4,14 @@ import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-3.jpg";
 import heroSlideBusiness from "@/assets/hero-slide-business-opt9.jpg";
+import disneyPlusLogo from "@/assets/logos/disney-plus.png";
 
 const slides = [
   {
     image: heroSlide1,
     tagline: "Emoção garantida",
     subtitle: "Assista ao vivo com qualidade máxima",
+    logo: disneyPlusLogo,
     speed: "700",
     label: "MEGA",
     price: "129",
@@ -86,6 +88,11 @@ const HeroSection = () => {
           <p className="text-lg sm:text-xl mb-8 max-w-lg text-yellow-400">
             {slide.subtitle}
           </p>
+
+          {/* Logo (e.g. Disney+) */}
+          {slide.logo && (
+            <img src={slide.logo} alt="Streaming" className="h-8 sm:h-10 mb-4 object-contain" loading="lazy" />
+          )}
 
           {/* Speed + Price row */}
           {(slide.speed || slide.price) && (
