@@ -62,7 +62,7 @@ const HeroSection = () => {
           key={i}
           src={s.image}
           alt={s.tagline}
-          className="absolute inset-0 w-full h-full object-cover object-top sm:object-center transition-opacity duration-700"
+          className="absolute inset-0 w-full h-full object-cover object-bottom sm:object-center transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         />
       ))}
