@@ -126,7 +126,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="lg" className="text-base border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground px-8">
+              <Button variant="outline" size="lg" className="text-base border-white/30 text-white hover:bg-white/10 hover:text-white px-8">
                 💬 WhatsApp
               </Button>
             </a>
