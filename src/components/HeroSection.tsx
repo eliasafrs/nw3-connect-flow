@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-3.jpg";
-import heroSlideBusiness from "@/assets/hero-slide-business.jpg";
+import heroSlideBusiness from "@/assets/hero-slide-business-opt2.jpg";
 
 const slides = [
   {
