@@ -99,20 +99,20 @@ const HeroSection = () => {
                 </span>
               </div>
             )}
-            <div className="border-l-2 border-primary-foreground/20 pl-6">
+            <div className="border-l-2 border-white/20 pl-6">
               <div className="flex items-baseline gap-0.5">
-                <span className="text-primary-foreground/60 text-sm">R$</span>
-                <span className="font-heading text-5xl font-black text-primary-foreground leading-none">
+                <span className="text-white/60 text-sm">R$</span>
+                <span className="font-heading text-5xl font-black text-white leading-none">
                   {slide.price}
                 </span>
                 <div className="flex flex-col">
-                  <span className="text-primary-foreground/80 text-lg leading-none">
+                  <span className="text-white/80 text-lg leading-none">
                     {slide.cents}
                   </span>
-                  <span className="text-primary-foreground/50 text-xs">/mês</span>
+                  <span className="text-white/50 text-xs">/mês</span>
                 </div>
               </div>
-              <p className="text-primary-foreground/40 text-xs mt-1">{slide.note}</p>
+              <p className="text-white/40 text-xs mt-1">{slide.note}</p>
             </div>
           </div>
 
