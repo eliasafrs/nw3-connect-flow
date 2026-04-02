@@ -18,18 +18,6 @@ const slides = [
     cta: "Eu quero!",
   },
   {
-    image: heroSlide2,
-    tagline: "Segurança garantida",
-    subtitle: "Monitore sua casa ou empresa em tempo real, de onde estiver.",
-    speed: "",
-    label: "PLANO CÂMERAS",
-    extraInfo: "2 a 4 câmeras Full HD",
-    price: "129",
-    cents: ",90",
-    note: "*Consulte condições",
-    cta: "Solicitar Orçamento",
-  },
-  {
     image: heroSlide3,
     tagline: "Diversão garantida",
     subtitle: "TV Digital + Streaming no melhor combo da região.",
@@ -98,12 +86,6 @@ const HeroSection = () => {
                 <span className="font-heading text-xl font-bold text-accent/80 uppercase">
                   {slide.label}
                 </span>
-              </div>
-            )}
-            {!slide.speed && slide.extraInfo && (
-              <div>
-                <div className="font-heading text-2xl font-bold text-accent">{slide.label}</div>
-                <div className="text-primary-foreground/60 text-sm">{slide.extraInfo}</div>
               </div>
             )}
             <div className="border-l-2 border-primary-foreground/20 pl-6">
