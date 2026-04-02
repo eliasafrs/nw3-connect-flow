@@ -10,10 +10,12 @@ const logoMap: Record<string, string> = {
   "Deezer + Apple TV": deezerLogo,
   "Disney+": disneyLogo,
   "Disney+ & HBO Max": disneyLogo,
+  "Disney+ ou HBO Max": disneyLogo,
 };
 
 const secondLogoMap: Record<string, string | undefined> = {
   "Disney+ & HBO Max": hboLogo,
+  "Disney+ ou HBO Max": hboLogo,
 };
 
 const plans = [
