@@ -26,13 +26,13 @@ const ServicesGrid = () => {
             <Link
               key={s.label}
               to={s.href}
-              className="group bg-muted/50 backdrop-blur-sm border border-border rounded-2xl p-8 hover:bg-muted transition-all duration-300 hover:-translate-y-1"
+              className="group backdrop-blur-sm border border-border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 bg-primary"
             >
               <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center mx-auto mb-5 shadow-glow`}>
-                <s.icon className="w-8 h-8 text-primary-foreground" />
+                <s.icon className="w-8 h-8 border-primary-foreground text-[#f7c602]" />
               </div>
-              <h3 className="font-heading font-bold text-foreground text-lg mb-2">{s.label}</h3>
-              <span className="inline-flex items-center gap-1 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <h3 className="font-heading font-bold text-lg mb-2 text-primary-foreground">{s.label}</h3>
+              <span className="inline-flex items-center gap-1 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity text-primary-foreground">
                 Ver mais <ChevronRight className="w-3 h-3" />
               </span>
             </Link>
