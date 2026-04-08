@@ -295,6 +295,17 @@ const ManualCliente = () => {
             </div>
           </div>
 
+          <div className="mb-10 rounded-2xl overflow-hidden border border-border">
+            <img
+              src={wifiCoverageImg}
+              alt="Infográfico comparando frequências Wi-Fi 2.4 GHz e 5 GHz"
+              className="w-full h-auto"
+              loading="lazy"
+              width={1920}
+              height={608}
+            />
+          </div>
+
           <p className="text-muted-foreground mb-8 max-w-2xl">
             Os equipamentos disponibilizados pela NW3 são <strong className="text-foreground">dual band</strong>, permitindo escolher a frequência ideal para cada situação.
           </p>
