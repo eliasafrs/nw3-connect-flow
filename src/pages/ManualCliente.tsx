@@ -208,31 +208,7 @@ const ManualCliente = () => {
             />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 items-start">
-            <StepList items={steps.semInternet} />
-            <div className="bg-card rounded-2xl border border-border p-8">
-              <h3 className="font-heading font-bold text-foreground text-lg mb-3">Conheça seus equipamentos</h3>
-              <div className="space-y-4 text-sm">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-accent font-bold text-xs">ONU</span>
-                  </div>
-                  <p className="text-muted-foreground">Recebe o sinal de fibra óptica e autentica a conexão do usuário.</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Wifi className="w-4 h-4 text-accent" />
-                  </div>
-                  <p className="text-muted-foreground">O roteador distribui o sinal por cabo e rede Wi-Fi para seus dispositivos.</p>
-                </div>
-              </div>
-              <div className="mt-6 p-4 bg-primary/5 rounded-xl">
-                <p className="text-xs text-muted-foreground">
-                  <strong className="text-foreground">Dica:</strong> Para smart TVs, desktops e videogames, prefira conexão via cabo de rede para melhor desempenho.
-                </p>
-              </div>
-            </div>
-          </div>
+          <StepList items={steps.semInternet} />
         </div>
       </section>
 
