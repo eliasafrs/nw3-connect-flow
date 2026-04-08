@@ -247,7 +247,7 @@ const BusinessPlans = () => {
                 <Cctv className="w-4 h-4" /> Proteção Inteligente
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-                Adicione <span className="text-gradient">monitoramento</span> ao seu plano
+                Adicione <span className="text-gradient">câmera de segurança</span> ao seu plano
               </h2>
               <p className="text-primary-foreground/70 text-lg mb-4">
                 Transforme seu espaço em um ambiente monitorado, seguro e conectado com as câmeras da NW3.
