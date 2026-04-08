@@ -196,20 +196,19 @@ const ManualCliente = () => {
             </div>
           </div>
 
+          <div className="mb-10 rounded-2xl overflow-hidden border border-border">
+            <img
+              src={troubleshootImg}
+              alt="Ilustração passo a passo para resolver problemas de internet"
+              className="w-full h-auto"
+              loading="lazy"
+              width={1920}
+              height={600}
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 gap-10 items-start">
-            <div>
-              <StepList items={steps.semInternet} />
-              <div className="mt-8 rounded-2xl overflow-hidden border border-border">
-                <img
-                  src={troubleshootImg}
-                  alt="Ilustração passo a passo para resolver problemas de internet"
-                  className="w-full h-auto"
-                  loading="lazy"
-                  width={1024}
-                  height={768}
-                />
-              </div>
-            </div>
+            <StepList items={steps.semInternet} />
             <div className="bg-card rounded-2xl border border-border p-8">
               <h3 className="font-heading font-bold text-foreground text-lg mb-3">Conheça seus equipamentos</h3>
               <div className="space-y-4 text-sm">
