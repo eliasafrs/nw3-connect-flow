@@ -1,7 +1,7 @@
 import { BookOpen, Smartphone, FileText, Wifi, Gauge, MonitorPlay, ChevronRight } from "lucide-react";
 import appClienteImg from "@/assets/app-cliente.jpg";
 import googlePlayBadge from "@/assets/google-play-badge.png";
-// ... keep existing code
+import appStoreBadge from "@/assets/app-store-badge.png";
 import { Button } from "@/components/ui/button";
 import PageBanner from "@/components/PageBanner";
 
@@ -132,7 +132,7 @@ const ManualCliente = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src="/72af9a92-2ff1-4d8f-8d3e-27566b5e6296.png" alt="Disponível na App Store" className="h-14" loading="lazy" />
+                    <img src={appStoreBadge} alt="Disponível na App Store" className="h-14" loading="lazy" />
                   </a>
                 </div>
               </div>
