@@ -6,9 +6,7 @@ const steps = {
   portal: [
     { num: "1", text: "Acesse a Área do Cliente ou baixe o app NW3." },
     { num: "2", text: "Digite o seu CPF ou CNPJ." },
-    { num: "3", text: "Caso já tenha acesso, informe a senha." },
-    { num: "4", text: "Primeiro acesso? Você receberá um código por e-mail ou SMS." },
-    { num: "5", text: "Insira o código e redefina sua senha para os próximos acessos." },
+    { num: "3", text: "Informe sua senha e faça login." },
   ],
   boleto: [
     { num: "1", text: "Acesse a Área do Cliente pelo app ou portal." },
