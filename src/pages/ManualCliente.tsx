@@ -1,5 +1,6 @@
 import { BookOpen, Smartphone, FileText, Wifi, Gauge, MonitorPlay, ChevronRight } from "lucide-react";
 import appClienteImg from "@/assets/app-cliente.jpg";
+import troubleshootImg from "@/assets/troubleshoot-internet.jpg";
 import googlePlayBadge from "@/assets/google-play-badge.png";
 import appStoreBadge from "@/assets/app-store-badge-v2.png";
 import { Button } from "@/components/ui/button";
