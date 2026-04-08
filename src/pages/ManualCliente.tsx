@@ -125,7 +125,7 @@ const ManualCliente = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={googlePlayBadge} alt="Disponível no Google Play" className="h-10" loading="lazy" />
+                    <img src={googlePlayBadge} alt="Disponível no Google Play" className="h-14" loading="lazy" />
                   </a>
                   <a
                     href="https://apps.apple.com/us/app/nw3-internet/id6741180251"
