@@ -62,7 +62,7 @@ const Footer = () => {
                 { label: "2ª Via de Boleto", href: "#" },
                 { label: "Central de Ajuda", href: "/ajuda" },
                 { label: "Sobre a NW3", href: "/sobre" },
-                { label: "Ouvidoria", href: "#" },
+                { label: "Ouvidoria", href: "https://wa.me/551125862995" },
                 { label: "Documentos Legais", href: "#" },
               ].map((l) => (
                 <li key={l.label}>
