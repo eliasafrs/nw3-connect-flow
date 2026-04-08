@@ -132,7 +132,7 @@ const ManualCliente = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={appStoreBadge} alt="Disponível na App Store" className="h-10" loading="lazy" />
+                    <img src={appStoreBadge} alt="Disponível na App Store" className="h-14" loading="lazy" />
                   </a>
                 </div>
               </div>
