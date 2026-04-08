@@ -114,9 +114,9 @@ const Footer = () => {
           <p className="text-xs text-primary-foreground/40">
             © 2025 NW3 Internet. Todos os direitos reservados. CNPJ: 33.578.123/0001-63
           </p>
-          <a href="#" className="text-xs text-primary-foreground/40 hover:text-primary-foreground transition-colors">
+          <Link to="/politica-de-privacidade" className="text-xs text-primary-foreground/40 hover:text-primary-foreground transition-colors">
             Política de Privacidade
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

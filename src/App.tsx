@@ -12,6 +12,7 @@ import Aplicativos from "./pages/Aplicativos";
 import Ajuda from "./pages/Ajuda";
 import Sobre from "./pages/Sobre";
 import ManualCliente from "./pages/ManualCliente";
+import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
