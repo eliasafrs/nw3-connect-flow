@@ -30,7 +30,7 @@ const Aplicativos = () => {
       <PageBanner
         icon={AppWindow}
         title="Aplicativos"
-        highlight="Inclusos"
+        highlight="Streaming"
         description="Adicione o melhor do streaming em seu plano"
       />
 
