@@ -36,10 +36,10 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-3 mt-4">
               <a href="https://play.google.com/store/apps/details?id=com.provedor.nw3internet" target="_blank" rel="noopener noreferrer">
-                <img src={googlePlayBadge} alt="Disponível no Google Play" className="h-14" loading="lazy" />
+                <img src={googlePlayBadge} alt="Disponível no Google Play" className="h-11" loading="lazy" />
               </a>
               <a href="https://apps.apple.com/us/app/nw3-internet/id6741180251" target="_blank" rel="noopener noreferrer">
-                <img src={appStoreBadge} alt="Disponível na App Store" className="h-14" loading="lazy" />
+                <img src={appStoreBadge} alt="Disponível na App Store" className="h-11" loading="lazy" />
               </a>
             </div>
           </div>
