@@ -9,6 +9,7 @@ import deezerLogo from "@/assets/logos/deezer.png";
 import playkidsLogo from "@/assets/logos/playkids.png";
 import exitlagLogo from "@/assets/logos/exitlag.png";
 import skyPlusLogo from "@/assets/logos/sky-plus.png";
+import lookeLogo from "@/assets/logos/looke.png";
 
 const apps = [
   { logo: disneyLogo, title: "Disney+", desc: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic. Inclui Star e esportes com ESPN.", plans: "Planos a partir de 700 Mega" },
