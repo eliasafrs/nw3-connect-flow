@@ -5,6 +5,7 @@ import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-3.jpg";
 import heroSlideBusiness from "@/assets/hero-slide-business-opt9.jpg";
 import disneyPlusLogo from "@/assets/logos/disney-plus.png";
+import exitlagLogo from "@/assets/logos/exitlag.png";
 
 const slides = [
   {
@@ -23,6 +24,7 @@ const slides = [
     image: heroSlide2,
     tagline: "Diversão garantida",
     subtitle: "Jogue sem travar com internet + Exitlag no seu plano.",
+    logo: exitlagLogo,
     speed: "600",
     label: "MEGA",
     price: "109",
@@ -90,6 +92,13 @@ const HeroSection = () => {
           </p>
 
 
+
+          {/* Partner logo */}
+          {slide.logo && (
+            <div className="mb-4">
+              <img src={slide.logo} alt="Logo parceiro" className="h-12 object-contain" />
+            </div>
+          )}
 
           {/* Speed + Price row */}
           {(slide.speed || slide.price) && (
