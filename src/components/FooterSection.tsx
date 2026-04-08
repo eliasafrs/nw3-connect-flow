@@ -66,7 +66,7 @@ const Footer = () => {
                       {l.label}
                     </Link>
                   ) : (
-                    <a href={l.href} className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+                    <a href={l.href} target={l.href.startsWith("http") ? "_blank" : undefined} rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined} className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
                       {l.label}
                     </a>
                   )}
