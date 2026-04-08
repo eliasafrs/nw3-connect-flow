@@ -82,7 +82,7 @@ const ResidentialPlans = () => {
                 {/* Speed */}
                 <div className="mb-4">
                   <div className="font-heading text-5xl font-black text-foreground leading-none">
-                    {plan.speed}
+                    {plan.speed}+
                   </div>
                   <div className="text-xs text-muted-foreground font-medium mt-1">
                     {plan.speed === "1 Giga" ? "de velocidade" : "Mega"}
