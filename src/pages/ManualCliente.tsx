@@ -105,7 +105,7 @@ const ManualCliente = () => {
                 height={800}
               />
               <div className="p-8 text-center">
-                <p className="text-muted-foreground text-sm mb-6">
+                <p className="text-muted-foreground text-sm mb-4">
                   Acesse pelo navegador ou baixe o app no seu smartphone.
                 </p>
                 <a
@@ -113,11 +113,28 @@ const ManualCliente = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="cta" size="lg" className="w-full">
+                  <Button variant="cta" size="lg" className="w-full mb-4">
                     <ChevronRight className="w-5 h-5 mr-2" />
                     Acessar Portal do Cliente
                   </Button>
                 </a>
+                <p className="text-muted-foreground text-xs mb-3">Baixe o app:</p>
+                <div className="flex items-center justify-center gap-3">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.provedor.nw3internet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={googlePlayBadge} alt="Disponível no Google Play" className="h-10" loading="lazy" />
+                  </a>
+                  <a
+                    href="https://apps.apple.com/us/app/nw3-internet/id6741180251"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={appStoreBadge} alt="Disponível na App Store" className="h-10" loading="lazy" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
