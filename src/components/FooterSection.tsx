@@ -17,13 +17,18 @@ const Footer = () => {
               Conectando você ao que importa com fibra óptica de alta velocidade.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Instagram].map((Icon, i) => (
+              {[
+                { Icon: Facebook, href: "#" },
+                { Icon: Instagram, href: "https://www.instagram.com/nw3_internet/" },
+              ].map((item, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="w-9 h-9 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
                 >
-                  <Icon className="w-4 h-4 text-primary-foreground/70" />
+                  <item.Icon className="w-4 h-4 text-primary-foreground/70" />
                 </a>
               ))}
             </div>
