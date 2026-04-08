@@ -22,7 +22,7 @@ const slides = [
   {
     image: heroSlide2,
     tagline: "Diversão garantida",
-    subtitle: "TV Digital + Streaming no melhor combo da região.",
+    subtitle: "Jogue sem travar com internet + Exitlag no seu plano.",
     speed: "600",
     label: "MEGA",
     price: "109",
