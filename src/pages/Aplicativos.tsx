@@ -29,9 +29,9 @@ const Aplicativos = () => {
     <>
       <PageBanner
         icon={AppWindow}
-        title="Aplicativos"
-        highlight="Inclusos"
-        description="Adicione o melhor do streaming em seu plano"
+        title="Adicione o melhor do"
+        highlight="streaming"
+        description="em seu plano com a NW3"
       />
 
       <section className="py-20 lg:py-28 bg-background">
