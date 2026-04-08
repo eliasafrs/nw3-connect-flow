@@ -55,7 +55,9 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="#"
+            href="http://sgp.nw3internet.com.br:8000/accounts/central/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-primary border border-primary/30 rounded-full px-4 py-1.5 hover:bg-primary/5 transition-colors"
           >
             <User className="w-4 h-4" />
@@ -93,7 +95,9 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="#"
+              href="http://sgp.nw3internet.com.br:8000/accounts/central/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-primary border border-primary/30 rounded-full px-4 py-2 hover:bg-primary/5 transition-colors w-fit"
             >
               <User className="w-4 h-4" />
