@@ -253,8 +253,8 @@ const BusinessPlans = () => {
                 Transforme seu espaço em um ambiente monitorado, seguro e conectado com as câmeras da NW3.
               </p>
               <p className="text-primary-foreground/60 mb-8">
-                A partir de <span className="text-accent font-bold text-xl">R$ 49,90/mês</span>*, escolha o número de câmeras
-                internas ou externas, com gravação em nuvem por até 30 dias. Ativação rápida e acompanhe tudo pelo celular.
+                A partir de <span className="text-accent font-bold text-xl">R$ 39,90/mês</span>*, escolha o número de câmeras
+                internas ou externas, com gravação em nuvem por até 3 dias. Ativação rápida e acompanhe tudo pelo celular.
               </p>
               <Button
                 variant="cta"
