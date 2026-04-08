@@ -5,6 +5,7 @@ import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-3.jpg";
 import heroSlideBusiness from "@/assets/hero-slide-business-opt9.jpg";
 import disneyPlusLogo from "@/assets/logos/disney-plus.png";
+import exitlagLogo from "@/assets/logos/exitlag.png";
 
 const slides = [
   {
