@@ -250,20 +250,19 @@ const ManualCliente = () => {
             </div>
           </div>
 
+          <div className="mb-10 rounded-2xl overflow-hidden border border-border">
+            <img
+              src={speedTestImg}
+              alt="Infográfico passo a passo para teste de velocidade"
+              className="w-full h-auto"
+              loading="lazy"
+              width={1920}
+              height={600}
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 gap-10 items-start">
-            <div>
-              <StepList items={steps.testeVelocidade} />
-              <div className="mt-8 rounded-2xl overflow-hidden border border-border">
-                <img
-                  src={speedTestImg}
-                  alt="Infográfico passo a passo para teste de velocidade"
-                  className="w-full h-auto"
-                  loading="lazy"
-                  width={1920}
-                  height={600}
-                />
-              </div>
-            </div>
+            <StepList items={steps.testeVelocidade} />
             <div className="bg-card rounded-2xl border border-border p-8 text-center">
               <Gauge className="w-16 h-16 text-primary mx-auto mb-4 opacity-30" />
               <p className="text-muted-foreground text-sm mb-2">
