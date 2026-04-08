@@ -1,10 +1,11 @@
-import { Wifi, Cctv, Phone, ChevronRight } from "lucide-react";
+import { Wifi, Cctv, Phone, AppWindow, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   { icon: Wifi, label: "Internet", href: "/internet", color: "from-primary to-primary-glow" },
   { icon: Cctv, label: "Câmera", href: "/camera", color: "from-primary to-accent" },
   { icon: Phone, label: "Fixo", href: "/fixo", color: "from-primary to-primary-glow" },
+  { icon: AppWindow, label: "Streaming", href: "/aplicativos", color: "from-primary to-accent" },
 ];
 
 const ServicesGrid = () => {
@@ -21,7 +22,7 @@ const ServicesGrid = () => {
           Todos os serviços que você precisa em um só lugar.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {services.map((s) => (
             <Link
               key={s.label}
