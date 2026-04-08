@@ -38,7 +38,7 @@ const Aplicativos = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-2">
-              Tudo incluído no seu <span className="text-gradient">plano</span>
+              O melhor do Streaming no seu <span className="text-gradient">plano</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               Confira os aplicativos disponíveis de acordo com cada plano.
