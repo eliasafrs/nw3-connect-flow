@@ -1,11 +1,14 @@
+import { Shield } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
 
 const PoliticaPrivacidade = () => {
   return (
     <>
       <PageBanner
-        title="Política de Privacidade"
-        subtitle="Saiba como tratamos seus dados pessoais"
+        icon={Shield}
+        title="Política de"
+        highlight="Privacidade"
+        description="Saiba como tratamos seus dados pessoais"
       />
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
