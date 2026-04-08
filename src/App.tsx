@@ -12,6 +12,7 @@ import Aplicativos from "./pages/Aplicativos";
 import Ajuda from "./pages/Ajuda";
 import Sobre from "./pages/Sobre";
 import ManualCliente from "./pages/ManualCliente";
+import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/ajuda" element={<Ajuda />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/manual-do-cliente" element={<ManualCliente />} />
+            <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
