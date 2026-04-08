@@ -24,66 +24,6 @@ const plans: Record<Segment, {
     features: string[];
   }[];
 }> = {
-  basico: {
-    headline: "De básico, só o nome",
-    subtitle: "Velocidade e estabilidade para impulsionar o dia a dia do seu negócio.",
-    options: [
-      {
-        speed: "350 Mega",
-        sla: "SLA de atendimento: 24 horas",
-        price: "119",
-        cents: ",00",
-        features: ["Sem taxa de ativação*", "Wi-Fi 6 incluso", "1 IP Dinâmico"],
-      },
-      {
-        speed: "500 Mega",
-        sla: "SLA de atendimento: 24 horas",
-        price: "149",
-        cents: ",00",
-        features: ["Sem taxa de ativação", "Wi-Fi 6 incluso", "1 IP Dinâmico"],
-      },
-    ],
-  },
-  avancado: {
-    headline: "Atendimento prioritário",
-    subtitle: "Internet rápida e segura com atendimento diferenciado para sua empresa.",
-    options: [
-      {
-        speed: "500 Mega",
-        sla: "SLA de atendimento: 18 horas",
-        price: "169",
-        cents: ",00",
-        features: ["Sem taxa de ativação*", "Wi-Fi 6 + 1 IP Fixo", "1 linha telefônica fixa"],
-      },
-      {
-        speed: "700 Mega",
-        sla: "SLA de atendimento: 18 horas",
-        price: "219",
-        cents: ",00",
-        features: ["Sem taxa de ativação", "Wi-Fi 6 + 1 IP Fixo", "1 linha telefônica fixa"],
-      },
-    ],
-  },
-  plus: {
-    headline: "Plus é mais: +recursos, +oportunidades",
-    subtitle: "Conectividade avançada com telefonia, câmera e Wi-Fi com recursos exclusivos.",
-    options: [
-      {
-        speed: "500 Mega",
-        sla: "SLA de atendimento: 12 horas",
-        price: "269",
-        cents: ",00",
-        features: ["Sem taxa de ativação*", "Wi-Fi 6 + 1 IP Fixo", "1 linha telefônica fixa", "Suporte prioritário"],
-      },
-      {
-        speed: "700 Mega",
-        sla: "SLA de atendimento: 12 horas",
-        price: "319",
-        cents: ",00",
-        features: ["Sem taxa de ativação", "Wi-Fi 6 + 1 IP Fixo", "1 linha telefônica fixa", "Suporte prioritário"],
-      },
-    ],
-  },
   simetrica: {
     headline: "Upload igual ao Download",
     subtitle: "Banda simétrica ideal para empresas que enviam arquivos pesados, fazem videoconferências e usam sistemas em nuvem.",
