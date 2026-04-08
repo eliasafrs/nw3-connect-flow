@@ -13,8 +13,6 @@ const selfServiceItems = [
   { icon: Gauge, title: "Teste de velocidade", desc: "Verifique a velocidade da sua internet", href: "#" },
   { icon: BookOpen, title: "Manual do cliente", desc: "Guias e tutoriais para seu plano", href: "/manual-do-cliente" },
   { icon: User, title: "Área do cliente", desc: "Gerencie seu plano e dados", href: "http://sgp.nw3internet.com.br:8000/accounts/central/login" },
-  { icon: Scale, title: "Documentos Legais", desc: "Contratos e termos de uso", href: "#" },
-  { icon: Headset, title: "Ouvidoria NW3", desc: "Canal oficial de reclamações", href: "https://wa.me/551125862995" },
 ];
 
 const faqs = [
