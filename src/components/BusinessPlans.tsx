@@ -49,18 +49,18 @@ const plans: Record<Segment, {
     subtitle: "Link dedicado com banda garantida, IP fixo e SLA agressivo para operações críticas.",
     options: [
       {
-        speed: "100 Mega",
+        speed: "1 Giga",
         sla: "SLA de atendimento: 4 horas",
         price: "699",
         cents: ",00",
-        features: ["100 Mbps dedicados e simétricos", "IP Fixo (/29 - 5 IPs úteis)", "SLA 99,5% de disponibilidade", "Gerente de conta dedicado"],
+        features: ["1 Gbps dedicado e simétrico", "1 IP Fixo", "SLA 99,5% de disponibilidade", "Gerente de conta dedicado"],
       },
       {
-        speed: "200 Mega",
+        speed: "2 Gigas",
         sla: "SLA de atendimento: 4 horas",
         price: "999",
         cents: ",00",
-        features: ["200 Mbps dedicados e simétricos", "IP Fixo (/29 - 5 IPs úteis)", "SLA 99,7% de disponibilidade", "Gerente de conta dedicado"],
+        features: ["2 Gbps dedicados e simétricos", "1 IP Fixo", "SLA 99,7% de disponibilidade", "Gerente de conta dedicado"],
       },
     ],
   },
