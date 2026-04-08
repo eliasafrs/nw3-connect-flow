@@ -31,7 +31,7 @@ const Aplicativos = () => {
         icon={AppWindow}
         title="Aplicativos"
         highlight="Inclusos"
-        description="Aproveite os melhores aplicativos de streaming inclusos no seu plano NW3 Internet."
+        description="Adicione o melhor do streaming em seu plano"
       />
 
       <section className="py-20 lg:py-28 bg-background">
