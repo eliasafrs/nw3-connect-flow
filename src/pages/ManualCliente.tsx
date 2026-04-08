@@ -103,7 +103,7 @@ const ManualCliente = () => {
               <img
                 src={appClienteImg}
                 alt="Pessoa usando o app NW3 no celular"
-                className="w-full h-56 object-cover object-top"
+                className="w-full h-64 md:h-80 object-cover object-top"
                 loading="lazy"
                 width={800}
                 height={800}
