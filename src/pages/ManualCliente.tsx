@@ -2,6 +2,7 @@ import { BookOpen, Smartphone, FileText, Wifi, Gauge, MonitorPlay, ChevronRight 
 import appClienteImg from "@/assets/app-cliente.jpg";
 import speedTestImg from "@/assets/speed-test-guide.jpg";
 import troubleshootImg from "@/assets/troubleshoot-internet.jpg";
+import wifiCoverageImg from "@/assets/wifi-coverage-guide.jpg";
 import googlePlayBadge from "@/assets/google-play-badge.png";
 import appStoreBadge from "@/assets/app-store-badge-v2.png";
 import { Button } from "@/components/ui/button";
@@ -292,6 +293,17 @@ const ManualCliente = () => {
               </h2>
               <p className="text-muted-foreground text-sm">Entenda as frequências 2.4 GHz e 5 GHz</p>
             </div>
+          </div>
+
+          <div className="mb-10 rounded-2xl overflow-hidden border border-border">
+            <img
+              src={wifiCoverageImg}
+              alt="Infográfico comparando frequências Wi-Fi 2.4 GHz e 5 GHz"
+              className="w-full h-auto"
+              loading="lazy"
+              width={1920}
+              height={608}
+            />
           </div>
 
           <p className="text-muted-foreground mb-8 max-w-2xl">
