@@ -247,14 +247,14 @@ const BusinessPlans = () => {
                 <Cctv className="w-4 h-4" /> Proteção Inteligente
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-                Adicione <span className="text-gradient">monitoramento</span> ao seu plano
+                Adicione <span className="text-gradient">câmera de segurança</span> ao seu plano
               </h2>
               <p className="text-primary-foreground/70 text-lg mb-4">
                 Transforme seu espaço em um ambiente monitorado, seguro e conectado com as câmeras da NW3.
               </p>
               <p className="text-primary-foreground/60 mb-8">
-                A partir de <span className="text-accent font-bold text-xl">R$ 49,90/mês</span>*, escolha o número de câmeras
-                internas ou externas, com gravação em nuvem por até 30 dias. Ativação rápida e acompanhe tudo pelo celular.
+                A partir de <span className="text-accent font-bold text-xl">R$ 39,90/mês</span>*, escolha o número de câmeras
+                internas ou externas, com gravação em nuvem por até 3 dias. Ativação rápida e acompanhe tudo pelo celular.
               </p>
               <Button
                 variant="cta"
@@ -272,7 +272,7 @@ const BusinessPlans = () => {
               {[
                 { icon: Cctv, title: "Full HD", desc: "Câmeras de alta definição" },
                 { icon: Globe, title: "Acesso Remoto", desc: "Monitore de qualquer lugar" },
-                { icon: Shield, title: "Nuvem Segura", desc: "Até 30 dias de gravação" },
+                { icon: Shield, title: "Nuvem Segura", desc: "Até 3 dias de gravação" },
                 { icon: Phone, title: "App Exclusivo", desc: "Controle pelo celular" },
               ].map((item) => (
                 <div
