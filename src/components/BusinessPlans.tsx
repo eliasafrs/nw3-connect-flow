@@ -74,7 +74,7 @@ const highlights = [
 ];
 
 const BusinessPlans = () => {
-  const [activeSegment, setActiveSegment] = useState<Segment>("basico");
+  const [activeSegment, setActiveSegment] = useState<Segment>("simetrica");
   const currentPlan = plans[activeSegment];
 
   return (
