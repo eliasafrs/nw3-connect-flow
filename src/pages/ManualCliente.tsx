@@ -97,7 +97,7 @@ const ManualCliente = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
             <StepList items={steps.portal} />
             <div className="bg-card rounded-2xl border border-border overflow-hidden">
               <img
