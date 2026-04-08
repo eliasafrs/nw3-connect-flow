@@ -93,24 +93,22 @@ const HeroSection = () => {
 
 
 
-          {/* Partner logo */}
-          {slide.logo && (
-            <div className="mb-4">
-              <img src={slide.logo} alt="Logo parceiro" className="h-5 object-contain" />
-            </div>
-          )}
-
           {/* Speed + Price row */}
           {(slide.speed || slide.price) && (
           <div className="flex flex-wrap items-end gap-6 mb-8">
             {slide.speed && (
-              <div className="flex items-baseline gap-1">
+              <div className="flex items-end gap-3">
                 <span className="font-heading text-6xl lg:text-7xl font-black text-white leading-none">
                   {slide.speed}
                 </span>
-                <span className="font-heading text-xl font-bold text-white/80 uppercase">
-                  {slide.label}
-                </span>
+                <div className="flex flex-col items-start">
+                  {slide.logo && (
+                    <img src={slide.logo} alt="Logo parceiro" className="h-5 object-contain mb-1" />
+                  )}
+                  <span className="font-heading text-xl font-bold text-white/80 uppercase">
+                    {slide.label}
+                  </span>
+                </div>
               </div>
             )}
             {slide.price && (
