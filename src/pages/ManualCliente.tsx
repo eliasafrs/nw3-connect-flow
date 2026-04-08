@@ -93,21 +93,30 @@ const ManualCliente = () => {
 
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <StepList items={steps.portal} />
-            <div className="bg-card rounded-2xl border border-border p-8 text-center">
-              <Smartphone className="w-16 h-16 text-primary mx-auto mb-4 opacity-30" />
-              <p className="text-muted-foreground text-sm mb-6">
-                Acesse pelo navegador ou baixe o app no seu smartphone.
-              </p>
-              <a
-                href="http://sgp.nw3internet.com.br:8000/accounts/central/login"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="cta" size="lg" className="w-full">
-                  <ChevronRight className="w-5 h-5 mr-2" />
-                  Acessar Portal do Cliente
-                </Button>
-              </a>
+            <div className="bg-card rounded-2xl border border-border overflow-hidden">
+              <img
+                src={appClienteImg}
+                alt="Pessoa usando o app NW3 no celular"
+                className="w-full h-56 object-cover object-top"
+                loading="lazy"
+                width={800}
+                height={800}
+              />
+              <div className="p-8 text-center">
+                <p className="text-muted-foreground text-sm mb-6">
+                  Acesse pelo navegador ou baixe o app no seu smartphone.
+                </p>
+                <a
+                  href="http://sgp.nw3internet.com.br:8000/accounts/central/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="cta" size="lg" className="w-full">
+                    <ChevronRight className="w-5 h-5 mr-2" />
+                    Acessar Portal do Cliente
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
