@@ -10,6 +10,7 @@ import playkidsLogo from "@/assets/logos/playkids.png";
 import exitlagLogo from "@/assets/logos/exitlag.png";
 import skyPlusLogo from "@/assets/logos/sky-plus.png";
 import lookeLogo from "@/assets/logos/looke.png";
+import appleTvLogo from "@/assets/logos/apple-tv.png";
 
 const apps = [
   { logo: disneyLogo, title: "Disney+", desc: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic. Inclui Star e esportes com ESPN.", plans: "Planos a partir de 700 Mega" },
@@ -20,6 +21,7 @@ const apps = [
   { logo: exitlagLogo, title: "Exitlag", desc: "Otimize sua conexão para jogos online. Reduza lag e melhore sua experiência gamer.", plans: "Planos a partir de 600 Mega" },
   { logo: skyPlusLogo, title: "Sky+", desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda.", plans: "Planos a partir de 700 Mega" },
   { logo: lookeLogo, title: "Looke", desc: "Filmes, séries, documentários e conteúdo infantil sob demanda. Catálogo nacional e internacional.", plans: "Planos a partir de 500 Mega" },
+  { logo: appleTvLogo, title: "Apple TV+", desc: "Séries e filmes originais premiados da Apple. Produções exclusivas com grandes estrelas de Hollywood.", plans: "Planos a partir de 700 Mega" },
 ];
 
 const Aplicativos = () => {
