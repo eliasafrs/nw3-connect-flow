@@ -241,17 +241,26 @@ const ManualCliente = () => {
 
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <StepList items={steps.testeVelocidade} />
-            <div className="bg-card rounded-2xl border border-border p-8 text-center">
-              <Gauge className="w-16 h-16 text-primary mx-auto mb-4 opacity-30" />
-              <p className="text-muted-foreground text-sm mb-2">
-                Testes via cabo de rede são mais precisos.
-              </p>
-              <p className="text-muted-foreground text-xs mb-6">
-                Em planos superiores a 100 Mega, use equipamento com porta Gigabit Ethernet.
-              </p>
-              <Button variant="cta" size="lg" className="w-full">
-                Iniciar Teste de Velocidade
-              </Button>
+            <div className="bg-card rounded-2xl border border-border overflow-hidden">
+              <img
+                src={speedTestResultImg}
+                alt="Resultado de teste de velocidade mostrando 500 Mbps"
+                className="w-full h-auto"
+                loading="lazy"
+                width={800}
+                height={512}
+              />
+              <div className="p-6 text-center">
+                <p className="text-muted-foreground text-sm mb-2">
+                  Testes via cabo de rede são mais precisos.
+                </p>
+                <p className="text-muted-foreground text-xs mb-4">
+                  Em planos superiores a 100 Mega, use equipamento com porta Gigabit Ethernet.
+                </p>
+                <Button variant="cta" size="lg" className="w-full">
+                  Iniciar Teste de Velocidade
+                </Button>
+              </div>
             </div>
           </div>
         </div>
