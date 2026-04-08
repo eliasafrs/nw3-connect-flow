@@ -7,9 +7,6 @@ import {
 import businessHero from "@/assets/banners/business-hero.jpg";
 
 const segments = [
-  { id: "basico", label: "Básico", icon: Zap },
-  { id: "avancado", label: "Avançado", icon: Award },
-  { id: "plus", label: "Plus", icon: Users },
   { id: "simetrica", label: "Banda Simétrica", icon: ArrowUpDown },
   { id: "dedicado", label: "Link Dedicado", icon: LinkIcon },
 ] as const;
