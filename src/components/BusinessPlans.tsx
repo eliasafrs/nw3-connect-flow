@@ -67,7 +67,7 @@ const plans: Record<Segment, {
 };
 
 const highlights = [
-  { icon: Clock, label: "Suporte", desc: "24 Horas" },
+  { icon: Clock, label: "Suporte", desc: "Prioritário" },
   { icon: Wifi, label: "Garantia", desc: "de Banda" },
   { icon: Server, label: "Recursos", desc: "Extras" },
   { icon: Shield, label: "Segurança", desc: "Avançada" },
