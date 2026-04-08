@@ -12,7 +12,7 @@ const selfServiceItems = [
   { icon: FileText, title: "2ª via do boleto", desc: "Acesse sua fatura e imprima a 2ª via", href: "#" },
   { icon: Gauge, title: "Teste de velocidade", desc: "Verifique a velocidade da sua internet", href: "#" },
   { icon: BookOpen, title: "Manual do cliente", desc: "Guias e tutoriais para seu plano", href: "#" },
-  { icon: User, title: "Área do cliente", desc: "Gerencie seu plano e dados", href: "#" },
+  { icon: User, title: "Área do cliente", desc: "Gerencie seu plano e dados", href: "http://sgp.nw3internet.com.br:8000/accounts/central/login" },
   { icon: Scale, title: "Documentos Legais", desc: "Contratos e termos de uso", href: "#" },
   { icon: Headset, title: "Ouvidoria NW3", desc: "Canal oficial de reclamações", href: "#" },
 ];
