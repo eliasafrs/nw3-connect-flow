@@ -2,6 +2,8 @@ import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 
 import { Link } from "react-router-dom";
 import nw3Logo from "@/assets/nw3-logo.png";
+import googlePlayBadge from "@/assets/google-play-badge.png";
+import appStoreBadge from "@/assets/app-store-badge.png";
 
 const Footer = () => {
   return (
