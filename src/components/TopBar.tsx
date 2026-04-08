@@ -35,10 +35,10 @@ const TopBar = ({ segment, onSegmentChange }: TopBarProps) => {
 
         {/* Right side */}
         <div className="hidden md:flex items-center gap-5 text-xs">
-          <span className="flex items-center gap-1.5 text-primary-foreground/70">
+          <a href="https://wa.me/551125862995" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
             <Phone className="w-3 h-3" />
             (11) 2586-2995
-          </span>
+          </a>
           <a
             href="https://wa.me/551125862995"
             target="_blank"
