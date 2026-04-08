@@ -42,7 +42,7 @@ const navItems = [
 ];
 
 const StepList = ({ items }: { items: { num: string; text: string }[] }) => (
-  <div className="space-y-6">
+  <div className="space-y-8">
     {items.map((step) => (
       <div key={step.num} className="flex items-start gap-4">
         <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
