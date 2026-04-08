@@ -96,7 +96,7 @@ const HeroSection = () => {
           {/* Partner logo */}
           {slide.logo && (
             <div className="mb-4">
-              <img src={slide.logo} alt="Logo parceiro" className="h-12 object-contain" />
+              <img src={slide.logo} alt="Logo parceiro" className="h-8 object-contain" />
             </div>
           )}
 
