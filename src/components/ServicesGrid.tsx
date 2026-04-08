@@ -1,4 +1,4 @@
-import { Wifi, Cctv, Phone, AppWindow, ChevronRight } from "lucide-react";
+import { Wifi, Cctv, Phone, MonitorPlay, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
