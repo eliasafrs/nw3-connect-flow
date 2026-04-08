@@ -24,6 +24,7 @@ const slides = [
     image: heroSlide2,
     tagline: "Diversão garantida",
     subtitle: "Jogue sem travar com internet + Exitlag no seu plano.",
+    logo: exitlagLogo,
     speed: "600",
     label: "MEGA",
     price: "109",
