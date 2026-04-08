@@ -120,13 +120,13 @@ const Ajuda = () => {
             Fale com nossa equipe pelo WhatsApp ou telefone. Estamos prontos para ajudar!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/551125862995" target="_blank" rel="noopener noreferrer">
               <Button variant="cta" size="lg">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Falar no WhatsApp
               </Button>
             </a>
-            <a href="tel:0000000000">
+            <a href="tel:1125862995">
               <Button variant="hero-outline" size="lg">
                 <Phone className="w-5 h-5 mr-2" />
                 Ligar Agora
