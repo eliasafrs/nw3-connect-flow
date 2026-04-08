@@ -1,11 +1,11 @@
-import { Wifi, Cctv, Phone, AppWindow, ChevronRight } from "lucide-react";
+import { Wifi, Cctv, Phone, MonitorPlay, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   { icon: Wifi, label: "Internet", href: "/internet", color: "from-primary to-primary-glow" },
   { icon: Cctv, label: "Câmera", href: "/camera", color: "from-primary to-accent" },
   { icon: Phone, label: "Fixo", href: "/fixo", color: "from-primary to-primary-glow" },
-  { icon: AppWindow, label: "Streaming", href: "/aplicativos", color: "from-primary to-accent" },
+  { icon: MonitorPlay, label: "Streaming", href: "/aplicativos", color: "from-primary to-accent" },
 ];
 
 const ServicesGrid = () => {
