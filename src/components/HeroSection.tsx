@@ -93,6 +93,13 @@ const HeroSection = () => {
 
 
 
+          {/* Partner logo */}
+          {slide.logo && (
+            <div className="mb-4">
+              <img src={slide.logo} alt="Logo parceiro" className="h-12 object-contain" />
+            </div>
+          )}
+
           {/* Speed + Price row */}
           {(slide.speed || slide.price) && (
           <div className="flex flex-wrap items-end gap-6 mb-8">
