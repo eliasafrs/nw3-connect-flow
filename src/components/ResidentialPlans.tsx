@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, ChevronRight, Wifi } from "lucide-react";
+import { Check, ChevronRight, Tv, Wifi } from "lucide-react";
 
 import disneyLogo from "@/assets/logos/8164e6be-f6e5-4d93-b6a2-56fa5171a793.png";
 import hboLogo from "@/assets/logos/hbo-max.png";
@@ -85,7 +85,12 @@ const ResidentialPlans = () => {
                     {plan.speed}
                   </div>
                   <div className="text-xs text-muted-foreground font-medium mt-1">
-                    {plan.speed === "1 Giga" ? "de velocidade" : "Mega"}
+                    {plan.speed === "1 Giga" ? "de velocidade" : "MEGA"}
+                  </div>
+                  <div className="bg-accent/10 rounded-lg px-3 py-1.5 text-center mt-2">
+                    <span className="text-xs font-semibold flex items-center justify-center gap-1 uppercase text-[#0f1c2e]">
+                      <Tv className="w-3.5 h-3.5" /> + DE 90 CANAIS DE TV
+                    </span>
                   </div>
                 </div>
 
