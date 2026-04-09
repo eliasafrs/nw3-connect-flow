@@ -78,7 +78,7 @@ const ResidentialPlans = () => {
                 </div>
               )}
 
-              <div className="p-6">
+              <div className="p-6 text-center">
                 {/* Speed */}
                 <div className="mb-4">
                   <div className="font-heading text-5xl font-black text-foreground leading-none">
@@ -91,7 +91,7 @@ const ResidentialPlans = () => {
 
                 {/* Streaming logos */}
                 {plan.streaming && (
-                  <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
+                  <div className="flex items-center justify-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
                       {logoMap[plan.streaming] && (
                         <img
                           src={logoMap[plan.streaming]}
@@ -115,7 +115,7 @@ const ResidentialPlans = () => {
 
                 {/* Price */}
                 <div className="mb-5">
-                  <div className="flex items-baseline gap-0.5">
+                  <div className="flex items-baseline justify-center gap-0.5">
                     <span className="text-sm text-muted-foreground">R$</span>
                     <span className="font-heading text-4xl font-black text-foreground">{plan.price}</span>
                     <div className="flex flex-col">
