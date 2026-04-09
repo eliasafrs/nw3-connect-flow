@@ -13,7 +13,7 @@ const slides = [
     tagline: "Emoção garantida",
     subtitle: "Assista ao vivo com qualidade máxima",
     logo: disneyPlusLogo,
-    speed: "700",
+    speed: "600",
     label: "MEGA",
     price: "129",
     cents: ",90",
