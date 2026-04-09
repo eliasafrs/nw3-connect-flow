@@ -107,7 +107,7 @@ const HeroSection = () => {
                   </span>
                 </div>
                 {slide.logo && (
-                  <div className="flex flex-col items-center gap-1">
+                  <div className="flex items-center gap-2">
                     <span className="font-heading text-3xl font-black text-white leading-none">+</span>
                     <img src={slide.logo} alt="Logo parceiro" className={`object-contain ${slide.logo === disneyPlusLogo ? 'h-11' : 'h-6'}`} />
                   </div>
