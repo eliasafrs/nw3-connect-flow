@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import heroSlide2 from "@/assets/hero-slide-gaming-v3.jpg";
+import heroSlide2 from "@/assets/hero-slide-gaming-v4.jpg";
 import heroSlideBusiness from "@/assets/hero-slide-business-opt9.jpg";
 import disneyPlusLogo from "@/assets/logos/disney-plus.png";
 import exitlagLogo from "@/assets/logos/exitlag.png";
