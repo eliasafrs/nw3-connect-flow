@@ -91,25 +91,27 @@ const ResidentialPlans = () => {
 
                 {/* Streaming logos */}
                 {plan.streaming && (
-                  <div className="flex items-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
-                    <span className="text-foreground text-lg font-bold">+</span>
-                    {logoMap[plan.streaming] && (
-                      <img
-                        src={logoMap[plan.streaming]}
-                        alt={plan.streaming}
-                        className="h-7 w-auto object-contain"
-                      />
-                    )}
-                    {secondLogoMap[plan.streaming] && (
-                      <>
-                        <span className="text-muted-foreground text-xs font-bold">OU</span>
+                  <div className="flex flex-col items-center gap-1 bg-secondary rounded-lg px-3 py-2.5 mb-5">
+                    <span className="text-primary text-xs font-bold">+</span>
+                    <div className="flex items-center gap-2">
+                      {logoMap[plan.streaming] && (
                         <img
-                          src={secondLogoMap[plan.streaming]}
-                          alt=""
+                          src={logoMap[plan.streaming]}
+                          alt={plan.streaming}
                           className="h-7 w-auto object-contain"
                         />
-                      </>
-                    )}
+                      )}
+                      {secondLogoMap[plan.streaming] && (
+                        <>
+                          <span className="text-muted-foreground text-xs font-bold">OU</span>
+                          <img
+                            src={secondLogoMap[plan.streaming]}
+                            alt=""
+                            className="h-7 w-auto object-contain"
+                          />
+                        </>
+                      )}
+                    </div>
                   </div>
                 )}
                 {!plan.streaming && <div className="mb-5" />}
