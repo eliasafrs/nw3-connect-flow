@@ -109,7 +109,6 @@ const ResidentialPlans = () => {
                           />
                         </>
                       )}
-                    </div>
                   </div>
                 )}
                 {!plan.streaming && <div className="mb-5" />}
