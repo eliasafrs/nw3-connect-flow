@@ -96,6 +96,7 @@ const HeroSection = () => {
           {/* Speed + Price row */}
           {(slide.speed || slide.price) && (
           <div className="flex flex-wrap items-end gap-6 mb-8">
+            {slide.speed && (
               <div className="flex items-center gap-3">
                 <div className="flex flex-col items-center">
                   <span className="font-heading text-6xl lg:text-7xl font-black text-white leading-none">
