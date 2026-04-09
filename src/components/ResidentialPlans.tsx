@@ -96,7 +96,7 @@ const ResidentialPlans = () => {
                         <img
                           src={logoMap[plan.streaming]}
                           alt={plan.streaming}
-                          className="h-9 w-auto object-contain"
+                          className="h-7 w-auto object-contain"
                         />
                       )}
                       {secondLogoMap[plan.streaming] && (
