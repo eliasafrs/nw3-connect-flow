@@ -10,15 +10,15 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section className="py-20 lg:py-28 relative overflow-hidden text-primary bg-primary">
       <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
 
       <div className="relative container mx-auto px-4 text-center">
-        <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-3">
+        <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-3 text-primary-foreground">
           Quem tem <span className="text-gradient">NW3</span>, tem tudo!
         </h2>
-        <p className="text-muted-foreground text-lg mb-14 max-w-xl mx-auto">
+        <p className="text-lg mb-14 max-w-xl mx-auto text-primary-foreground">
           Todos os serviços que você precisa em um só lugar.
         </p>
 
@@ -29,7 +29,7 @@ const ServicesGrid = () => {
               to={s.href}
               className="group backdrop-blur-sm border border-border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 bg-primary"
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center mx-auto mb-5 shadow-glow`}>
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center mx-auto mb-5 shadow-glow text-primary-foreground bg-primary-foreground`}>
                 <s.icon className="w-8 h-8 border-primary-foreground text-[#f7c602]" />
               </div>
               <h3 className="font-heading font-bold text-lg mb-2 text-primary-foreground">{s.label}</h3>
