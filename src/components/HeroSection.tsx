@@ -103,7 +103,7 @@ const HeroSection = () => {
                 </span>
                 <div className="flex flex-col items-start">
                   {slide.logo && (
-                    <img src={slide.logo} alt="Logo parceiro" className="h-11 object-contain mb-1" />
+                    <img src={slide.logo} alt="Logo parceiro" className={`object-contain mb-1 ${slide.logo === disneyPlusLogo ? 'h-11' : 'h-6'}`} />
                   )}
                   <span className="font-heading text-xl font-bold text-white/80 uppercase">
                     {slide.label}
