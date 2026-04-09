@@ -244,13 +244,13 @@ const BusinessPlans = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <span className="inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-wider mb-3">
-                <Cctv className="w-4 h-4" /> Proteção Inteligente
+                <Cctv className="w-4 h-4" /> CAMERA DE SEGURANÇA
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
                 Adicione <span className="text-gradient">câmera de segurança</span> ao seu plano
               </h2>
               <p className="text-primary-foreground/70 text-lg mb-4">
-                Transforme seu espaço em um ambiente monitorado, seguro e conectado com as câmeras da NW3.
+                Transforme seu espaço em um ambiente seguro e conectado com as câmeras da NW3.
               </p>
               <p className="text-primary-foreground/60 mb-8">
                 A partir de <span className="text-accent font-bold text-xl">R$ 39,90/mês</span>*, escolha o número de câmeras
