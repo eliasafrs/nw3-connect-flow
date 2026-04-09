@@ -84,7 +84,7 @@ const BusinessPlans = () => {
         <img src={businessHero} alt="NW3 Negócios" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-hero opacity-80" />
         <div className="relative container mx-auto px-4 text-center py-16">
-          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 px-4 py-1.5 rounded-full text-sm font-medium mb-6 text-primary-foreground">
             <Building2 className="w-4 h-4" />
             NW3 Negócios
           </div>
@@ -93,7 +93,7 @@ const BusinessPlans = () => {
             <span className="text-gradient">conectividade e tecnologia</span>
           </h1>
           <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto mb-8">
-            O NW3 Negócios foi criado para micro e pequenas empresas. Garantia de banda,
+            O NW3 Negócios foi criado para micro, pequenas e grandes empresas. Garantia de banda,
             atendimento prioritário e recursos como telefonia fixa, câmeras e Wi-Fi avançado.
           </p>
 
