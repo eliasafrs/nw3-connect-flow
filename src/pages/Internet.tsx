@@ -135,7 +135,7 @@ const Internet = () => {
                         </div>
                         <div className="bg-accent/10 rounded-lg px-3 py-2 text-center mb-3 space-y-1">
                           <div className="text-xs font-bold text-primary">+</div>
-                          <div className="text-xs font-semibold text-accent-foreground flex items-center justify-center gap-1">
+                          <div className="text-xs font-semibold text-accent-foreground flex items-center justify-center gap-1 uppercase">
                             <Tv className="w-3.5 h-3.5" /> Canais de TV
                           </div>
                           <div className="text-xs font-bold text-primary">+</div>
