@@ -84,10 +84,10 @@ const HeroSection = () => {
           </div>
 
           {/* Main heading */}
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-4">
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             {slide.tagline}
           </h1>
-          <p className="text-lg sm:text-xl mb-8 max-w-lg text-yellow-400">
+          <p className="text-lg sm:text-xl mb-8 max-w-lg text-yellow-400 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
             {slide.subtitle}
           </p>
 
