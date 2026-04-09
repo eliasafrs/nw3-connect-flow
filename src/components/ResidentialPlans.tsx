@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, ChevronRight, Wifi } from "lucide-react";
+import { Check, ChevronRight, Tv, Wifi } from "lucide-react";
 
 import disneyLogo from "@/assets/logos/8164e6be-f6e5-4d93-b6a2-56fa5171a793.png";
 import hboLogo from "@/assets/logos/hbo-max.png";
