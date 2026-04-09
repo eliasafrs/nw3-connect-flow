@@ -147,7 +147,7 @@ const Internet = () => {
                                   {plan.separator || "+"}
                                 </span>
                               )}
-                              <img src={logo} alt={plan.streaming} className="h-9 w-auto object-contain" />
+                              <img src={logo} alt={plan.streaming} className="h-12 w-auto object-contain" />
                             </div>
                           ))}
                         </div>
