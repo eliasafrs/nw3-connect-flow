@@ -138,7 +138,6 @@ const Internet = () => {
                           <div className="text-xs font-semibold flex items-center justify-center gap-1 uppercase text-[#0f1c2e]">
                             <Tv className="w-3.5 h-3.5" /> Canais de TV
                           </div>
-                          <div className="text-xs font-bold text-primary"></div>
                         </div>
                         <div className="flex items-center justify-center gap-3 bg-primary/5 rounded-xl px-4 py-4 mb-5">
                           {plan.logos.map((logo, i) => (
