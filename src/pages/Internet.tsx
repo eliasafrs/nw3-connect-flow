@@ -135,7 +135,7 @@ const Internet = () => {
                         </div>
                         <div className="bg-accent/10 rounded-lg px-3 py-1.5 text-center mb-3">
                           <span className="text-xs font-semibold text-accent-foreground flex items-center justify-center gap-1">
-                            <Tv className="w-3.5 h-3.5" /> 90+ canais de TV
+                            <Tv className="w-3.5 h-3.5" /> + 90 canais de TV
                           </span>
                         </div>
                         <div className="flex items-center justify-center gap-3 bg-primary/5 rounded-xl px-4 py-4 mb-5">
