@@ -129,7 +129,7 @@ const Internet = () => {
                           </div>
                         )}
                         <div className="text-center mb-3">
-                          <div className="font-heading text-5xl font-bold text-white">{plan.speed}</div>
+                          <div className="font-heading text-5xl font-bold text-[#e4d101]">{plan.speed}</div>
                           <div className="text-xs text-white/70 font-medium">
                             {plan.speed === "1 Giga" ? "" : "MEGA"}
                           </div>
@@ -155,8 +155,8 @@ const Internet = () => {
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
                             <span className="text-sm text-white/60">R$</span>
-                            <span className="font-heading text-5xl font-bold text-yellow-400">{plan.price}</span>
-                            <span className="text-sm text-yellow-400">{plan.cents}/mês</span>
+                            <span className="font-heading text-5xl font-bold text-[#e4d101]">{plan.price}</span>
+                            <span className="text-sm text-[#e4d101]">{plan.cents}/mês</span>
                           </div>
                         </div>
                         <Button variant={plan.popular ? "cta" : "outline"} className="w-full" size="lg">
@@ -203,7 +203,7 @@ const Internet = () => {
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
                             <span className="text-sm text-muted-foreground">R$</span>
-                            <span className="font-heading text-5xl font-bold text-yellow-400">{plan.price}</span>
+                            <span className="font-heading text-5xl font-bold text-[#e4d101]">{plan.price}</span>
                             <span className="text-sm text-muted-foreground">{plan.cents}/mês</span>
                           </div>
                         </div>
