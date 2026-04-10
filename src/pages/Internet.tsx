@@ -155,8 +155,8 @@ const Internet = () => {
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
                             <span className="text-sm text-white/60">R$</span>
-                            <span className="font-heading text-5xl font-bold text-[#ffae00]">{plan.price}</span>
-                            <span className="text-sm text-[#ffae00]">{plan.cents}/mês</span>
+                            <span className="font-heading text-5xl font-bold text-yellow-400">{plan.price}</span>
+                            <span className="text-sm text-yellow-400">{plan.cents}/mês</span>
                           </div>
                         </div>
                         <Button variant={plan.popular ? "cta" : "outline"} className="w-full" size="lg">
