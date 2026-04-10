@@ -154,7 +154,7 @@ const Internet = () => {
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
                             <span className="text-sm text-muted-foreground">R$</span>
-                            <span className="font-heading text-5xl font-bold text-foreground">{plan.price}</span>
+                            <span className="font-heading text-5xl font-bold text-yellow-400">{plan.price}</span>
                             <span className="text-sm text-muted-foreground">{plan.cents}/mês</span>
                           </div>
                         </div>
@@ -202,7 +202,7 @@ const Internet = () => {
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
                             <span className="text-sm text-muted-foreground">R$</span>
-                            <span className="font-heading text-5xl font-bold text-foreground">{plan.price}</span>
+                            <span className="font-heading text-5xl font-bold text-yellow-400">{plan.price}</span>
                             <span className="text-sm text-muted-foreground">{plan.cents}/mês</span>
                           </div>
                         </div>

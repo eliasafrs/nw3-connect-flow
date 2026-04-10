@@ -118,7 +118,7 @@ const HeroSection = () => {
             <div className="border-l-2 border-white/20 pl-6">
               <div className="flex items-baseline gap-0.5">
                 <span className="text-white/60 text-sm">R$</span>
-                <span className="font-heading text-5xl font-black text-white leading-none">
+                <span className="font-heading text-5xl font-black text-yellow-400 leading-none">
                   {slide.price}
                 </span>
                 <div className="flex flex-col">

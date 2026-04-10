@@ -213,7 +213,7 @@ const BusinessPlans = () => {
                   <div className="text-center mb-6">
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-muted-foreground text-lg">R$</span>
-                      <span className="font-heading text-5xl font-bold text-foreground">{opt.price}</span>
+                      <span className="font-heading text-5xl font-bold text-yellow-400">{opt.price}</span>
                       <div className="text-left">
                         <span className="text-muted-foreground text-xl block leading-none">{opt.cents}</span>
                         <span className="text-muted-foreground text-sm">/mês</span>
