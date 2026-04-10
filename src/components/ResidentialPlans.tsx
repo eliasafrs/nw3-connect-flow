@@ -63,11 +63,12 @@ const ResidentialPlans = () => {
           {plans.map((plan) => (
             <div
               key={plan.speed}
-              className={`relative group bg-card rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative group rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
                 plan.popular
                   ? "ring-2 ring-accent shadow-glow"
                   : "border border-border shadow-card hover:shadow-card-hover"
               }`}
+              style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
             >
               {/* Top accent bar */}
               <div className={`h-1 ${plan.popular ? "bg-accent" : "bg-primary/20 group-hover:bg-primary/40"} transition-colors`} />
