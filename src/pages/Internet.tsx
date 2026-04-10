@@ -130,7 +130,7 @@ const Internet = () => {
                         )}
                         <div className="text-center mb-3">
                           <div className="font-heading text-5xl font-bold text-[#e4d101]">{plan.speed}</div>
-                          <div className="text-xs text-white/70 font-medium">
+                          <div className="text-xs font-medium text-primary-foreground">
                             {plan.speed === "1 Giga" ? "" : "MEGA"}
                           </div>
                         </div>
