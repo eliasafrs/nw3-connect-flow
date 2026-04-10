@@ -122,7 +122,7 @@ const HeroSection = () => {
                   {slide.price}
                 </span>
                 <div className="flex flex-col">
-                  <span className="text-lg leading-none text-[#ffae00]">
+                  <span className="text-lg leading-none text-yellow-400">
                     {slide.cents}
                   </span>
                   <span className="text-white/50 text-xs">/mês</span>
