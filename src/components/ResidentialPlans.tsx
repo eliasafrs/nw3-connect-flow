@@ -63,14 +63,15 @@ const ResidentialPlans = () => {
           {plans.map((plan) => (
             <div
               key={plan.speed}
-              className={`relative group bg-card rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative group rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
                 plan.popular
                   ? "ring-2 ring-accent shadow-glow"
                   : "border border-border shadow-card hover:shadow-card-hover"
               }`}
+              style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
             >
               {/* Top accent bar */}
-              <div className={`h-1 ${plan.popular ? "bg-accent" : "bg-primary/20 group-hover:bg-primary/40"} transition-colors`} />
+              <div className={`h-1 ${plan.popular ? "bg-accent" : "bg-white/20 group-hover:bg-white/40"} transition-colors`} />
 
               {plan.popular && (
                 <div className="absolute top-3 right-3 bg-accent text-accent-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-md uppercase tracking-wider">
@@ -81,14 +82,14 @@ const ResidentialPlans = () => {
               <div className="p-6 text-center">
                 {/* Speed */}
                 <div className="mb-4">
-                  <div className="font-heading text-5xl font-black text-foreground leading-none">
+                  <div className="font-heading text-5xl font-black text-white leading-none">
                     {plan.speed}
                   </div>
-                  <div className="text-xs text-muted-foreground font-medium mt-1">
+                  <div className="text-xs text-white/70 font-medium mt-1">
                     {plan.speed === "1 Giga" ? "de velocidade" : "MEGA"}
                   </div>
-                  <div className="bg-accent/10 rounded-lg px-3 py-1.5 text-center mt-2">
-                    <span className="text-xs font-semibold flex items-center justify-center gap-1 uppercase text-[#0f1c2e]">
+                  <div className="bg-white/10 rounded-lg px-3 py-1.5 text-center mt-2">
+                    <span className="text-xs font-semibold flex items-center justify-center gap-1 uppercase text-white/90">
                       <Tv className="w-3.5 h-3.5" /> + DE 90 CANAIS DE TV
                     </span>
                   </div>
@@ -96,7 +97,7 @@ const ResidentialPlans = () => {
 
                 {/* Streaming logos */}
                 {plan.streaming && (
-                  <div className="flex items-center justify-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
+                  <div className="flex items-center justify-center gap-2 bg-white/10 rounded-lg px-3 py-2.5 mb-5">
                       {logoMap[plan.streaming] && (
                         <img
                           src={logoMap[plan.streaming]}
@@ -106,7 +107,7 @@ const ResidentialPlans = () => {
                       )}
                       {secondLogoMap[plan.streaming] && (
                         <>
-                          <span className="text-muted-foreground text-xs font-bold">OU</span>
+                          <span className="text-white/70 text-xs font-bold">OU</span>
                           <img
                             src={secondLogoMap[plan.streaming]}
                             alt=""
@@ -121,11 +122,11 @@ const ResidentialPlans = () => {
                 {/* Price */}
                 <div className="mb-5">
                   <div className="flex items-baseline justify-center gap-0.5">
-                    <span className="text-sm text-muted-foreground">R$</span>
-                    <span className="font-heading text-4xl font-black text-gradient">{plan.price}</span>
+                    <span className="text-sm text-white/60">R$</span>
+                    <span className="font-heading text-4xl font-black text-accent">{plan.price}</span>
                     <div className="flex flex-col">
-                      <span className="text-muted-foreground text-sm leading-none">{plan.cents}</span>
-                      <span className="text-muted-foreground text-[10px]">/mês</span>
+                      <span className="text-white/60 text-sm leading-none">{plan.cents}</span>
+                      <span className="text-white/60 text-[10px]">/mês</span>
                     </div>
                   </div>
                 </div>
@@ -155,6 +156,9 @@ const ResidentialPlans = () => {
               </div>
             ))}
           </div>
+          <p className="text-xs text-primary-foreground/40 mt-4 text-center">
+            *Sujeito à análise e prazo de permanência de 12 meses.
+          </p>
         </div>
       </div>
     </section>

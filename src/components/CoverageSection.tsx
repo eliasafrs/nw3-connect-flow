@@ -157,7 +157,7 @@ const CoverageSection = () => {
                   </p>
                   {result.available ? (
                     <a
-                      href="https://wa.me/551125862995?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20a%20NW3%20Internet."
+                      href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20a%20NW3%20Internet."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
