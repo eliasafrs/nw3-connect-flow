@@ -155,9 +155,6 @@ const ResidentialPlans = () => {
               </div>
             ))}
           </div>
-          <p className="text-xs text-primary-foreground/40 mt-4 text-center">
-            *Sujeito à análise e prazo de permanência de 12 meses.
-          </p>
         </div>
       </div>
     </section>
