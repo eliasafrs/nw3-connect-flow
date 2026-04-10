@@ -107,7 +107,7 @@ const ResidentialPlans = () => {
                       )}
                       {secondLogoMap[plan.streaming] && (
                         <>
-                          <span className="text-muted-foreground text-xs font-bold">OU</span>
+                          <span className="text-white/70 text-xs font-bold">OU</span>
                           <img
                             src={secondLogoMap[plan.streaming]}
                             alt=""
