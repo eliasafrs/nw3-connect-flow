@@ -62,7 +62,7 @@ const Fixo = () => {
                 <span className="text-sm text-muted-foreground">A partir de</span>
                 <div className="flex items-baseline justify-center gap-0.5 mt-1">
                   <span className="text-lg text-muted-foreground">R$</span>
-                  <span className="font-heading text-6xl font-bold text-foreground">19</span>
+                  <span className="font-heading text-6xl font-bold text-yellow-400">19</span>
                   <div className="text-left">
                     <span className="text-xl text-muted-foreground block leading-none">,90</span>
                     <span className="text-sm text-muted-foreground">/mês</span>
