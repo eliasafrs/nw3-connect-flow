@@ -71,7 +71,7 @@ const ResidentialPlans = () => {
               style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
             >
               {/* Top accent bar */}
-              <div className={`h-1 ${plan.popular ? "bg-accent" : "bg-primary/20 group-hover:bg-primary/40"} transition-colors`} />
+              <div className={`h-1 ${plan.popular ? "bg-accent" : "bg-white/20 group-hover:bg-white/40"} transition-colors`} />
 
               {plan.popular && (
                 <div className="absolute top-3 right-3 bg-accent text-accent-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-md uppercase tracking-wider">
