@@ -97,7 +97,7 @@ const ResidentialPlans = () => {
 
                 {/* Streaming logos */}
                 {plan.streaming && (
-                  <div className="flex items-center justify-center gap-2 bg-secondary rounded-lg px-3 py-2.5 mb-5">
+                  <div className="flex items-center justify-center gap-2 bg-white/10 rounded-lg px-3 py-2.5 mb-5">
                       {logoMap[plan.streaming] && (
                         <img
                           src={logoMap[plan.streaming]}
