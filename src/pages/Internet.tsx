@@ -116,11 +116,12 @@ const Internet = () => {
                     {comboPlans.map((plan) => (
                       <div
                         key={plan.speed}
-                        className={`relative bg-card rounded-2xl p-7 border transition-all duration-300 hover:-translate-y-1 ${
+                        className={`relative rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 ${
                           plan.popular
-                            ? "border-primary shadow-glow scale-[1.03]"
-                            : "border-border shadow-card hover:shadow-card-hover"
+                            ? "ring-2 ring-accent shadow-glow scale-[1.03]"
+                            : "border border-white/10 shadow-card hover:shadow-card-hover"
                         }`}
+                        style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
                       >
                         {plan.popular && (
                           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
