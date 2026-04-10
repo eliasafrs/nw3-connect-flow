@@ -116,34 +116,35 @@ const Internet = () => {
                     {comboPlans.map((plan) => (
                       <div
                         key={plan.speed}
-                        className={`relative bg-card rounded-2xl p-7 border transition-all duration-300 hover:-translate-y-1 ${
+                        className={`relative rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 ${
                           plan.popular
-                            ? "border-primary shadow-glow scale-[1.03]"
-                            : "border-border shadow-card hover:shadow-card-hover"
+                            ? "ring-2 ring-accent shadow-glow scale-[1.03]"
+                            : "border border-white/10 shadow-card hover:shadow-card-hover"
                         }`}
+                        style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
                       >
                         {plan.popular && (
-                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
                             Mais Popular
                           </div>
                         )}
                         <div className="text-center mb-3">
-                          <div className="font-heading text-5xl font-bold text-foreground">{plan.speed}</div>
-                          <div className="text-xs text-muted-foreground font-medium">
+                          <div className="font-heading text-5xl font-bold text-white">{plan.speed}</div>
+                          <div className="text-xs text-white/70 font-medium">
                             {plan.speed === "1 Giga" ? "" : "MEGA"}
                           </div>
                         </div>
-                        <div className="bg-accent/10 rounded-lg px-3 py-2 text-center mb-3 space-y-1">
-                          <div className="text-xs font-bold text-primary"></div>
-                          <div className="text-sm font-semibold flex items-center justify-center gap-1 uppercase text-[#0f1c2e]">
+                        <div className="bg-white/10 rounded-lg px-3 py-2 text-center mb-3 space-y-1">
+                          <div className="text-xs font-bold text-white/80"></div>
+                          <div className="text-sm font-semibold flex items-center justify-center gap-1 uppercase text-white/90">
                             <Tv className="w-3.5 h-3.5" /> + DE 90 CANAIS DE TV
                           </div>
                         </div>
-                        <div className="flex items-center justify-center gap-3 bg-primary/5 rounded-xl px-4 py-4 mb-5">
+                        <div className="flex items-center justify-center gap-3 bg-white/10 rounded-xl px-4 py-4 mb-5">
                           {plan.logos.map((logo, i) => (
                             <div key={i} className="flex items-center gap-3">
                               {i > 0 && (
-                                <span className="text-muted-foreground text-xs font-bold">
+                                <span className="text-white/70 text-xs font-bold">
                                   {plan.separator || "+"}
                                 </span>
                               )}
@@ -153,9 +154,9 @@ const Internet = () => {
                         </div>
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
-                            <span className="text-sm text-muted-foreground">R$</span>
-                            <span className="font-heading text-5xl font-bold text-yellow-400">{plan.price}</span>
-                            <span className="text-sm text-muted-foreground">{plan.cents}/mês</span>
+                            <span className="text-sm text-white/60">R$</span>
+                            <span className="font-heading text-5xl font-bold text-[#ffae00]">{plan.price}</span>
+                            <span className="text-sm text-[#ffae00]">{plan.cents}/mês</span>
                           </div>
                         </div>
                         <Button variant={plan.popular ? "cta" : "outline"} className="w-full" size="lg">
