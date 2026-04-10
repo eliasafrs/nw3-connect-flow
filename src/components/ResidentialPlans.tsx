@@ -123,9 +123,9 @@ const ResidentialPlans = () => {
                 <div className="mb-5">
                   <div className="flex items-baseline justify-center gap-0.5">
                     <span className="text-sm text-white/60">R$</span>
-                    <span className="font-heading text-4xl font-black text-accent">{plan.price}</span>
+                    <span className="font-heading text-4xl font-black text-[#ffae00]">{plan.price}</span>
                     <div className="flex flex-col">
-                      <span className="text-white/60 text-sm leading-none">{plan.cents}</span>
+                      <span className="text-sm leading-none text-[#ffae00]">{plan.cents}</span>
                       <span className="text-white/60 text-[10px]">/mês</span>
                     </div>
                   </div>
