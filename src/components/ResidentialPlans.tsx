@@ -82,14 +82,14 @@ const ResidentialPlans = () => {
               <div className="p-6 text-center">
                 {/* Speed */}
                 <div className="mb-4">
-                  <div className="font-heading text-5xl font-black text-foreground leading-none">
+                  <div className="font-heading text-5xl font-black text-white leading-none">
                     {plan.speed}
                   </div>
-                  <div className="text-xs text-muted-foreground font-medium mt-1">
+                  <div className="text-xs text-white/70 font-medium mt-1">
                     {plan.speed === "1 Giga" ? "de velocidade" : "MEGA"}
                   </div>
-                  <div className="bg-accent/10 rounded-lg px-3 py-1.5 text-center mt-2">
-                    <span className="text-xs font-semibold flex items-center justify-center gap-1 uppercase text-[#0f1c2e]">
+                  <div className="bg-white/10 rounded-lg px-3 py-1.5 text-center mt-2">
+                    <span className="text-xs font-semibold flex items-center justify-center gap-1 uppercase text-white/90">
                       <Tv className="w-3.5 h-3.5" /> + DE 90 CANAIS DE TV
                     </span>
                   </div>
