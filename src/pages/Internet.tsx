@@ -224,6 +224,21 @@ const Internet = () => {
                 </TabsContent>
               </Tabs>
 
+              {/* Benefits strip */}
+              <div className="bg-primary rounded-xl p-6 sm:p-8 max-w-4xl mx-auto mt-12">
+                <h3 className="font-heading text-lg font-bold text-primary-foreground mb-4 text-center">
+                  Incluído em todos os planos
+                </h3>
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+                  {["Roteador Wi-Fi incluso", "100% Fibra Óptica", "Suporte todos os dias", "Canais de TV no app"].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-accent" />
+                      <span className="font-medium text-primary-foreground text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </section>
         </>
