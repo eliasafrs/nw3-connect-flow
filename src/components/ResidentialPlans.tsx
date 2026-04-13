@@ -149,7 +149,7 @@ const ResidentialPlans = () => {
             Incluído em todos os planos
           </h3>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {["Roteador Wi-Fi incluso", "100% Fibra Óptica", "Suporte 24h", "Canais de TV no app"].map((item) => (
+            {["Roteador Wi-Fi incluso", "100% Fibra Óptica", "Suporte todos os dias", "Canais de TV no app"].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-accent" />
                 <span className="font-medium text-primary-foreground text-sm">{item}</span>
