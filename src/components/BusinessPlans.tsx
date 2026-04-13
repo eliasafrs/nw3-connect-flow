@@ -248,10 +248,10 @@ const BusinessPlans = () => {
                       <img
                         src={illustration}
                         alt="Ilustração conexão empresarial"
-                        className="w-[320px] h-auto object-contain drop-shadow-2xl"
+                        className="w-[420px] h-[280px] object-cover rounded-2xl shadow-lg"
                         loading="lazy"
-                        width={512}
-                        height={512}
+                        width={640}
+                        height={640}
                       />
                     </div>
                   </div>
