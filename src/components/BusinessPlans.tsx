@@ -5,6 +5,7 @@ import {
   Clock, ChevronRight, Check, Zap, Award, Users, ArrowUpDown, Link as LinkIcon
 } from "lucide-react";
 import businessHero from "@/assets/banners/business-hero.jpg";
+import businessIllustration from "@/assets/business-illustration.png";
 
 const segments = [
   { id: "simetrica", label: "Banda Simétrica", icon: ArrowUpDown },
@@ -171,69 +172,84 @@ const BusinessPlans = () => {
               <p className="text-muted-foreground text-lg max-w-xl mx-auto">{currentPlan.subtitle}</p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6">
-              {currentPlan.options.map((opt, i) => (
-                <div
-                  key={i}
-                  className={`relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 ${
-                    i === 1
-                      ? "ring-2 ring-accent shadow-glow scale-[1.03]"
-                      : "border border-white/10 shadow-card hover:shadow-card-hover"
-                  }`}
-                  style={{ background: "linear-gradient(135deg, hsl(220 72% 38%), hsl(225 90% 20%))" }}
-                >
-                  {i === 1 && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-accent-foreground text-xs font-bold px-4 py-1 rounded-full uppercase whitespace-nowrap">
-                      Mais popular
+            <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-center">
+              {/* Cards empilhados */}
+              <div className="flex flex-col gap-6 max-w-lg mx-auto lg:mx-0">
+                {currentPlan.options.map((opt, i) => (
+                  <div
+                    key={i}
+                    className={`relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 ${
+                      i === 1
+                        ? "ring-2 ring-accent shadow-glow scale-[1.02]"
+                        : "border border-white/10 shadow-card hover:shadow-card-hover"
+                    }`}
+                    style={{ background: "linear-gradient(135deg, hsl(220 72% 38%), hsl(225 90% 20%))" }}
+                  >
+                    {i === 1 && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-accent-foreground text-xs font-bold px-4 py-1 rounded-full uppercase whitespace-nowrap">
+                        Mais popular
+                      </div>
+                    )}
+
+                    {/* Speed */}
+                    <div className="bg-white/10 rounded-xl p-4 text-center mb-6">
+                      <span className="font-heading text-4xl font-bold text-[#e4d101]">{opt.speed.split(" ")[0]}</span>
+                      <span className="font-heading text-lg font-bold text-white/90 ml-2">{opt.speed.split(" ")[1]}</span>
                     </div>
-                  )}
 
-                  {/* Speed */}
-                  <div className="bg-white/10 rounded-xl p-4 text-center mb-6">
-                    <span className="font-heading text-4xl font-bold text-[#e4d101]">{opt.speed.split(" ")[0]}</span>
-                    <span className="font-heading text-lg font-bold text-white/90 ml-2">{opt.speed.split(" ")[1]}</span>
-                  </div>
+                    {/* SLA */}
+                    <p className="text-sm text-white/70 text-center mb-4 flex items-center justify-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5" />
+                      {opt.sla}
+                    </p>
 
-                  {/* SLA */}
-                  <p className="text-sm text-white/70 text-center mb-4 flex items-center justify-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5" />
-                    {opt.sla}
-                  </p>
+                    {/* Features */}
+                    <ul className="space-y-2.5 mb-6">
+                      {opt.features.map((f) => (
+                        <li key={f} className="flex items-center gap-2 text-sm text-white/90">
+                          <Check className="w-4 h-4 text-[#e4d101] flex-shrink-0" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
 
-                  {/* Features */}
-                  <ul className="space-y-2.5 mb-6">
-                    {opt.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm text-white/90">
-                        <Check className="w-4 h-4 text-[#e4d101] flex-shrink-0" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Price */}
-                  <div className="text-center mb-6">
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-white/60 text-lg">R$</span>
-                      <span className="font-heading text-5xl font-bold text-[#e4d101]">{opt.price}</span>
-                      <div className="text-left">
-                        <span className="text-[#e4d101] text-xl block leading-none">{opt.cents}</span>
-                        <span className="text-white/60 text-sm">/mês</span>
+                    {/* Price */}
+                    <div className="text-center mb-6">
+                      <div className="flex items-baseline justify-center gap-1">
+                        <span className="text-white/60 text-lg">R$</span>
+                        <span className="font-heading text-5xl font-bold text-[#e4d101]">{opt.price}</span>
+                        <div className="text-left">
+                          <span className="text-[#e4d101] text-xl block leading-none">{opt.cents}</span>
+                          <span className="text-white/60 text-sm">/mês</span>
+                        </div>
                       </div>
                     </div>
+
+                    <Button
+                      variant={i === 1 ? "cta" : "outline"}
+                      className="w-full rounded-xl"
+                      onClick={() => window.open("https://wa.me/551125862995?text=Olá, tenho interesse no plano empresarial " + activeSegment + " " + opt.speed, "_blank")}
+                    >
+                      Eu quero!
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </Button>
+
+                    <p className="text-xs text-white/40 text-center mt-3">*mediante análise de crédito</p>
                   </div>
+                ))}
+              </div>
 
-                  <Button
-                    variant={i === 1 ? "cta" : "outline"}
-                    className="w-full rounded-xl"
-                    onClick={() => window.open("https://wa.me/551125862995?text=Olá, tenho interesse no plano empresarial " + activeSegment + " " + opt.speed, "_blank")}
-                  >
-                    Eu quero!
-                    <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-
-                  <p className="text-xs text-white/40 text-center mt-3">*mediante análise de crédito</p>
-                </div>
-              ))}
+              {/* Ilustração lateral */}
+              <div className="hidden lg:flex items-center justify-center">
+                <img
+                  src={businessIllustration}
+                  alt="Ilustração empresarial NW3"
+                  className="w-[380px] h-auto object-contain drop-shadow-2xl"
+                  loading="lazy"
+                  width={800}
+                  height={900}
+                />
+              </div>
             </div>
           </div>
         </div>
