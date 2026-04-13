@@ -1,4 +1,4 @@
-import { Headset, Signal, Wrench, Heart, LockOpen } from "lucide-react";
+import { Headset, Signal, Wrench, Heart, Handshake } from "lucide-react";
 
 const items = [
   { icon: Signal, title: "Alta Estabilidade", desc: "Conexão que não cai, mesmo nos horários de pico" },
@@ -6,7 +6,7 @@ const items = [
   { icon: Wrench, title: "Técnicos Especializados", desc: "Instalação e manutenção com profissionais qualificados" },
   
   { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, próxima de você" },
-  { icon: LockOpen, title: "Sem Fidelidade", desc: "Liberdade para ficar porque quer, não porque deve" },
+  { icon: Handshake, title: "Sem Fidelidade", desc: "Liberdade para ficar porque quer, não porque deve" },
 ];
 
 const DifferentialsSection = () => {
