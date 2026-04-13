@@ -184,11 +184,11 @@ const BusinessPlans = () => {
                 return (
                   <div
                     key={i}
-                    className={`grid lg:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}
+                    className={`grid lg:grid-cols-[340px_1fr] gap-8 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}
                   >
                     {/* Card */}
                     <div
-                      className={`relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 ${i % 2 === 1 ? "lg:order-2" : ""} ${
+                      className={`relative rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 max-w-[340px] mx-auto lg:mx-0 ${i % 2 === 1 ? "lg:order-2" : ""} ${
                         i === 1
                           ? "ring-2 ring-accent shadow-glow scale-[1.02]"
                           : "border border-white/10 shadow-card hover:shadow-card-hover"
