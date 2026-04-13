@@ -1,4 +1,4 @@
-import { Headset, Signal, Wrench, Heart } from "lucide-react";
+import { Headset, Signal, Wrench, Heart, LockOpen } from "lucide-react";
 
 const items = [
   { icon: Signal, title: "Alta Estabilidade", desc: "Conexão que não cai, mesmo nos horários de pico" },
@@ -6,6 +6,7 @@ const items = [
   { icon: Wrench, title: "Técnicos Especializados", desc: "Instalação e manutenção com profissionais qualificados" },
   
   { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, próxima de você" },
+  { icon: LockOpen, title: "Sem Fidelidade", desc: "Liberdade para ficar porque quer, não porque deve" },
 ];
 
 const DifferentialsSection = () => {
@@ -21,7 +22,7 @@ const DifferentialsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {items.map((item) => (
               <div key={item.title} className="group relative bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] rounded-xl p-6 hover:bg-primary-foreground/[0.08] transition-all duration-300">
                 <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center mb-4">
