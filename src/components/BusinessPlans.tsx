@@ -179,7 +179,8 @@ const BusinessPlans = () => {
 
             <div className="flex flex-col gap-10">
               {currentPlan.options.map((opt, i) => {
-                const illustration = i === 0 ? businessConnect1 : businessConnect2;
+                const segmentOffset = activeSegment === "simetrica" ? 0 : 2;
+                const illustration = businessIllustrations[segmentOffset + i];
                 return (
                   <div
                     key={i}
