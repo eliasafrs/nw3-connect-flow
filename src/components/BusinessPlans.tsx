@@ -248,7 +248,7 @@ const BusinessPlans = () => {
                       <img
                         src={illustration}
                         alt="Ilustração conexão empresarial"
-                        className="w-[420px] h-[280px] object-cover rounded-2xl shadow-lg"
+                        className="w-full h-[360px] object-cover rounded-2xl shadow-lg"
                         loading="lazy"
                         width={640}
                         height={640}
