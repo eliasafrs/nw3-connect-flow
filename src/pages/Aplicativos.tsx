@@ -56,7 +56,7 @@ const Aplicativos = () => {
                 <img
                   src={app.logo}
                   alt="Logo do aplicativo"
-                  className={`h-16 w-16 object-contain rounded-2xl mb-5 ${app.shadow ? 'bg-black p-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]' : ''}`}
+                  className={`h-16 w-16 object-contain rounded-2xl mb-5 ${app.shadow ? 'bg-stone-950 p-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]' : ''}`}
                   loading="lazy"
                 />
                 <p className="text-sm text-muted-foreground mb-4">{app.desc}</p>
