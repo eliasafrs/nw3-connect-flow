@@ -68,7 +68,7 @@ const ResidentialPlans = () => {
                   ? "ring-2 ring-accent shadow-glow"
                   : "border border-border shadow-card hover:shadow-card-hover"
               }`}
-              style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
+              style={{ background: "linear-gradient(135deg, hsl(220 72% 38%), hsl(225 90% 20%))" }}
             >
               {/* Top accent bar */}
               <div className={`h-1 ${plan.popular ? "bg-accent" : "bg-white/20 group-hover:bg-white/40"} transition-colors`} />
