@@ -9,7 +9,7 @@ const cameraPlans = [
     cameras: "2 câmeras",
     price: "79",
     cents: ",90",
-    features: ["2 Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem (3 dias)"],
+    features: ["2 Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem (72 horas)"],
     popular: false,
   },
   {
@@ -17,7 +17,7 @@ const cameraPlans = [
     cameras: "4 câmeras",
     price: "159",
     cents: ",90",
-    features: ["4 Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem (3 dias)"],
+    features: ["4 Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem (72 horas)"],
     popular: true,
   },
   {
@@ -25,7 +25,7 @@ const cameraPlans = [
     cameras: "6 câmeras",
     price: "239",
     cents: ",90",
-    features: ["6 Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem (3 dias)"],
+    features: ["6 Câmeras Full HD", "Acesso pelo celular", "Gravação em nuvem (72 horas)"],
     popular: false,
   },
 ];
