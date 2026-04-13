@@ -1,10 +1,10 @@
-import { Headset, Signal, Wrench, MapPin, Heart } from "lucide-react";
+import { Headset, Signal, Wrench, Heart } from "lucide-react";
 
 const items = [
   { icon: Signal, title: "Alta Estabilidade", desc: "Conexão que não cai, mesmo nos horários de pico" },
   { icon: Headset, title: "Suporte híbrido", desc: "Experiência de atendimento com IA + especialistas" },
   { icon: Wrench, title: "Técnicos Especializados", desc: "Instalação e manutenção com profissionais qualificados" },
-  { icon: MapPin, title: "Atendimento Local", desc: "Estamos perto de você", href: "https://maps.app.goo.gl/MWKSTqZuCisUTLyE6" },
+  
   { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, feita para você" },
 ];
 
@@ -21,10 +21,9 @@ const DifferentialsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-          {items.map((item) => {
-            const content = (
-              <>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          {items.map((item) => (
+              <div key={item.title} className="group relative bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] rounded-xl p-6 hover:bg-primary-foreground/[0.08] transition-all duration-300">
                 <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center mb-4">
                   <item.icon className="w-5 h-5 text-primary-foreground" />
                 </div>
@@ -32,19 +31,8 @@ const DifferentialsSection = () => {
                   {item.title}
                 </h3>
                 <p className="text-xs text-primary-foreground/40 leading-relaxed">{item.desc}</p>
-              </>
-            );
-            const cls = "group relative bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] rounded-xl p-6 hover:bg-primary-foreground/[0.08] transition-all duration-300";
-            return item.href ? (
-              <a key={item.title} href={item.href} target="_blank" rel="noopener noreferrer" className={cls}>
-                {content}
-              </a>
-            ) : (
-              <div key={item.title} className={cls}>
-                {content}
               </div>
-            );
-          })}
+            ))}
         </div>
       </div>
     </section>
