@@ -121,7 +121,7 @@ const Internet = () => {
                             ? "ring-2 ring-accent shadow-glow scale-[1.03]"
                             : "border border-white/10 shadow-card hover:shadow-card-hover"
                         }`}
-                        style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
+                        style={{ background: "linear-gradient(135deg, hsl(220 72% 38%), hsl(225 90% 20%))" }}
                       >
                         {plan.popular && (
                           <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-accent-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap bg-primary">
@@ -179,7 +179,7 @@ const Internet = () => {
                             ? "ring-2 ring-accent shadow-glow scale-[1.03]"
                             : "border border-white/10 shadow-card hover:shadow-card-hover"
                         }`}
-                        style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
+                        style={{ background: "linear-gradient(135deg, hsl(220 72% 38%), hsl(225 90% 20%))" }}
                       >
                         {plan.popular && (
                           <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-accent-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap bg-primary">
