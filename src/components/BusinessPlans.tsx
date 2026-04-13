@@ -5,7 +5,8 @@ import {
   Clock, ChevronRight, Check, Zap, Award, Users, ArrowUpDown, Link as LinkIcon
 } from "lucide-react";
 import businessHero from "@/assets/banners/business-hero.jpg";
-import businessIllustration from "@/assets/business-illustration.png";
+import businessConnect1 from "@/assets/business-connect-1.png";
+import businessConnect2 from "@/assets/business-connect-2.png";
 
 const segments = [
   { id: "simetrica", label: "Banda Simétrica", icon: ArrowUpDown },
