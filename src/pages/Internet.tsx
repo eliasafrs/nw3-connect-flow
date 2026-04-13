@@ -197,10 +197,6 @@ const Internet = () => {
                             <Tv className="w-3.5 h-3.5" /> + DE 90 CANAIS DE TV
                           </span>
                         </div>
-                        <div className="flex items-center justify-center gap-2 bg-white/10 rounded-xl px-4 py-4 mb-5">
-                          <Wifi className="w-5 h-5 text-[#e4d101]" />
-                          <span className="text-sm font-semibold text-white/90">Internet + TV</span>
-                        </div>
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
                             <span className="text-sm text-white/60">R$</span>
