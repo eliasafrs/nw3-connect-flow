@@ -114,9 +114,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-primary-foreground/40">
-            © 2025 NW3 Internet. Todos os direitos reservados. CNPJ: 33.578.123/0001-63
-          </p>
+          <div className="flex items-center gap-4">
+            <img src={anatelLogo} alt="Anatel" className="h-10" loading="lazy" />
+            <p className="text-xs text-primary-foreground/40">
+              © 2025 NW3 Internet. Todos os direitos reservados. CNPJ: 33.578.123/0001-63
+            </p>
+          </div>
           <Link to="/politica-de-privacidade" className="text-xs text-primary-foreground/40 hover:text-primary-foreground transition-colors">
             Política de Privacidade
           </Link>
