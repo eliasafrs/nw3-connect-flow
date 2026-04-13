@@ -102,9 +102,11 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-primary-foreground" />
                 contato@nw3internet.com.br
               </li>
-              <li className="flex items-start gap-2 text-sm text-primary-foreground/50">
-                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-primary-foreground" />
-                Rua Domingos Fernandes Nobre, 385 - Vila Itaim - São Paulo
+              <li>
+                <a href="https://maps.app.goo.gl/MWKSTqZuCisUTLyE6" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 text-sm text-primary-foreground/50 hover:text-primary-foreground/70 transition-colors">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-primary-foreground" />
+                  Rua Domingos Fernandes Nobre, 385 - Vila Itaim - São Paulo
+                </a>
               </li>
             </ul>
           </div>
