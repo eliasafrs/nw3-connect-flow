@@ -124,7 +124,7 @@ const Internet = () => {
                         style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
                       >
                         {plan.popular && (
-                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-accent-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap bg-primary">
                             Mais Popular
                           </div>
                         )}
