@@ -6,7 +6,7 @@ const items = [
   { icon: Wrench, title: "Técnicos Especializados", desc: "Instalação e manutenção com profissionais qualificados" },
   
   { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, próxima de você" },
-  { icon: Handshake, title: "Sem Fidelidade", desc: "Liberdade para ficar porque quer, não porque deve" },
+  { icon: Handshake, title: "Sem Fidelidade", desc: "Liberdade para ficar porque confia, não porque deve" },
 ];
 
 const DifferentialsSection = () => {
