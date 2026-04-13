@@ -1,7 +1,7 @@
 import { Cctv as CameraIcon, Smartphone, Cloud, ShieldCheck, ChevronRight, Check, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CoverageSection from "@/components/CoverageSection";
-import cameraBanner from "@/assets/banners/camera-banner.jpg";
+import cameraAppBanner from "@/assets/banners/camera-app-banner.jpg";
 
 const cameraPlans = [
   {
@@ -33,20 +33,53 @@ const cameraPlans = [
 const Camera = () => {
   return (
     <>
-      {/* Banner com imagem */}
-      <section className="relative min-h-[380px] lg:min-h-[440px] flex items-center overflow-hidden">
-        <img src={cameraBanner} alt="NW3 Câmera" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative container mx-auto px-4 text-center">
-          <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
-            <CameraIcon className="w-8 h-8 text-accent" />
+      {/* Banner estilo split-screen */}
+      <section className="relative min-h-[480px] lg:min-h-[540px] overflow-hidden">
+        <div className="grid lg:grid-cols-2 min-h-[480px] lg:min-h-[540px]">
+          {/* Lado esquerdo - Texto */}
+          <div className="bg-hero flex items-center px-8 lg:px-16 py-16">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 px-4 py-1.5 rounded-full text-sm font-medium mb-6 text-primary-foreground">
+                <CameraIcon className="w-4 h-4" />
+                NW3 Câmera
+              </div>
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 leading-tight">
+                Sua casa na<br />
+                <span className="text-gradient">palma da mão</span>
+              </h1>
+              <p className="text-primary-foreground/70 text-lg max-w-md mb-8">
+                Visualize sua casa ou negócio de qualquer lugar, de forma prática e rápida pelo celular.
+              </p>
+              <div className="flex items-baseline gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 rounded-2xl px-6 py-4 inline-flex mb-6">
+                <span className="text-primary-foreground/50 text-sm">Planos a partir de</span>
+                <span className="text-primary-foreground/60 text-lg">R$</span>
+                <span className="font-heading text-4xl font-bold text-accent">39</span>
+                <span className="text-accent text-xl">,90</span>
+                <span className="text-primary-foreground/50 text-sm">/mês</span>
+              </div>
+              <div className="block">
+                <Button
+                  variant="cta"
+                  size="lg"
+                  className="rounded-full"
+                  onClick={() => window.open("https://wa.me/551125862995?text=Olá, gostaria de saber mais sobre câmera de segurança NW3", "_blank")}
+                >
+                  Quero NW3 Câmera
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </Button>
+              </div>
+            </div>
           </div>
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">
-            NW3 <span className="text-gradient">Câmera</span>
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Visualize sua casa ou negócio de qualquer lugar, de forma prática e rápida pelo celular.
-          </p>
+
+          {/* Lado direito - Imagem */}
+          <div className="relative hidden lg:block">
+            <img
+              src={cameraAppBanner}
+              alt="Pessoa visualizando câmeras pelo aplicativo"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(225,90%,12%)] via-transparent to-transparent" />
+          </div>
         </div>
       </section>
 
