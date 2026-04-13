@@ -174,37 +174,38 @@ const Internet = () => {
                     {internetPlans.map((plan) => (
                       <div
                         key={plan.speed}
-                        className={`relative bg-card rounded-2xl p-7 border transition-all duration-300 hover:-translate-y-1 ${
+                        className={`relative rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 ${
                           plan.popular
-                            ? "border-primary shadow-glow scale-[1.03]"
-                            : "border-border shadow-card hover:shadow-card-hover"
+                            ? "ring-2 ring-accent shadow-glow scale-[1.03]"
+                            : "border border-white/10 shadow-card hover:shadow-card-hover"
                         }`}
+                        style={{ background: "linear-gradient(135deg, hsl(220 72% 48%), hsl(225 90% 28%))" }}
                       >
                         {plan.popular && (
-                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-accent-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap bg-primary">
                             Mais Popular
                           </div>
                         )}
                         <div className="text-center mb-3">
-                          <div className="font-heading text-5xl font-bold text-foreground">{plan.speed}</div>
-                          <div className="text-xs text-muted-foreground font-medium">
+                          <div className="font-heading text-5xl font-bold text-[#e4d101]">{plan.speed}</div>
+                          <div className="text-xs font-medium text-primary-foreground">
                             {plan.speed === "1 Giga" ? "" : "MEGA"}
                           </div>
                         </div>
-                        <div className="bg-accent/10 rounded-lg px-3 py-1.5 text-center mb-3">
-                          <span className="text-xs font-semibold text-accent-foreground flex items-center justify-center gap-1">
-                            <Tv className="w-3.5 h-3.5" /> 90+ canais de TV
+                        <div className="bg-white/10 rounded-lg px-3 py-1.5 text-center mb-3">
+                          <span className="text-xs font-semibold text-white/90 flex items-center justify-center gap-1">
+                            <Tv className="w-3.5 h-3.5" /> + DE 90 CANAIS DE TV
                           </span>
                         </div>
-                        <div className="flex items-center justify-center gap-2 bg-secondary/80 rounded-xl px-4 py-4 mb-5">
-                          <Wifi className="w-5 h-5 text-primary" />
-                          <span className="text-sm font-semibold text-foreground">Internet + TV</span>
+                        <div className="flex items-center justify-center gap-2 bg-white/10 rounded-xl px-4 py-4 mb-5">
+                          <Wifi className="w-5 h-5 text-[#e4d101]" />
+                          <span className="text-sm font-semibold text-white/90">Internet + TV</span>
                         </div>
                         <div className="text-center mb-6">
                           <div className="flex items-baseline justify-center gap-0.5">
-                            <span className="text-sm text-muted-foreground">R$</span>
+                            <span className="text-sm text-white/60">R$</span>
                             <span className="font-heading text-5xl font-bold text-[#e4d101]">{plan.price}</span>
-                            <span className="text-sm text-muted-foreground">{plan.cents}/mês</span>
+                            <span className="text-sm text-[#e4d101]">{plan.cents}/mês</span>
                           </div>
                         </div>
                         <Button variant={plan.popular ? "cta" : "outline"} className="w-full" size="lg">
