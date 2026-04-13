@@ -1,7 +1,7 @@
 import { Cctv as CameraIcon, Smartphone, Cloud, ShieldCheck, ChevronRight, Check, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CoverageSection from "@/components/CoverageSection";
-import cameraBanner from "@/assets/banners/camera-banner.jpg";
+import cameraAppBanner from "@/assets/banners/camera-app-banner.jpg";
 
 const cameraPlans = [
   {
