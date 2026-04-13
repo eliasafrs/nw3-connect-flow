@@ -3,7 +3,7 @@ import { Headset, Signal, Wrench, MapPin, Heart } from "lucide-react";
 const items = [
   { icon: Signal, title: "Alta Estabilidade", desc: "Conexão que não cai, mesmo nos horários de pico" },
   { icon: Headset, title: "Suporte híbrido", desc: "Experiência de atendimento com IA + especialistas" },
-  { icon: Wrench, title: "Técnicos Especializados", desc: "Instalação e manutenção com profissionais certificados" },
+  { icon: Wrench, title: "Técnicos Especializados", desc: "Instalação e manutenção com profissionais qualificados" },
   { icon: MapPin, title: "Atendimento Local", desc: "Estamos perto de você", href: "https://maps.app.goo.gl/MWKSTqZuCisUTLyE6" },
   { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, feita para você" },
 ];
