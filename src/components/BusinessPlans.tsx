@@ -7,6 +7,10 @@ import {
 import businessHero from "@/assets/banners/business-hero.jpg";
 import businessConnect1 from "@/assets/business-connect-1.png";
 import businessConnect2 from "@/assets/business-connect-2.png";
+import businessConnect3 from "@/assets/business-connect-3.png";
+import businessConnect4 from "@/assets/business-connect-4.png";
+
+const businessIllustrations = [businessConnect1, businessConnect2, businessConnect3, businessConnect4];
 
 const segments = [
   { id: "simetrica", label: "Banda Simétrica", icon: ArrowUpDown },
