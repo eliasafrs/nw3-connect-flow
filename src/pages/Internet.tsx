@@ -224,30 +224,6 @@ const Internet = () => {
                 </TabsContent>
               </Tabs>
 
-              {/* Included features */}
-              <div className="bg-secondary/70 rounded-2xl p-8 max-w-4xl mx-auto text-center">
-                <h3 className="font-heading text-xl font-bold text-foreground mb-4">
-                  Todos os planos NW3 incluem
-                </h3>
-                <div className="flex flex-wrap justify-center gap-6">
-                  {[
-                    "Instalação gratuita",
-                    "Roteador Wi-Fi incluso",
-                    "100% Fibra Óptica",
-                    "Suporte 24h",
-                    "90+ canais de TV",
-                    "Wi-Fi de alta performance",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary" />
-                      <span className="font-semibold text-foreground text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-xs text-muted-foreground mt-4">
-                  *Sujeito à análise e prazo de permanência de 12 meses.
-                </p>
-              </div>
             </div>
           </section>
         </>
