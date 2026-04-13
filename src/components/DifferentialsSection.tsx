@@ -5,7 +5,7 @@ const items = [
   { icon: Headset, title: "Suporte híbrido", desc: "Experiência de atendimento com IA + especialistas" },
   { icon: Wrench, title: "Técnicos Especializados", desc: "Instalação e manutenção com profissionais qualificados" },
   
-  { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, feita para você" },
+  { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, próxima de você" },
 ];
 
 const DifferentialsSection = () => {
