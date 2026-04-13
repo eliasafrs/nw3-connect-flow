@@ -197,12 +197,14 @@ const Internet = () => {
                             <Tv className="w-3.5 h-3.5" /> + DE 90 CANAIS DE TV
                           </span>
                         </div>
-                        <div className="flex gap-3 mb-5">
-                          <div className="flex-1 bg-white/10 rounded-lg px-3 py-2 text-center">
-                            <span className="text-xs font-bold text-white/90">100% Fibra</span>
+                        <div className="flex flex-col gap-2 mb-5">
+                          <div className="flex items-center gap-2 text-white/90">
+                            <Check className="w-4 h-4 text-[#e4d101]" />
+                            <span className="text-xs font-bold">100% Fibra</span>
                           </div>
-                          <div className="flex-1 bg-white/10 rounded-lg px-3 py-2 text-center">
-                            <span className="text-xs font-bold text-white/90">Sem Fidelidade</span>
+                          <div className="flex items-center gap-2 text-white/90">
+                            <Check className="w-4 h-4 text-[#e4d101]" />
+                            <span className="text-xs font-bold">Sem Fidelidade</span>
                           </div>
                         </div>
                         <div className="text-center mb-6">
