@@ -4,7 +4,7 @@ const items = [
   { icon: Signal, title: "Alta Estabilidade", desc: "Conexão que não cai, mesmo nos horários de pico" },
   { icon: Headset, title: "Suporte Humanizado", desc: "Atendimento real, sem robôs, 24 horas" },
   { icon: Wrench, title: "Técnicos Especializados", desc: "Equipe qualificada na sua porta" },
-  { icon: MapPin, title: "Atendimento Local", desc: "Estamos perto de você" },
+  { icon: MapPin, title: "Atendimento Local", desc: "Estamos perto de você", href: "https://maps.app.goo.gl/MWKSTqZuCisUTLyE6" },
   { icon: Heart, title: "100% Regional", desc: "Empresa da sua região, feita para você" },
 ];
 
