@@ -23,7 +23,7 @@ const apps = [
   { logo: skyPlusLogo, desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda.", plans: "Planos a partir de 700 Mega" },
   { logo: lookeLogo, desc: "Filmes, séries, documentários e conteúdo infantil sob demanda. Catálogo nacional e internacional.", plans: "Planos a partir de 500 Mega" },
   { logo: appleTvLogo, desc: "Séries e filmes originais premiados da Apple. Produções exclusivas com grandes estrelas de Hollywood.", plans: "Planos a partir de 700 Mega" },
-  { logo: queimaDiariaLogo, desc: "Treinos, exercícios e programas fitness para fazer em casa. Cuide da saúde com praticidade.", plans: "Planos a partir de 500 Mega" },
+  { logo: queimaDiariaLogo, desc: "Treinos, exercícios e programas fitness para fazer em casa. Cuide da saúde com praticidade.", plans: "Planos a partir de 500 Mega", shadow: true },
 ];
 
 const Aplicativos = () => {
