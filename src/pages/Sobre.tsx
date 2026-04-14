@@ -64,8 +64,8 @@ const Sobre = () => {
                     <Headset className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-foreground mb-1">Suporte 24h</h4>
-                    <p className="text-sm text-muted-foreground">Atendimento real, sem robôs</p>
+                    <h4 className="font-heading font-bold text-foreground mb-1">Suporte todos os dias </h4>
+                    <p className="text-sm text-muted-foreground">Atendimento real com IA e especialistas pronto para atende-lo</p>
                   </div>
                 </div>
               </div>
