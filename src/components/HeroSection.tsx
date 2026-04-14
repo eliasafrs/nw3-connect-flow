@@ -59,22 +59,22 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative overflow-hidden bg-primary h-[calc(100svh-64px)] sm:min-h-[560px] lg:min-h-[620px] sm:h-auto">
+    <section className="relative overflow-hidden bg-primary sm:min-h-[560px] lg:min-h-[620px]">
       {/* Background images */}
       {slides.map((s, i) => (
         <img
           key={i}
           src={s.image}
           alt={s.tagline}
-          className="absolute inset-0 w-full h-full object-cover object-top sm:object-center transition-opacity duration-700"
+          className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         />
       ))}
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(240,97%,10%)/0.98] via-[hsl(240,97%,10%)/0.5] to-transparent sm:bg-gradient-to-r sm:from-[hsl(240,97%,10%)/0.92] sm:via-[hsl(240,97%,10%)/0.75] sm:to-[hsl(240,97%,10%)/0.3]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(240,97%,10%)] via-[hsl(240,97%,10%)/0.7] to-[hsl(240,97%,10%)/0.15] sm:bg-gradient-to-r sm:from-[hsl(240,97%,10%)/0.92] sm:via-[hsl(240,97%,10%)/0.75] sm:to-[hsl(240,97%,10%)/0.3]" />
 
-      <div className="relative container mx-auto px-4 py-0 sm:py-20 lg:py-24 flex items-end sm:items-center h-full sm:min-h-[560px] lg:min-h-[620px]">
-        <div className="max-w-2xl mx-0 sm:mx-[50px] pb-14 sm:pb-0">
+      <div className="relative container mx-auto px-4 pt-40 pb-12 sm:py-20 lg:py-24 flex items-end sm:items-center sm:min-h-[560px] lg:min-h-[620px]">
+        <div className="max-w-2xl mx-0 sm:mx-[50px]">
           {/* Tag */}
           <div className="inline-flex items-center gap-1.5 bg-white/15 border border-white/30 rounded-full px-3 py-0.5 mb-2 sm:mb-6 backdrop-blur-sm">
             <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
@@ -108,7 +108,7 @@ const HeroSection = () => {
                 </div>
                 {slide.logo && (
                   <div className="flex items-center gap-2">
-                    <span className="font-heading text-3xl font-black text-white leading-none">+</span>
+                    <span className="font-heading text-2xl sm:text-3xl font-black text-white leading-none">+</span>
                     <img src={slide.logo} alt="Logo parceiro" className={`object-contain ${slide.logo === disneyPlusLogo ? 'h-7 sm:h-11' : 'h-8 sm:h-14'}`} />
                   </div>
                 )}
@@ -122,7 +122,7 @@ const HeroSection = () => {
                   {slide.price}
                 </span>
                 <div className="flex flex-col">
-                  <span className="text-lg leading-none text-yellow-400">
+                  <span className="text-base sm:text-lg leading-none text-yellow-400">
                     {slide.cents}
                   </span>
                   <span className="text-white/50 text-xs">/mês</span>
