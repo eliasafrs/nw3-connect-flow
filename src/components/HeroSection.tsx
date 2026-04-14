@@ -59,7 +59,7 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative overflow-hidden min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
+    <section className="relative overflow-hidden min-h-[100svh] sm:min-h-[560px] lg:min-h-[620px]">
       {/* Background images */}
       {slides.map((s, i) => (
         <img
@@ -73,7 +73,7 @@ const HeroSection = () => {
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(240,97%,10%)/0.92] via-[hsl(240,97%,10%)/0.75] to-[hsl(240,97%,10%)/0.3]" />
 
-      <div className="relative container mx-auto px-4 py-16 sm:py-20 lg:py-24 flex items-center min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
+      <div className="relative container mx-auto px-4 py-12 sm:py-20 lg:py-24 flex items-center min-h-[100svh] sm:min-h-[560px] lg:min-h-[620px]">
         <div className="max-w-2xl mx-4 sm:mx-[50px]">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
@@ -84,10 +84,10 @@ const HeroSection = () => {
           </div>
 
           {/* Main heading */}
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             {slide.tagline}
           </h1>
-          <p className="text-lg sm:text-xl mb-8 max-w-lg text-yellow-400 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] [text-shadow:0_1px_4px_rgba(0,0,0,0.9)]">
+          <p className="text-base sm:text-xl mb-6 max-w-lg text-yellow-400 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] [text-shadow:0_1px_4px_rgba(0,0,0,0.9)]">
             {slide.subtitle}
           </p>
 
@@ -99,7 +99,7 @@ const HeroSection = () => {
             {slide.speed && (
               <div className="flex items-center gap-3">
                 <div className="flex flex-col items-center">
-                  <span className="font-heading text-6xl lg:text-7xl font-black text-white leading-none">
+                  <span className="font-heading text-5xl lg:text-7xl font-black text-white leading-none">
                     {slide.speed}
                   </span>
                   <span className="font-heading text-xl font-bold text-white/80 uppercase">
