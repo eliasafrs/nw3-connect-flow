@@ -100,7 +100,7 @@ const CoverageSection = () => {
           <label className="block text-sm font-medium text-foreground mb-2">
             Digite seu CEP
           </label>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="text"
               value={cep}
