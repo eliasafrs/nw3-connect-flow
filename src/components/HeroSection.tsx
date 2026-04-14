@@ -74,7 +74,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(240,97%,10%)/0.98] via-[hsl(240,97%,10%)/0.5] to-transparent sm:bg-gradient-to-r sm:from-[hsl(240,97%,10%)/0.92] sm:via-[hsl(240,97%,10%)/0.75] sm:to-[hsl(240,97%,10%)/0.3]" />
 
       <div className="relative container mx-auto px-4 py-0 sm:py-20 lg:py-24 flex items-end sm:items-center h-full sm:min-h-[560px] lg:min-h-[620px]">
-        <div className="max-w-2xl mx-0 sm:mx-[50px] pb-12 sm:pb-0">
+        <div className="max-w-2xl mx-0 sm:mx-[50px] pb-14 sm:pb-0">
           {/* Tag */}
           <div className="inline-flex items-center gap-1.5 bg-white/15 border border-white/30 rounded-full px-3 py-0.5 mb-2 sm:mb-6 backdrop-blur-sm">
             <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
