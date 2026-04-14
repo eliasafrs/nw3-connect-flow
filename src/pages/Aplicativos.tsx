@@ -23,7 +23,7 @@ const apps = [
   { logo: skyPlusLogo, desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda.", plans: "Planos a partir de 700 Mega" },
   { logo: lookeLogo, desc: "Filmes, séries, documentários e conteúdo infantil sob demanda. Catálogo nacional e internacional.", plans: "Planos a partir de 500 Mega" },
   { logo: appleTvLogo, desc: "Séries e filmes originais premiados da Apple. Produções exclusivas com grandes estrelas de Hollywood.", plans: "Planos a partir de 700 Mega" },
-  { logo: queimaDiariaLogo, desc: "Treinos, exercícios e programas fitness para fazer em casa. Cuide da saúde com praticidade.", plans: "Planos a partir de 500 Mega", shadow: true },
+  { logo: queimaDiariaLogo, desc: "Treinos, exercícios e programas fitness para fazer em casa. Cuide da saúde com praticidade.", plans: "Planos a partir de 500 Mega", shadow: true, whiteBg: true },
 ];
 
 const Aplicativos = () => {
@@ -56,7 +56,7 @@ const Aplicativos = () => {
                 <img
                   src={app.logo}
                   alt="Logo do aplicativo"
-                  className={`h-16 w-16 object-contain rounded-2xl mb-5 ${app.shadow ? 'bg-stone-950 p-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]' : ''}`}
+                  className={`h-16 w-16 object-contain rounded-2xl mb-5 ${app.shadow ? 'p-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]' : ''} ${app.whiteBg ? 'bg-white' : app.shadow ? 'bg-stone-950' : ''}`}
                   loading="lazy"
                 />
                 <p className="text-sm text-muted-foreground mb-4">{app.desc}</p>
