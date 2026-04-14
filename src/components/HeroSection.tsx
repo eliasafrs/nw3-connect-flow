@@ -59,14 +59,14 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative overflow-hidden h-[calc(100svh-120px)] sm:min-h-[560px] lg:min-h-[620px] sm:h-auto">
+    <section className="relative overflow-hidden bg-primary h-[calc(100svh-120px)] sm:min-h-[560px] lg:min-h-[620px] sm:h-auto">
       {/* Background images */}
       {slides.map((s, i) => (
         <img
           key={i}
           src={s.image}
           alt={s.tagline}
-          className="absolute inset-0 w-full h-full object-cover object-bottom sm:object-center transition-opacity duration-700"
+          className="absolute inset-0 w-full h-full object-contain object-center sm:object-cover sm:object-center transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         />
       ))}
