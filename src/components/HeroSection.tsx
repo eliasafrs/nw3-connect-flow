@@ -22,7 +22,7 @@ const slides = [
   },
   {
     image: heroSlide2,
-    tagline: "Diversão garantida",
+    tagline: "Jogue sem limites",
     subtitle: "Jogue sem travar com internet + Exitlag no seu plano.",
     logo: exitlagLogo,
     speed: "600",
