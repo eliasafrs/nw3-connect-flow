@@ -17,7 +17,7 @@ const apps = [
   { logo: disneyLogo, desc: "Os melhores filmes e séries da Disney, Pixar, Marvel, Star Wars e National Geographic. Inclui Star e esportes com ESPN.", plans: "Planos a partir de 700 Mega" },
   { logo: hboLogo, desc: "As melhores séries como House of the Dragon, The Last of Us, e filmes premiados da Warner Bros.", plans: "Plano 1 Giga" },
   { logo: globoplayLogo, desc: "Novelas, séries originais, jornalismo, reality shows e transmissões ao vivo da TV Globo.", plans: "Planos a partir de 600 Mega", shadow: true },
-  { logo: deezerLogo, desc: "Mais de 90 milhões de músicas, podcasts e playlists personalizadas sem anúncios.", plans: "Todos os planos" },
+  { logo: deezerLogo, desc: "Mais de 90 milhões de músicas, podcasts e playlists personalizadas sem anúncios.", plans: "Todos os planos", shadow: true },
   { logo: playkidsLogo, desc: "Conteúdo educativo e divertido para crianças. Jogos, vídeos e livros em um ambiente seguro.", plans: "Planos a partir de 500 Mega" },
   { logo: exitlagLogo, desc: "Otimize sua conexão para jogos online. Reduza lag e melhore sua experiência gamer.", plans: "Planos a partir de 600 Mega", shadow: true },
   { logo: skyPlusLogo, desc: "Acesso a canais ao vivo, filmes, séries e conteúdo esportivo sob demanda.", plans: "Planos a partir de 700 Mega" },
