@@ -157,14 +157,14 @@ const HeroSection = () => {
       {/* Navigation arrows */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
+        className="absolute left-2 sm:left-4 bottom-14 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
         aria-label="Anterior"
       >
         <ChevronLeft className="w-5 h-5 text-white" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 lg:right-56 top-1/2 -translate-y-1/2 w-11 h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
+        className="absolute right-2 sm:right-4 lg:right-56 bottom-14 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-lg bg-white/10 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-all z-10 border border-white/10"
         aria-label="Próximo"
       >
         <ChevronRight className="w-5 h-5 text-white" />
