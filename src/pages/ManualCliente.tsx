@@ -23,7 +23,7 @@ const steps = {
   ],
   semInternet: [
     { num: "1", text: "Verifique se as fontes dos equipamentos estão conectadas e se há energia elétrica." },
-    { num: "2", text: "Desligue da fonte de energia, aguarde 15 segundos e religue." },
+    { num: "2", text: "Desligue da fonte de energia, aguarde 30 segundos e religue." },
     { num: "3", text: "Se o LED \"LOS\" (vermelho) estiver aceso ou piscando, entre em contato com o Suporte Técnico." },
   ],
   testeVelocidade: [
