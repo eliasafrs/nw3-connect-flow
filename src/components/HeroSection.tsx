@@ -4,7 +4,7 @@ import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-disney-v4.webp";
 import heroSlide2 from "@/assets/hero-slide-gaming-v4.webp";
 import heroSlideBusiness from "@/assets/hero-slide-business-opt9.webp";
-import heroSlideCopa from "@/assets/hero-slide-copa-v5.webp";
+import heroSlideCopa from "@/assets/hero-slide-copa-v6.webp";
 import disneyPlusLogo from "@/assets/logos/disney-plus.png";
 import exitlagLogo from "@/assets/logos/exitlag.png";
 import globoplayLogo from "@/assets/logos/globoplay.png";
