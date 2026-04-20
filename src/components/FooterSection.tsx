@@ -112,8 +112,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-primary-foreground/40">
+        <div className="border-t border-primary-foreground/10 pt-6 pb-24 sm:pb-0 flex flex-col sm:flex-row items-center justify-between gap-4 sm:pr-24">
+          <p className="text-xs text-primary-foreground/40 text-center sm:text-left">
             © 2025 NW3 Internet. Todos os direitos reservados. CNPJ: 33.578.123/0001-63
           </p>
           <Link to="/politica-de-privacidade" className="text-xs text-primary-foreground/40 hover:text-primary-foreground transition-colors">
