@@ -257,9 +257,11 @@ const ManualCliente = () => {
                 <p className="text-muted-foreground text-xs mb-4">
                   Em planos superiores a 100 Mega, use equipamento com porta Gigabit Ethernet.
                 </p>
-                <Button variant="cta" size="lg" className="w-full">
-                  Iniciar Teste de Velocidade
-                </Button>
+                <a href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="cta" size="lg" className="w-full">
+                    Iniciar Teste de Velocidade
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

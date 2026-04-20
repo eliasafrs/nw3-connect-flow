@@ -138,7 +138,19 @@ const Camera = () => {
                   ))}
                 </ul>
 
-                <Button variant={plan.popular ? "cta" : "outline"} className="w-full">
+                <Button
+                  variant={plan.popular ? "cta" : "outline"}
+                  className="w-full"
+                  onClick={() =>
+                    window.open(
+                      `https://wa.me/551125862995?text=${encodeURIComponent(
+                        `Olá! Tenho interesse no Plano de Câmera ${plan.name} (${plan.cameras}) por R$ ${plan.price}${plan.cents}/mês.`
+                      )}`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }
+                >
                   Solicitar Orçamento
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>

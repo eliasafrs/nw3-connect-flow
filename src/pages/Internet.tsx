@@ -159,7 +159,15 @@ const Internet = () => {
                             <span className="text-sm text-[#e4d101]">{plan.cents}/mês</span>
                           </div>
                         </div>
-                        <Button variant={plan.popular ? "cta" : "outline"} className="w-full" size="lg">
+                        <Button
+                          variant={plan.popular ? "cta" : "outline"}
+                          className="w-full"
+                          size="lg"
+                          onClick={() => {
+                            const msg = `Olá! Tenho interesse no Combo ${plan.speed} MEGA + ${plan.streaming} por R$ ${plan.price}${plan.cents}/mês.`;
+                            window.open(`https://wa.me/551125862995?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+                          }}
+                        >
                           Eu quero!
                           <ChevronRight className="w-4 h-4 ml-1" />
                         </Button>
@@ -214,7 +222,15 @@ const Internet = () => {
                             <span className="text-sm text-[#e4d101]">{plan.cents}/mês</span>
                           </div>
                         </div>
-                        <Button variant={plan.popular ? "cta" : "outline"} className="w-full" size="lg">
+                        <Button
+                          variant={plan.popular ? "cta" : "outline"}
+                          className="w-full"
+                          size="lg"
+                          onClick={() => {
+                            const msg = `Olá! Tenho interesse no Plano Internet ${plan.speed} MEGA por R$ ${plan.price}${plan.cents}/mês.`;
+                            window.open(`https://wa.me/551125862995?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+                          }}
+                        >
                           Eu quero!
                           <ChevronRight className="w-4 h-4 ml-1" />
                         </Button>
