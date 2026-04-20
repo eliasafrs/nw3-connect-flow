@@ -2,10 +2,12 @@
 # NW3 Internet - SPA (React Router) - cPanel
 # ============================================
 
-# Forçar HTTPS (descomente após confirmar SSL ativo)
+# Forçar HTTPS (descomente apenas após confirmar SSL ativo no cPanel)
+# Versão compatível com cPanel atrás de proxy/CloudFlare (usa X-Forwarded-Proto)
 # <IfModule mod_rewrite.c>
 #   RewriteEngine On
-#   RewriteCond %{HTTPS} off
+#   RewriteCond %{HTTPS} !=on
+#   RewriteCond %{HTTP:X-Forwarded-Proto} !https
 #   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # </IfModule>
 
