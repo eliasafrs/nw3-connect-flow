@@ -68,7 +68,19 @@ const Aplicativos = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="cta" size="lg">
+            <Button
+              variant="cta"
+              size="lg"
+              onClick={() =>
+                window.open(
+                  `https://wa.me/551125862995?text=${encodeURIComponent(
+                    "Olá, gostaria de saber mais sobre os planos com aplicativos da NW3."
+                  )}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
               Ver Planos com Aplicativos
             </Button>
           </div>
