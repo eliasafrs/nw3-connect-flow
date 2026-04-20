@@ -85,7 +85,18 @@ const Fixo = () => {
                 ))}
               </ul>
 
-              <Button variant="cta" className="w-full" size="lg">
+              <Button
+                variant="cta"
+                className="w-full"
+                size="lg"
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/551125862995?text=${encodeURIComponent("Olá! Tenho interesse no plano de Telefone Fixo NW3 a partir de R$ 19,90/mês.")}`,
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+              >
                 Contratar Fixo
                 <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
