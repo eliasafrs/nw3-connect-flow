@@ -11,6 +11,18 @@ import globoplayLogo from "@/assets/logos/globoplay.png";
 
 const slides = [
   {
+    image: heroSlideCopa,
+    tagline: "Acompanhe a Copa com",
+    subtitle: "Internet + Globoplay - Não perca nenhum jogo da Copa do Mundo!",
+    logo: globoplayLogo,
+    speed: "600",
+    label: "MEGA",
+    price: "139",
+    cents: ",90",
+    note: "*Consulte condições",
+    cta: "Eu quero!",
+  },
+  {
     image: heroSlide1,
     tagline: "Emoção garantida",
     subtitle: "Assista ao vivo com qualidade máxima",
