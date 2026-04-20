@@ -134,6 +134,15 @@ const ResidentialPlans = () => {
                 <Button
                   variant={plan.popular ? "cta" : "outline"}
                   className="w-full"
+                  onClick={() =>
+                    window.open(
+                      `https://wa.me/551125862995?text=${encodeURIComponent(
+                        `Olá, tenho interesse no plano residencial de ${plan.speed} MEGA por R$ ${plan.price}${plan.cents}${plan.streaming ? ` com ${plan.streaming}` : ""}`
+                      )}`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }
                 >
                   Eu quero!
                   <ChevronRight className="w-4 h-4 ml-1" />
