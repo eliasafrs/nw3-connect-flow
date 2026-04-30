@@ -108,6 +108,10 @@
     background: var(--hero-gradient);
   }
 
+  .bg-footer {
+    background: var(--footer-gradient);
+  }
+
   .shadow-glow {
     box-shadow: var(--glow-shadow);
   }
