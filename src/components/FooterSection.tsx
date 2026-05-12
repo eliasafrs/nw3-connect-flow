@@ -7,7 +7,7 @@ import appStoreBadge from "@/assets/app-store-badge-v2.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-footer py-16">
+    <footer className="bg-footer py-16 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
