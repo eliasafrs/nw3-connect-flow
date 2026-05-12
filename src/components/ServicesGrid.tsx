@@ -10,7 +10,7 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden text-primary bg-primary">
+    <section className="py-20 lg:py-28 relative overflow-hidden text-primary bg-footer">
       <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
 

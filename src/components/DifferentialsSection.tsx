@@ -11,7 +11,7 @@ const items = [
 
 const DifferentialsSection = () => {
   return (
-    <section id="diferenciais" className="py-20 lg:py-28 bg-primary">
+    <section id="diferenciais" className="py-20 lg:py-28 bg-footer">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-primary-foreground mb-3">
