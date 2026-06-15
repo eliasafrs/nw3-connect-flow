@@ -68,8 +68,8 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-primary-foreground mb-4">Suporte</h4>
             <ul className="space-y-2">
               {[
-                { label: "Área do Cliente", href: "http://sgp.nw3internet.com.br:8000/accounts/central/login" },
-                { label: "2ª Via de Boleto", href: "http://sgp.nw3internet.com.br:8000/accounts/central/login" },
+                { label: "Área do Cliente", href: "https://nw3.sgp.tsmx.com.br/accounts/central/login" },
+                { label: "2ª Via de Boleto", href: "https://nw3.sgp.tsmx.com.br/accounts/central/login" },
                 { label: "Central de Ajuda", href: "/ajuda" },
                 { label: "Sobre a NW3", href: "/sobre" },
               ].map((l) => (

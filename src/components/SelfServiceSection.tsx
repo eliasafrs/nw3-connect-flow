@@ -4,7 +4,7 @@ const items = [
   { icon: FileText, title: "2ª via do boleto", href: "#" },
   { icon: Gauge, title: "Teste de velocidade", href: "#" },
   { icon: BookOpen, title: "Manual do cliente", href: "/manual-do-cliente" },
-  { icon: User, title: "Área do cliente", href: "http://sgp.nw3internet.com.br:8000/accounts/central/login" },
+  { icon: User, title: "Área do cliente", href: "https://nw3.sgp.tsmx.com.br/accounts/central/login" },
   { icon: Scale, title: "Documentos Legais", href: "#" },
   { icon: Headset, title: "Ouvidoria NW3", href: "https://wa.me/551125862995" },
 ];
