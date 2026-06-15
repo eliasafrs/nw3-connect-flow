@@ -9,10 +9,10 @@ import {
 } from "@/components/ui/accordion";
 
 const selfServiceItems = [
-  { icon: FileText, title: "2ª via do boleto", desc: "Acesse sua fatura e imprima a 2ª via", href: "http://sgp.nw3internet.com.br:8000/accounts/central/login" },
+  { icon: FileText, title: "2ª via do boleto", desc: "Acesse sua fatura e imprima a 2ª via", href: "https://nw3.sgp.tsmx.com.br/accounts/central/login" },
   { icon: Gauge, title: "Teste de velocidade", desc: "Verifique a velocidade da sua internet", href: "https://www.speedtest.net/" },
   { icon: BookOpen, title: "Manual do cliente", desc: "Guias e tutoriais para seu plano", href: "/manual-do-cliente" },
-  { icon: User, title: "Área do cliente", desc: "Gerencie seu plano e dados", href: "http://sgp.nw3internet.com.br:8000/accounts/central/login" },
+  { icon: User, title: "Área do cliente", desc: "Gerencie seu plano e dados", href: "https://nw3.sgp.tsmx.com.br/accounts/central/login" },
 ];
 
 const faqs = [

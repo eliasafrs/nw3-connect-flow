@@ -113,7 +113,7 @@ const ManualCliente = () => {
                   Acesse pelo navegador ou baixe o app no seu smartphone.
                 </p>
                 <a
-                  href="http://sgp.nw3internet.com.br:8000/accounts/central/login"
+                  href="https://nw3.sgp.tsmx.com.br/accounts/central/login"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
