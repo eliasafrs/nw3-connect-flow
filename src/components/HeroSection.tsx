@@ -4,20 +4,34 @@ import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-disney-v4.webp";
 import heroSlide2 from "@/assets/hero-slide-gaming-v4.webp";
 import heroSlideBusiness from "@/assets/hero-slide-business-opt9.webp";
-import heroSlideCopa from "@/assets/hero-slide-copa-v7.webp";
+import heroSlideGloboplay from "@/assets/hero-slide-globoplay.webp";
+import heroSlideAppleTv from "@/assets/hero-slide-appletv.webp";
 import disneyPlusLogo from "@/assets/logos/disney-plus.png";
 import exitlagLogo from "@/assets/logos/exitlag.png";
 import globoplayLogo from "@/assets/logos/globoplay.png";
+import appleTvLogo from "@/assets/logos/apple-tv.png";
 
 const slides = [
   {
-    image: heroSlideCopa,
-    tagline: "Acompanhe a Copa com",
-    subtitle: "Internet + Globoplay - Não perca nenhum jogo da Copa do Mundo!",
+    image: heroSlideGloboplay,
+    tagline: "Tudo da Globo na sua casa",
+    subtitle: "Novelas, séries originais, esportes e jornalismo ao vivo com Internet + Globoplay.",
     logo: globoplayLogo,
     speed: "600",
     label: "MEGA",
     price: "139",
+    cents: ",90",
+    note: "*Consulte condições",
+    cta: "Eu quero!",
+  },
+  {
+    image: heroSlideAppleTv,
+    tagline: "Ted Lasso e F1 na Apple TV",
+    subtitle: "Assista aos originais premiados como Ted Lasso e à Fórmula 1 com Internet + Apple TV.",
+    logo: appleTvLogo,
+    speed: "600",
+    label: "MEGA",
+    price: "119",
     cents: ",90",
     note: "*Consulte condições",
     cta: "Eu quero!",
@@ -34,6 +48,7 @@ const slides = [
     note: "*Consulte condições",
     cta: "Eu quero!",
   },
+
   {
     image: heroSlide2,
     tagline: "Jogue sem limites",
