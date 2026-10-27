@@ -125,7 +125,7 @@ const ManualCliente = () => {
                 <p className="text-muted-foreground text-xs mb-3">Baixe o app:</p>
                 <div className="flex items-center justify-center gap-3">
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.dragones.nw3internethttps://play.google.com/store/apps/details?id=com.dragones.nw3internethttps://play.google.com/store/apps/details?id=com.provedor.nw3internetpcampaignid=web_sharepcampaignid=web_share"
+                    href="https://play.google.com/store/apps/details?id=com.dragones.nw3internet&pcampaignid=web_share"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
