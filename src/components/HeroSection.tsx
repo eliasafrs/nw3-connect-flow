@@ -23,7 +23,8 @@ const slides = [
     price: "139",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Eu quero!",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
   {
     image: heroSlideAppleTv,
@@ -35,7 +36,8 @@ const slides = [
     price: "119",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Eu quero!",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
   {
     image: heroSlide1,
@@ -47,7 +49,8 @@ const slides = [
     price: "129",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Eu quero!",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
 
   {
