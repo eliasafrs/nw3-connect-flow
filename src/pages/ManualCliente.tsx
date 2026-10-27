@@ -125,14 +125,14 @@ const ManualCliente = () => {
                 <p className="text-muted-foreground text-xs mb-3">Baixe o app:</p>
                 <div className="flex items-center justify-center gap-3">
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.provedor.nw3internet"
+                    href="https://play.google.com/store/apps/details?id=com.dragones.nw3internet&pcampaignid=web_share"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={googlePlayBadge} alt="Disponível no Google Play" className="h-14" loading="lazy" />
                   </a>
                   <a
-                    href="https://apps.apple.com/us/app/nw3-internet/id6741180251"
+                    href="https://apps.apple.com/br/app/nw3-clientes/id6772604416"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

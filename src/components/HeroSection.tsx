@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft, Zap } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-disney-v4.webp";
@@ -22,7 +23,8 @@ const slides = [
     price: "139",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Eu quero!",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
   {
     image: heroSlideAppleTv,
@@ -34,7 +36,8 @@ const slides = [
     price: "119",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Eu quero!",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
   {
     image: heroSlide1,
@@ -46,7 +49,8 @@ const slides = [
     price: "129",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Eu quero!",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
 
   {
@@ -59,7 +63,8 @@ const slides = [
     price: "109",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Conhecer Pacotes",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
   {
     image: heroSlideBusiness,
@@ -71,6 +76,7 @@ const slides = [
     cents: "",
     note: "",
     cta: "Falar com consultor",
+    href: "https://wa.me/551125862995",
   },
 ];
 
@@ -164,10 +170,21 @@ const HeroSection = () => {
           )}
 
           <div className="flex flex-wrap gap-2 sm:gap-3">
-            <Button variant="cta" size="lg" className="text-xs sm:text-base px-4 sm:px-8 h-9 sm:h-11">
-              {slide.cta}
-              <ChevronRight className="w-5 h-5 ml-1" />
-            </Button>
+            {slide.href.startsWith("http") ? (
+              <a href={slide.href} target="_blank" rel="noopener noreferrer">
+                <Button variant="cta" size="lg" className="text-xs sm:text-base px-4 sm:px-8 h-9 sm:h-11">
+                  {slide.cta}
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </Button>
+              </a>
+            ) : (
+              <Link to={slide.href}>
+                <Button variant="cta" size="lg" className="text-xs sm:text-base px-4 sm:px-8 h-9 sm:h-11">
+                  {slide.cta}
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </Button>
+              </Link>
+            )}
             <a
               href="https://wa.me/551125862995"
               target="_blank"
