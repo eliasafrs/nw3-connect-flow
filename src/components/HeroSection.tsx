@@ -63,7 +63,8 @@ const slides = [
     price: "109",
     cents: ",90",
     note: "*Consulte condições",
-    cta: "Conhecer Pacotes",
+    cta: "Conhecer Pacote",
+    href: "/internet",
   },
   {
     image: heroSlideBusiness,
@@ -75,6 +76,7 @@ const slides = [
     cents: "",
     note: "",
     cta: "Falar com consultor",
+    href: "https://wa.me/551125862995",
   },
 ];
 
