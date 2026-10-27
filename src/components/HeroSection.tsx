@@ -170,10 +170,21 @@ const HeroSection = () => {
           )}
 
           <div className="flex flex-wrap gap-2 sm:gap-3">
-            <Button variant="cta" size="lg" className="text-xs sm:text-base px-4 sm:px-8 h-9 sm:h-11">
-              {slide.cta}
-              <ChevronRight className="w-5 h-5 ml-1" />
-            </Button>
+            {slide.href.startsWith("http") ? (
+              <a href={slide.href} target="_blank" rel="noopener noreferrer">
+                <Button variant="cta" size="lg" className="text-xs sm:text-base px-4 sm:px-8 h-9 sm:h-11">
+                  {slide.cta}
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </Button>
+              </a>
+            ) : (
+              <Link to={slide.href}>
+                <Button variant="cta" size="lg" className="text-xs sm:text-base px-4 sm:px-8 h-9 sm:h-11">
+                  {slide.cta}
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </Button>
+              </Link>
+            )}
             <a
               href="https://wa.me/551125862995"
               target="_blank"
